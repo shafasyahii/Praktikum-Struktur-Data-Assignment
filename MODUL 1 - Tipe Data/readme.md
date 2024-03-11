@@ -3,7 +3,24 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+### Tipe Data
+Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
+1. Tipe data primitif
+2. Tipe data abstrak
+3. Tipe data koleksi
+
+#### 1. Tipe Data Primitif
+Tipe data primitive adalah tipe data dasar yang disediakan oleh banyak Bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [jurnal]. Contoh tipe data primitive, antara lain:
+1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, sperti 1, 2, 3 dan sebagainya.
+2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau decimal, seperti 1.1, 2.5 dan sebagainya.
+3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter Tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [jurnal].  
+4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+
+#### 2. Tipe Data Abstrak
+ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [web]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [blog]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [blog].
+
+#### 3. Tipe Data Koleksi
+Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola Kumpulan data sekaligus dalam satu variable. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
 
 ## Guided 
 
