@@ -10,17 +10,17 @@ Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini 
 3. Tipe data koleksi
 
 #### 1. Tipe Data Primitif
-Tipe data primitive adalah tipe data dasar yang disediakan oleh banyak Bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [jurnal]. Contoh tipe data primitive, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, sperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau decimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter Tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [jurnal].  
+Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
+1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
+2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
+3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
 4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
 
 #### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [web]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [blog]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [blog].
+ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [blog]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [blog].
 
 #### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola Kumpulan data sekaligus dalam satu variable. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
 
 ## Guided 
 
@@ -175,7 +175,16 @@ int main() {
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 Kode di atas memiliki dua fungsi, yaitu fungsi 'add' dan 'substract'. Fungsi 'add' menerima dua parameter berupa tipe data integer dan mengembalikan nilai yang merupakan hasil penjumlahan dari kedua parameter. Sedangkan fungsi 'substract' menerima dua parameter berupa tipe data float dan mengembalikan nilai yang adalah hasil pengurangan dari kedua parameter. Pada bagian main program, kode ini akan dijalankan dan memberikan output yang sesuai dengan perintah.
 
+Dalam materi tipe data primitif, dijelaskan tentang beberapa tipe data dasar yang digunakan untuk menyimpan suatu nilai. Setiap tipe data primitif memiliki ukuran dan rentang nilai yang telah ditetapkan serta tidak dapat diubah. 
+
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
+
+Fungsi dari class dan struct:
+1. Membantu mengorganisir kode menjadi lebih terstruktur dan mudah dipahami.
+2. Data dapat disembunyikan dan hanya dapat diakses melalui fungsi yang telah ditentukan.
+3. Memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda tergantung pada objek yang digunakan.
+   
+Berikut contoh program dari class dan struct:
 
 ```C++
 #include <iostream>
@@ -264,10 +273,18 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
 
-Kode di atas merupakan contoh dari fungsi 'map' yang digunakan utnuk 
+Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasangan data berupa key dan value. mapNamaNilai menyimpan pasangan nama dan nilai siswa. Kemudian untuk menambahkan, mengubah, dan menghapus data dari map menggunakan fungsi 'insert()', '[]', dan 'erase().
+
+Perbedaan array dan map:
+1. Array hanya dapat menyimpan data dengan tipe data yang sama, sedangkan map dapat menyimpan data dengan tipe yang berbeda.
+2. Array memiliki indeks yang dimulai dari 0 dan hanya dapat diakses menggunakan indeks, sedangkan map memiliki key yang digunakan sebagai indeks dan dapat diakses menggunakan key.
+3. Array memiliki ukuran yang terbatas dan tidak dapat diubah, sedangkan map memiliki ukuran yang fleksibel dan dapat diubah sesuai kebutuhan.
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
+[2] Warno, “Pembelajaran Pemrograman Bahasa Java Dan Arti Keyword,” Pembelajaran Pemrograman Bhs. Java Dan Arti Keyword, vol. 8, no. 1, pp. 40–51, 2020.
+[3] D. Rosadi, “ADT (Abstract Data Type) C++,” medium.com. Accessed: Mar. 10, 2024. [Online]. Available: https://medium.com/@111202214191/adt-abstract-data-type-c-4cdcf4441d8c
+[4] R. Muliono, “ABSTRACT DATA TYPE (ADT),” blog.uma.ac.id. Accessed: Mar. 10, 2024. [Online]. Available: https://rizkimuliono.blog.uma.ac.id/wp-content/uploads/sites/365/2017/05/ADT-Abstract-Data-Type.pdf
