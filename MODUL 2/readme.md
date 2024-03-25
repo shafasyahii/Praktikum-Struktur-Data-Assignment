@@ -4,7 +4,7 @@
 ## Dasar Teori
 
 ### Array
-Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyimpan beberapa nilai dalam satu variabel. Array merupakan tipe data terstruktur dalam pemrograman, yang memungkinkan untuk menyimpan data atau referensi objek dalam jumlah banyak dan terindeks. Sehingga sejumlah variabel dapat menggunakan nama yang sama [web]. Dengan menggunakan array, kita dapat menghindari penggunaan variabel yang terlalu banyak. Ruang memori yang dibutuhkan untuk deklarasi array adalah 40 byte (10 elemen dengan tipe data ```int```, di mana setiap ```int``` memerlukan 4 byte). Adapun bentuk array berdasarkan dimensinva terbagi menjadi lima, yaitu Array berdimensi satu, array berdimensi dua, array multidimensi, array empat dimensi, dan array lima dimensi.
+Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyimpan beberapa nilai dalam satu variabel. Array merupakan tipe data terstruktur dalam pemrograman, yang memungkinkan untuk menyimpan data atau referensi objek dalam jumlah banyak dan terindeks. Sehingga sejumlah variabel dapat menggunakan nama yang sama [web]. Dengan menggunakan array, kita dapat menghindari penggunaan variabel yang terlalu banyak. Adapun bentuk array berdasarkan dimensinva terbagi menjadi lima, yaitu Array berdimensi satu, array berdimensi dua, array multidimensi, array empat dimensi, dan array lima dimensi.
 
 #### 1. Array Satu Dimensi
 Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: 
@@ -13,7 +13,10 @@ Contoh:
 ```int Nilai[10];```
 Kita dapat memberikan nilai pada elemen array saat pendeklarasian. Misalnya:
 ```int Nilai[10] = {1, 2, 4, 5, 3,7, 6, 9, 8, 10};```
-Dalam contoh di atas, kita telah memesan tempat pada memori komputer sebanyak 10 tempat (indeks 0 hingga 9) dan mengisinya dengan nilai-nilai yang diberikan.
+Dalam contoh ini, kita telah memesan tempat pada memori komputer sebanyak 10 tempat (indeks 0 hingga 9) dan mengisinya dengan nilai-nilai yang diberikan.
+
+#### 2. Array Dua Dimensi
+
 
 ## Guided 
 
