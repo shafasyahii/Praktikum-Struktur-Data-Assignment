@@ -8,11 +8,11 @@ Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyi
 
 #### 1. Array Satu Dimensi
 Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal logika]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: 
-```tipe_data nama_array[jumlah_elemen];```
+!```tipe_data nama_array[jumlah_elemen];```
 Contoh:
-```int Nilai[10];```
+!```int Nilai[10];```
 Kita dapat memberikan nilai pada elemen array saat pendeklarasian. Misalnya:
-```int Nilai[10] = {1, 2, 4, 5, 3,7, 6, 9, 8, 10};```
+!```int Nilai[10] = {1, 2, 4, 5, 3,7, 6, 9, 8, 10};```
 Dalam contoh ini, kita telah memesan tempat pada memori komputer sebanyak 10 tempat (indeks 0 hingga 9) dan mengisinya dengan nilai-nilai yang diberikan.
 
 #### 2. Array Dua Dimensi
@@ -141,14 +141,14 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/6a9b349d-7c92-4e1e-9530-3d864b0bdee0)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 Kode di atas memiliki dua fungsi, yaitu fungsi 'add' dan 'substract'. Fungsi 'add' menerima dua parameter berupa tipe data integer dan mengembalikan nilai yang merupakan hasil penjumlahan dari kedua parameter. Sedangkan fungsi 'substract' menerima dua parameter berupa tipe data float dan mengembalikan nilai yang adalah hasil pengurangan dari kedua parameter. Pada bagian main program, kode ini akan dijalankan dan memberikan output yang sesuai dengan perintah.
 
 Dalam materi tipe data primitif, dijelaskan tentang beberapa tipe data dasar yang digunakan untuk menyimpan suatu nilai. Setiap tipe data primitif memiliki ukuran dan rentang nilai yang telah ditetapkan serta tidak dapat diubah. 
 
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 Fungsi dari class dan struct:
 1. Membantu mengorganisir kode menjadi lebih terstruktur dan mudah dipahami.
@@ -245,11 +245,6 @@ int main() {
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
 
 Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasangan data berupa key dan value. mapNamaNilai menyimpan pasangan nama dan nilai siswa. Kemudian untuk menambahkan, mengubah, dan menghapus data dari map menggunakan fungsi 'insert()', '[]', dan 'erase().
-
-Perbedaan array dan map:
-1. Array hanya dapat menyimpan data dengan tipe data yang sama, sedangkan map dapat menyimpan data dengan tipe yang berbeda.
-2. Array memiliki indeks yang dimulai dari 0 dan hanya dapat diakses menggunakan indeks, sedangkan map memiliki key yang digunakan sebagai indeks dan dapat diakses menggunakan key.
-3. Array memiliki ukuran yang terbatas dan tidak dapat diubah, sedangkan map memiliki ukuran yang fleksibel dan dapat diubah sesuai kebutuhan.
 
 ## Kesimpulan
 
