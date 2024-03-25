@@ -7,10 +7,7 @@
 Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyimpan beberapa nilai dalam satu variabel. Array merupakan tipe data terstruktur dalam pemrograman, yang memungkinkan untuk menyimpan data atau referensi objek dalam jumlah banyak dan terindeks. Sehingga sejumlah variabel dapat menggunakan nama yang sama [web]. Dengan menggunakan array, kita dapat menghindari penggunaan variabel yang terlalu banyak. Adapun bentuk array berdasarkan dimensinva terbagi menjadi lima, yaitu Array berdimensi satu, array berdimensi dua, array multidimensi, array empat dimensi, dan array lima dimensi.
 
 #### 1. Array Satu Dimensi
-Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal logika]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: 
-```
-tipe_data nama_array[jumlah_elemen];
-```
+Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal logika]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: ```tipe_data nama_array[jumlah_elemen];```
 Contoh:
 ```
 int Nilai[10];
@@ -39,6 +36,23 @@ Selain itu, kita juga bisa menginisialisasi nilai saat mendefinisikan array, sep
 int matrix[2][3] = {
     {1, 2, 3},
     {7, 8, 9}
+};
+```
+
+#### 3. Array Multidimensi
+Array multidimensi adalah array yang memiliki lebih dari dua dimensi. Ini berarti kita dapat menyimpan data dengan lebih dari dua subskrip. Contoh subskrip bisa berupa array tiga dimensi, empat dimensi, dan seterusnya. Contoh pendeklarasian array multidimensi adalah sebagai berikut:
+```
+int arr[2][3][4];
+```
+Dalam contoh di atas, kita mendeklarasikan array tiga dimensi dengan nama ```arr```. Array ini memiliki ukuran:
+Subskrip pertama: 2
+Subskrip kedua: 3
+Subskrip ketiga: 4
+Jika kita ingin memberi nilai pada array ```arr``` saat pendeklarasian (inisialisasi), kita dapat melakukannya seperti ini:
+```
+int arr[2][3][4] = {
+    {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}},
+    {{13, 14, 15, 16}, {17, 18, 19, 20}, {21, 22, 23, 24}}
 };
 ```
 
@@ -304,7 +318,7 @@ Kode ini digunakan untuk mencari nilai maksimum, minimum, rata-rata, dan lokasi 
 
 ## Kesimpulan
 
-Tipe data
+
 
 ## Referensi
 
