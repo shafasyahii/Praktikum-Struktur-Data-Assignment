@@ -323,6 +323,9 @@ Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen de
 
 ## Referensi
 [1] S. Miftah R, “Belajar Python: Mengenal Array pada Bahasa Pemrograman Python,” dqlab.id. Accessed: Mar. 25, 2024. [Online]. Available: https://dqlab.id/belajar-bahasa-pemrograman-python-array
+
 [2] W. Eko S, Logika & Algoritma untuk Pemula. 2020.
+
 [3] MateriDosen, “Array Dua Dimensi C++, Lengkap Contoh Program dan Penjelasan.” Accessed: Mar. 24, 2024. [Online]. Available: https://www.materidosen.com/2017/06/array-dua-dimensi-c-lengkap-contoh.html
+
 [4] Z. Musiafa, STRUKTUR DATA DAN IMPLEMENTASI ALGORITMA. 2022.
