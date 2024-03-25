@@ -7,7 +7,7 @@
 Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyimpan beberapa nilai dalam satu variabel. Array merupakan tipe data terstruktur dalam pemrograman, yang memungkinkan untuk menyimpan data atau referensi objek dalam jumlah banyak dan terindeks. Sehingga sejumlah variabel dapat menggunakan nama yang sama [web]. Dengan menggunakan array, kita dapat menghindari penggunaan variabel yang terlalu banyak. Adapun bentuk array berdasarkan dimensinva terbagi menjadi lima, yaitu Array berdimensi satu, array berdimensi dua, array multidimensi, array empat dimensi, dan array lima dimensi.
 
 #### 1. Array Satu Dimensi
-Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan tersusun dari elemen yang sama dalam satu baris [jurnal]. Array satu dimensi memiliki banyak keuntungan karena mudah digunakan dan mudah dibaca, sehingga membuat array jenis ini menjadi yang paling umum digunakan. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Untuk mendeklarasikan sebuah array satu dimensi dalam bahasa C++, kita menggunakan tanda ```[ ]``` (bracket).
+Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). 
 
 ## Guided 
 
