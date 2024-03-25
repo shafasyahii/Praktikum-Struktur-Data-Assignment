@@ -149,7 +149,7 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/6a9b349d-7c92-4e1e-9530-3d864b0bdee0)
 
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk mengelola data dalam bentuk array dan memisahkan elemen-elemen berdasarkan sifat genap atau ganjilnya. Program ini meminta pengguna untuk memasukkan ukuran array (jumlah elemen yang akan dimasukkan). Setelah mendapatkan ukuran array, program akan meminta pengguna memasukkan elemen-elemen array. Pengguna diminta memasukkan bilangan bulat sebanyak ukuran array yang telah ditentukan. Program akan memeriksa setiap elemen array. Jika elemen tersebut adalah bilangan genap (habis dibagi 2), maka program akan menampilkannya sebagai ```Nomor Genap```. Program juga akan memeriksa setiap elemen array. Jika elemen tersebut adalah bilangan ganjil (tidak habis dibagi 2), maka program akan menampilkannya sebagai ```Nomor Ganjil```. Setelah semua elemen array diperiksa, program akan mengakhiri eksekusi dan mengembalikan nilai 0.
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
