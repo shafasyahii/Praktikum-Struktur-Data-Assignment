@@ -4,10 +4,10 @@
 ## Dasar Teori
 
 ### Array
-Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyimpan beberapa nilai dalam satu variabel. Array merupakan tipe data terstruktur dalam pemrograman, yang memungkinkan untuk menyimpan data atau referensi objek dalam jumlah banyak dan terindeks. Sehingga sejumlah variabel dapat menggunakan nama yang sama [web]. Dengan menggunakan array, kita dapat menghindari penggunaan variabel yang terlalu banyak. Adapun bentuk array berdasarkan dimensinva terbagi menjadi lima, yaitu Array berdimensi satu, array berdimensi dua, array multidimensi, array empat dimensi, dan array lima dimensi.
+Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyimpan beberapa nilai dalam satu variabel. Array merupakan tipe data terstruktur dalam pemrograman, yang memungkinkan untuk menyimpan data atau referensi objek dalam jumlah banyak dan terindeks. Sehingga sejumlah variabel dapat menggunakan nama yang sama [1]. Dengan menggunakan array, kita dapat menghindari penggunaan variabel yang terlalu banyak. Adapun bentuk array berdasarkan dimensinva terbagi menjadi lima, yaitu Array berdimensi satu, array berdimensi dua, array multidimensi, array empat dimensi, dan array lima dimensi. Untuk array empat dimensi dan lima dimensi, memiliki konsep yang sama dengan multidimensi.
 
 #### 1. Array Satu Dimensi
-Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal logika]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: ```tipe_data nama_array[jumlah_elemen];```
+Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [2]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: ```tipe_data nama_array[jumlah_elemen];```
 Contoh:
 ```
 int Nilai[10];
@@ -19,7 +19,7 @@ int Nilai[10] = {1, 2, 4, 5, 3,7, 6, 9, 8, 10};
 Dalam contoh ini, kita telah memesan tempat pada memori komputer sebanyak 10 tempat (indeks 0 hingga 9) dan mengisinya dengan nilai-nilai yang diberikan.
 
 #### 2. Array Dua Dimensi
-Array dua dimensi adalah array yang terdiri dari n buah baris dan m buah kolom, atau array dua dimensi juga biasa disebut sebagai array yang mempunyai dua subskrip, yaitu baris dan kolom [web materidosen]. Untuk mendeklarasikan variabel array dua dimensi, harus menentukan nama array diikuti oleh dua tanda kurung dimana indeks kedua adalah set kedua tanda kurung kotak. Indeks pertama menunjukkan baris, dan indeks kedua menunjukkan kolom [jurnal struktur].
+Array dua dimensi adalah array yang terdiri dari n buah baris dan m buah kolom, atau array dua dimensi juga biasa disebut sebagai array yang mempunyai dua subskrip, yaitu baris dan kolom [3]. Untuk mendeklarasikan variabel array dua dimensi, harus menentukan nama array diikuti oleh dua tanda kurung dimana indeks kedua adalah set kedua tanda kurung kotak. Indeks pertama menunjukkan baris, dan indeks kedua menunjukkan kolom [4].
 Contoh deklarasi array dua dimensi: 
 ```
 int bilangan[2][2];
@@ -317,8 +317,12 @@ int main()
 Kode ini digunakan untuk mencari nilai maksimum, minimum, rata-rata, dan lokasi dari nilai-nilai yang dimasukkan oleh pengguna dalam array. Program ini dimulai dengan meminta pengguna untuk memasukkan panjang array (jumlah angka) dan menyimpannya ke dalam variabel ```n```. Setelah itu, pengguna diminta untuk memasukkan angka-angka yang akan dimasukkan ke dalam array. Kemudian program akan menentukan nilai maksimum dan minimum serta lokasi (index) dari nilai maksimum dan minimum di dalam array. Selanjutnya, program menghitung nilai rata-rata dari semua nilai yang dimasukkan pengguna. Terakhir, program akan menampilkan hasil dari nilai maksimum, minimum, dan rata-rata beserta lokasi-nya.
 
 ## Kesimpulan
+Array adalah kumpulan variabel dengan tipe data yang sama, yang memungkinkan menyimpan beberapa nilai dalam satu variabel. Dalam pemrograman, array merupakan tipe data terstruktur yang memungkinkan penyimpanan data atau referensi objek dalam jumlah banyak dan terindeks. Penggunaan array membantu menghindari penggunaan terlalu banyak variabel. Berdasarkan dimensinya, array dapat dibagi menjadi lima jenis yaitu Array satu dimensi, dua dimensi, multidimensi, empat dimensi, dan lima dimensi. 
 
-
+Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks. Array dua dimensi adalah array yang terdiri dari n buah baris dan m buah kolom, atau array dua dimensi juga biasa disebut sebagai array yang mempunyai dua subskrip, yaitu baris dan kolom. Array multidimensi adalah array yang memiliki lebih dari dua dimensi, berarti kita dapat menyimpan data dengan lebih dari dua subskrip. Sedangkan array empat dimensi dan lima dimensi, kedua dimensi ini memiliki konsep yang sama dengan multidimensi.
 
 ## Referensi
-
+[1] S. Miftah R, “Belajar Python: Mengenal Array pada Bahasa Pemrograman Python,” dqlab.id. Accessed: Mar. 25, 2024. [Online]. Available: https://dqlab.id/belajar-bahasa-pemrograman-python-array
+[2] W. Eko S, Logika & Algoritma untuk Pemula. 2020.
+[3] MateriDosen, “Array Dua Dimensi C++, Lengkap Contoh Program dan Penjelasan.” Accessed: Mar. 24, 2024. [Online]. Available: https://www.materidosen.com/2017/06/array-dua-dimensi-c-lengkap-contoh.html
+[4] Z. Musiafa, STRUKTUR DATA DAN IMPLEMENTASI ALGORITMA. 2022.
