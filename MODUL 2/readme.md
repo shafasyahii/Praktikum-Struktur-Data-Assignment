@@ -70,7 +70,7 @@ int main()
     }
 }
 ```
-Kode di atas mengimplementasikan
+Kode di atas digunakan untuk mengimplementasikan input dan output array tiga dimensi. Program ini mendeklarasikan sebuah array tiga dimensi dengan ukuran 2x3x3 menggunakan ```int arr[2][3][3];```. 1. Selanjutnya, program meminta pengguna untuk memasukkan nilai elemen-elemen array. Dalam tiga loop bersarang, program mengambil input dari pengguna dan menyimpannya di dalam array. Setelah semua elemen dimasukkan, program mencetak nilai-nilai array tersebut dengan pesan ```Data Array[x][y][z] = nilai``` menggunakan loop yang serupa. Terakhir, program mencetak seluruh array dalam format yang lebih sederhana, hanya nilai-nilai array tanpa pesan tambahan.
 
 ### 2. Program Mencari Nilai Maksimal pada Array
 
@@ -102,7 +102,7 @@ int main()
     cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
 }
 ```
-kode 
+Kode di atas digunakan untuk mencari nilai maksimum dari sebuah array dan lokasi/indeksnya. Pengguna diminta untuk memasukkan panjang array dan angka-angka ke dalam array. Setelah semua angka dimasukkan, program mencari nilai maksimum dan mencatat lokasi/indeksnya di mana nilai maksimum tersebut ditemukan. Terakhir, program akan menampilkan nilai maksimum dan lokasinya.
 
 ## Unguided
 
