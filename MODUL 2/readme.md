@@ -217,7 +217,7 @@ int main()
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/9d44326e-c14d-4b33-84a4-0b8fc5101ec4)
 
-Kode di atas menggabungkan 
+Seperti pada guided satu, kode di atas adalah program untuk mengelola data dalam bentuk array tiga dimensi. Pengguna diminta memasukkan jumlah elemen untuk setiap dimensi pertama, kedua, dan ketiga. Setelah mendapatkan ukuran array, program mendeklarasikan array tiga dimensi dengan ukuran yang diinputkan. Kemudian, program meminta pengguna memasukkan elemen-elemen array. Pengguna diminta memasukkan bilangan bulat sebanyak elemen yang ada dalam array. Setelah semua elemen array dimasukkan, program akan menampilkan seluruh data array yang telah diinput. Data array ditampilkan dengan format ```Data Array[Dimensi1][Dimensi2][Dimensi3] = Nilai```. Pada tampilan array, program menampilkan elemen-elemen array dalam bentuk matriks tiga dimensi. Setiap elemen dipisahkan oleh spasi, dan setiap dimensi terpisah oleh baris baru.
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
