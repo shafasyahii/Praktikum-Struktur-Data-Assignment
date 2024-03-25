@@ -276,7 +276,7 @@ int main()
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/a6bc9ac1-5fbc-485b-9fc0-7a41c7ea0a6f)
 
-Kode di atas merupakan 
+Kode ini digunakan untuk mencari nilai maksimum, minimum, rata-rata, dan lokasi dari nilai-nilai yang dimasukkan oleh pengguna dalam array. Program ini dimulai dengan meminta pengguna untuk memasukkan panjang array (jumlah angka) dan menyimpannya ke dalam variabel ```n```. Setelah itu, pengguna diminta untuk memasukkan angka-angka yang akan dimasukkan ke dalam array. Kemudian program akan menentukan nilai maksimum dan minimum serta lokasi (index) dari nilai maksimum dan minimum di dalam array. Selanjutnya, program menghitung nilai rata-rata dari semua nilai yang dimasukkan pengguna. Terakhir, program akan menampilkan hasil dari nilai maksimum, minimum, dan rata-rata beserta lokasi-nya.
 
 ## Kesimpulan
 
