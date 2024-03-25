@@ -8,15 +8,39 @@ Array adalah kumpulan variabel yang memiliki tipe data yang sama dan dapat menyi
 
 #### 1. Array Satu Dimensi
 Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen dengan tipe data homogen dan hanya memiliki satu indeks [jurnal logika]. Elemen pertama ditandai dengan indeks 0, elemen kedua di indeks 1, dan seterusnya. Array satu dimensi ini mudah digunakan dan mudah dibaca sehingga membuat array jenis ini menjadi yang paling umum digunakan. Untuk mendeklarasikan sebuah array satu dimensi kita menggunakan tanda ```[ ]``` (bracket). Bentuk umum pendeklarasian array satu dimensi adalah sebagai berikut: 
-```tipe_data nama_array[jumlah_elemen];```
+```
+tipe_data nama_array[jumlah_elemen];
+```
 Contoh:
-```int Nilai[10];```
+```
+int Nilai[10];
+```
 Kita dapat memberikan nilai pada elemen array saat pendeklarasian. Misalnya:
-```int Nilai[10] = {1, 2, 4, 5, 3,7, 6, 9, 8, 10};```
+```
+int Nilai[10] = {1, 2, 4, 5, 3,7, 6, 9, 8, 10};
+```
 Dalam contoh ini, kita telah memesan tempat pada memori komputer sebanyak 10 tempat (indeks 0 hingga 9) dan mengisinya dengan nilai-nilai yang diberikan.
 
 #### 2. Array Dua Dimensi
-
+Array dua dimensi adalah array yang terdiri dari n buah baris dan m buah kolom, atau array dua dimensi juga biasa disebut sebagai array yang mempunyai dua subskrip, yaitu baris dan kolom [web materidosen]. Untuk mendeklarasikan variabel array dua dimensi, harus menentukan nama array diikuti oleh dua tanda kurung dimana indeks kedua adalah set kedua tanda kurung kotak. Indeks pertama menunjukkan baris, dan indeks kedua menunjukkan kolom [jurnal struktur].
+Contoh deklarasi array dua dimensi: 
+```
+int bilangan[2][2];
+``` 
+Di sini, ```bilangan``` adalah sebuah array dua dimensi yang berisi 4 elemen (2 x 2). Untuk mengakses setiap elemen array, kita menggunakan dua indeks, misalnya: 
+```
+bilangan[0][0] = 100;
+bilangan[0][1] = 101;
+bilangan[1][0] = 110;
+bilangan[1][1] = 111;
+```
+Selain itu, kita juga bisa menginisialisasi nilai saat mendefinisikan array, seperti contoh berikut:
+```
+int matrix[2][3] = {
+    {1, 2, 3},
+    {7, 8, 9}
+};
+```
 
 ## Guided 
 
