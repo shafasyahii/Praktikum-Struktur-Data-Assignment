@@ -309,6 +309,9 @@ Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya
 
 ## Referensi
 [1] R. Firliana, “Algoritma & Pemrograman C++,” Algoritma & Pemrograman C++. 2018. [Online]. Available: http://repository.unpkediri.ac.id/id/eprint/2468
+
 [2] D. S. Rita Wahyuni Arifin, “Algoritma Metode Pengurutan Bubble Sort dan Quick Dalam Bahasa Pemrograman C++,” Inf. Syst. Educ. Prof., vol. 4, no. 2, pp. 178–187, 2020.
+
 [3] Endang Retnoningsih, “Algoritma Pengurutan Data (Sorting) Dengan Metode Insertion Sort dan Selection Sort,” Inf. Manag. Educ. Prof., vol. 3, no. 1, pp. 95–106, 2018.
+
 [4] Sutiono, “Apa itu Algoritma Bubble Sort?,” DosenIT.com. Accessed: Apr. 01, 2024. [Online]. Available: https://dosenit.com/kuliah-it/rpl/algoritma-bubble-sort
