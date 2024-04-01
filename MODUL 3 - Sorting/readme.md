@@ -1,0 +1,314 @@
+# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
+<p align="center">Shafa Syahida</p>
+
+## Dasar Teori
+
+### Konsep Dasar Sorting
+Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu ataupun secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu [1]. Meskipun pengurutan ini sepertinya hanya sebuah masalah klasik dalam keinformatikaan, namun perannya tidak dapat dipisahkan terutama dalam pengolahan data. Secara umum ada 2 jenis pengurutan (sorting) data yaitu pengurutan naik (ascending), yaitu jika data disusun mulai dari nilai yang paling kecil hingga yang paling besar dan pengurutan turun (descending), yaitu jika data yang disusun mulai dari nilai yang paling besar hingga paling kecil. Algoritma pemrograman pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Metode pengurutan yang paling sering digunakan yaitu metode Insertion sort, Selection sort dan Bubble Sort [2].
+
+
+#### 1. insertion Sort
+Insertion sort adalah algoritma pengurutan yang bekerja dengan cara menyisipkan elemen baru ke dalam posisi yang tepat dalam array yang sudah terurut. Algoritma ini dimulai dari elemen kedua, dan membandingkannya dengan elemen pertama. Jika elemen kedua lebih kecil dari elemen pertama, maka elemen kedua disisipkan di depan elemen pertama. Proses ini diulangi untuk elemen ketiga, keempat, dan seterusnya.
+
+Langkah-langkah algoritma insertion sort:
+
+1. Mulai dari element kedua dalam array.
+2. Bandingkan element kedua dengan element pertama.
+3. Jika element kedua lebih kecil dari element pertama, maka sisipkan element kedua di depan element pertama.
+4. Ulangi langkah 2 dan 3 untuk elemen-element berikutnya.
+
+Pada langkah 2 dan 3, elemen kedua akan dibandingkan dengan elemen-elemen sebelumnya secara berurutan. Jika elemen kedua lebih kecil dari elemen sebelumnya, maka elemen kedua akan disisipkan di depan elemen tersebut.
+
+#### 2. Selection Sort
+Algoritma selection sort sering juga disebut dengan metode maksimum atau minimum. Metode maksimum karena didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan. Konsepnya dengan memilih elemen maksimum kemudian mempertukarkan elemen maksimum tersebut dengan elemen paling akhir untuk urutan ascending dan elemen pertama untuk descending [3]. 
+
+Algoritma selection sort memiliki langkah-langkah sebagai berikut:
+
+1. Pilih element terkecil dalam array dengan cara membandingkan element satu per satu (menggunakan perulangan).
+2. Tukar posisi element terkecil dengan element pertama.
+3. Ulangi langkah 1 dan 2 untuk elemen-elemen berikutnya.
+
+#### 3. Bubble Sort
+Metode ini merupakan metode sorting yang paling mudah, namun paling lambat dibandingkan dengan metode lainnya. Algoritma Bubble Sort merupakan proses pengurutan yang secara berangsur-angsur memindahkan data ke posisi yang tepat. Karena itulah, algoritma ini dinamakan “bubble” atau yang jika diterjemahkan ke dalam Bahasa Indonesia, artinya yaitu gelembung. Secara sederhana, bisa didefinisikan bahwa algoritma Bubble Sort adalah pengurutan dengan cara pertukaran data dengan data di sebelahnya secara terus menerus sampai pada satu iterasi tertentu dimana tidak ada lagi perubahan yang signifikan [4]. 
+
+Langkah-langkah algoritma bubble sort:
+
+1. Masukkan array yang akan diurutkan.
+2. Lakukan perulangan sebanyak ```n-1``` kali, di mana ```n``` adalah jumlah elemen dalam array.
+3. Bandingkan elemen yang ada di sebelahnya. Jika elemen sebelumnya lebih besar dari elemen berikutnya, tukar posisi keduanya.
+4. Lanjutkan perulangan hingga tidak ada lagi pertukaran yang perlu dilakukan.
+
+## Guided 
+
+### 1. Bubble Sort
+
+```C++
+#include <iostream>
+using namespace std;
+
+void bubble_sort(double arr[], int length){
+    bool not_sorted = true;
+    int j=0;
+    double tmp;
+
+    while (not_sorted){
+        not_sorted = false;
+        j++;
+        for (int i=0; i < length - j; i++){
+            if (arr[i] > arr[i + 1]) {
+                tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+                not_sorted = true;
+            }//end of if
+        }//end of for loop
+    }//end of while loop
+}//end of bubble_sort
+
+void print_array(double a[], int length) {
+
+    for(int i=0; i<length; i++) {
+        cout << a[i] << "\t";
+    }
+    cout << endl;
+}
+
+int main() {
+
+    int length = 5;
+    double a[] = {22.1, 15.3, 8.2, 33.21, 99.99};
+
+    cout << "Urutan bilangan sebelum sorting: " << endl;
+    print_array(a, length);
+
+    bubble_sort(a, length);
+
+    cout << "\nUrutan bilangan setelah sorting: " << endl;
+    print_array(a, length);
+}
+```
+Kode di atas mengimplementasikan sorting algorithm yang disebut Bubble Sort. Algoritma ini digunakan untuk mengurutkan sebuah array dari bilangan acak menjadi terurut. Fungsi ```bubble_sort``` menerima dua parameter, yaitu array yang akan diurutkan dan panjangnya. Algoritma Bubble Sort bekerja dengan membandingkan dua elemen berdekatan, dan elemen yang lebih besar dipindahkan ke posisi yang lebih kanan. Proses ini dilakukan berulang kali sampai array diurutkan. Fungsi ```print_array``` digunakan untuk mencetak isi array ke layar dengan format tertentu. Di fungsi ```main()```, array a dideklarasikan dan diinisialisasikan dengan 5 elemen acak, lalu mencetak urutan sebelum dan sesudah diurutkan.
+
+### 2. Insertion Sort
+
+```C++
+#include <iostream>
+using namespace std;
+
+void insertion_sort(char arr[], int length) {
+    int i, j;
+    char tmp;
+
+    for (i = 1; i < length; i++) {
+        j = i;
+
+        while (j > 0 && arr[j - 1] < arr[j]) {
+            tmp = arr[j];
+            arr[j] = arr[j - 1];
+            arr[j - 1] + tmp;
+            j--;
+        }//end of while loop
+    }//end of for loop
+}
+
+void print_array(char a[], int length) {
+
+    for(int i=0; i<length; i++) {
+        cout << a[i] << "\t";
+    }
+    cout << endl;
+}
+
+int main() {
+    int length = 6;
+    char a[length] = {'c', 'f', 'a', 'z', 'd', 'p'};
+
+    cout << "Urutan karakter sebelum sorting: " << endl;
+    print_array(a, length);
+
+    insertion_sort(a, length);
+
+    cout << "\nUrutan karakter setelah sorting: " << endl;
+    print_array(a, length);
+}
+```
+Kode di atas digunakan untuk mencetak urutan karakter sebelum dan setelah melakukan sorting menggunakan algoritma insertion sort. Fungsi ```insertion_sort``` ini menerima dua parameter, array ```arr``` dan panjang array ```length```. Fungsi ini menggunakan looping nested untuk membandingkan karakter dalam array dan memindahkan karakter jika diperlukan. Fungsi ```print_array``` digunakan untuk mencetak urutan karakter dalam array. Fungsi ini menerima dua parameter, array ```a``` dan panjang array ```length```. Fungsi ini menggunakan looping for untuk mencetak semua karakter dalam array.
+Dalam fungsi ```main()```, array ```a``` diisi dengan karakter 'c', 'f', 'a', 'z', 'd', dan 'p'. Program mencetak urutan karakter sebelum sorting dan setelah sorting dengan menggunakan fungsi ```print_array```.
+
+## Unguided
+
+### 1. Kelas S1 IF 2016 G memiliki 5 mahasiswa. Pada akhir semester mereka menerima lembar Indeks Prestasi Semester (IPS), masing-masing mahasiswa tersebut memiliki IPS sebagai berikut: {3.8, 2.9, 3.3, 4.0, 2.4}. Buatlah program untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort! 
+
+```C++
+#include <iostream>
+using namespace std;
+
+void selection_sort(float arr[], int length) {
+    int i, j, min;
+    float temp;
+
+    for (i = 0; i < length; i++) {
+        min = i;
+        for (j = i + 1; j < length; j++) {
+            if (arr[j] > arr[min]) {
+                min = j;
+            }
+        }
+
+        // Swap the elements
+        temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+    }
+}
+
+void print_array(float arr[], int length) {
+    for (int i = 0; i < length; i++) {
+        cout << arr[i] << "\t";
+    }
+    cout << endl;
+}
+
+int main() {
+    int length = 5;
+    float arr[5] = {3.8, 2.9, 3.3, 4.0, 2.4};
+
+    cout << "Indeks Prestasi Semester before sorting: " << endl;
+    print_array(arr, length);
+
+    selection_sort(arr, length);
+
+    cout << "\nIndeks Prestasi Semester after sorting: " << endl;
+    print_array(arr, length);
+}
+```
+#### Output:
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/013ce921-65d7-4b5d-be03-986ebcfb349f)
+
+Kode ini digunakan untuk mengurutkan array berisi nilai prestasi semester mahasiswa. Algoritma yang digunakan adalah sorting selection sort. Kompleksitas waktu algoritma ini adalah O(n^2), karena dalam setiap iterasi, kita mencari nilai minimum dari array yang belum diurutkan. Kompleksitas ruang algoritma ini adalah O(1), karena kita hanya membutuhkan ruang untuk menyimpan nilai array dan variabel temp.
+
+Di dalam kode ini, fungsi ```selection_sort``` menerima dua parameter yaitu array yang akan diurutkan dan panjang array tersebut. Fungsi ```print_array``` menerima dua parameter yaitu array yang akan ditampilkan dan panjang array tersebut. Fungsi ini digunakan untuk menampilkan nilai array. Dalam proses pengurutan, kita menggunakan dua variabel ```i``` dan ```j``` untuk mengindikasikan posisi dalam array. Kita menggunakan variabel ```min``` untuk menyimpan posisi nilai minimum dalam array. Kemudian, kita menggunakan variabel ```temp``` untuk menyimpan nilai yang akan dipindahkan. Pada fungsi ```main()```, program menginisialisasi array ```arr``` dengan panjang 5 dan mengisi nilai array dengan nilai prestasi semester mahasiswa. Terakhir, program mencetak nilai array sebelum diurutkan dan setelah diurutkan.
+
+### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
+
+```C++
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+void bubble_sort(string arr[], int length){
+    bool not_sorted = true;
+    int j=0;
+    string tmp;
+
+    while (not_sorted){
+        not_sorted = false;
+        j++;
+        for (int i=0; i < length - j; i++){
+            if (arr[i] > arr[i + 1]) {
+                tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+                not_sorted = true;
+            }
+        }
+    }
+}
+
+void print_array(string a[], int length) {
+    for(int i=0; i<length; i++) {
+        cout << a[i] << "\t";
+    }
+    cout << endl;
+}
+
+int main() {
+
+    int length = 10;
+    string a[] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};
+
+    cout << "Nama-nama sebelum sorting: " << endl;
+    print_array(a, length);
+
+    bubble_sort(a, length);
+
+    cout << "\nNama-nama setelah sorting: " << endl;
+    print_array(a, length);
+}
+```
+#### Output:
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/0a6e192c-aa4c-4fb7-973b-3d3e0c09236c)
+
+Kode di atas digunakan untuk mengurutkan sebuah array string menggunakan algoritma sorting bubble sort. Algoritma bubble sort adalah salah satu algoritma sorting yang paling sederhana, tetapi memiliki kompleksitas waktu beraturan O(n^2), dimana n adalah panjang array. Hal ini disebabkan karena proses perbandingan dan penggantian elemen array yang dilakukan dalam setiap iterasi, yang mencapai n-1 iterasi. Algoritma bubble sort memiliki kompleksitas ruang beraturan O(1), dimana ruang yang dibutuhkan untuk menyimpan array dan beberapa variabel bantu. Hal ini disebabkan karena tidak ada alokasi memori yang berubah-ubah selama proses sorting.
+
+Fungsi ```bubble_sort``` menerima array string dan panjang array sebagai parameter. Fungsi ```print_array``` digunakan untuk menampilkan isi array string.
+Dalam fungsi ```main()```, array string ```a``` didefinisikan dengan panjang 10 dan isinya adalah beberapa nama. Proses sorting dilakukan dengan menyebutkan fungsi ```bubble_sort``` dengan parameter array ```a``` dan panjang ```length```. Setelah sorting, isi array ```a``` dicetak menggunakan fungsi ```print_array```. Terakhir, program akan menampilkan nama-nama sebelum sorting dan setelah sorting.
+
+### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/82918b9b-dd41-4c7d-bf96-236cd5c2c6b9)
+
+```C++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Masukkan jumlah karakter (n): ";
+    cin >> n;
+
+    vector<char> characters(n);
+    for (int i = 0; i < n; ++i) {
+        cout << "Masukkan karakter ke-" << i + 1 << ": ";
+        cin >> characters[i];
+    }
+
+    // Urutan sebelum sorting
+    cout << "Urutan karakter sebelum sorting:\n";
+    for (char c : characters) {
+        cout << c << " ";
+    }
+    cout << "\n";
+
+    // Ascending sort
+    sort(characters.begin(), characters.end());
+    cout << "Urutan karakter setelah ascending sort:\n";
+    for (char c : characters) {
+        cout << c << " ";
+    }
+    cout << "\n";
+
+    // Descending sort
+    sort(characters.rbegin(), characters.rend());
+    cout << "Urutan karakter setelah descending sort:\n";
+    for (char c : characters) {
+        cout << c << " ";
+    }
+    cout << "\n";
+
+    return 0;
+}
+```
+#### Output:
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/f4d40206-d609-4f09-bd1e-6f248bdf50b3)
+
+Kode diatas digunakan untuk mengurutkan karakter yang diinputkan secara ascending dan descending. Pengguna pertama-tama diminta untuk memasukkan jumlah karakter (n) yang ingin diurutkan. Kemudian, pengguna diminta untuk memasukkan setiap karakter satu per satu. Setiap karakter yang dimasukkan akan disimpan dalam vektor. Kemudian program akan mengeluarkan urutan karakter sebelum sorting. Setelah itu, urutan karakter sebelum dan sesudah diurutkan akan ditampilkan. Ini dilakukan dengan menggunakan fungsi ```sort()``` dari library ```algorithm``` dengan dua parameter, yaitu ```begin()``` dan ```end()``` untuk urutan naik, dan ```rbegin()``` dan ```rend()``` untuk urutan turun. Fungsi ```sort``` dari library ```algorithm``` kemudian digunakan untuk mengurutkan vektor ```characters``` dalam urutan menaik.
+
+Program ini memiliki kompleksitas waktu operasi sorting O(n * log(n)), di mana n adalah jumlah elemen dalam vektor. Ini karena algoritma sorting yang digunakan (quick sort atau merge sort) memiliki kompleksitas waktu yang buruk sebesar O(n * log(n)). Kompleksitas ruang operasi sorting adalah O(n), karena array sementara dengan ukuran n dibutuhkan untuk operasi sorting.
+
+## Kesimpulan
+
+Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu atau secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu. Terdapat 2 jenis pengurutan data, yaitu pengurutan naik (ascending) dan pengurutan turun (descending). Algoritma pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Terdapat 3 algoritma pengurutan yang paling sering digunakan, yaitu:
+1. Insertion Sort: algoritma pengurutan yang bekerja dengan cara menyisipkan elemen baru ke dalam posisi yang tepat dalam array yang sudah terurut.
+2. Selection Sort: algoritma pengurutan yang didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan.
+3. Bubble Sort: algoritma pengurutan yang melakukan proses pengurutan secara berangsur-angsur memindahkan data ke posisi yang tepat.
+
+## Referensi
+[1] R. Firliana, “Algoritma & Pemrograman C++,” Algoritma & Pemrograman C++. 2018. [Online]. Available: http://repository.unpkediri.ac.id/id/eprint/2468
+[2] D. S. Rita Wahyuni Arifin, “Algoritma Metode Pengurutan Bubble Sort dan Quick Dalam Bahasa Pemrograman C++,” Inf. Syst. Educ. Prof., vol. 4, no. 2, pp. 178–187, 2020.
+[3] Endang Retnoningsih, “Algoritma Pengurutan Data (Sorting) Dengan Metode Insertion Sort dan Selection Sort,” Inf. Manag. Educ. Prof., vol. 3, no. 1, pp. 95–106, 2018.
+[4] Sutiono, “Apa itu Algoritma Bubble Sort?,” DosenIT.com. Accessed: Apr. 01, 2024. [Online]. Available: https://dosenit.com/kuliah-it/rpl/algoritma-bubble-sort
