@@ -4,7 +4,7 @@
 ## Dasar Teori
 
 ### Konsep Dasar Sorting
-Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu ataupun secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu [buku]. Meskipun pengurutan ini sepertinya hanya sebuah masalah klasik dalam keinformatikaan, namun perannya tidak dapat dipisahkan terutama dalam pengolahan data. Secara umum ada 2 jenis pengurutan (sorting) data yaitu pengurutan naik (ascending), yaitu jika data disusun mulai dari nilai yang paling kecil hingga yang paling besar dan pengurutan turun (descending), yaitu jika data yang disusun mulai dari nilai yang paling besar hingga paling kecil. Algoritma pemrograman pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Metode pengurutan yang paling sering digunakan yaitu metode Insertion sort, Selection sort dan Bubble Sort [jurnal rita wahyuni].
+Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu ataupun secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu [1]. Meskipun pengurutan ini sepertinya hanya sebuah masalah klasik dalam keinformatikaan, namun perannya tidak dapat dipisahkan terutama dalam pengolahan data. Secara umum ada 2 jenis pengurutan (sorting) data yaitu pengurutan naik (ascending), yaitu jika data disusun mulai dari nilai yang paling kecil hingga yang paling besar dan pengurutan turun (descending), yaitu jika data yang disusun mulai dari nilai yang paling besar hingga paling kecil. Algoritma pemrograman pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Metode pengurutan yang paling sering digunakan yaitu metode Insertion sort, Selection sort dan Bubble Sort [2].
 
 
 #### 1. insertion Sort
@@ -20,7 +20,7 @@ Langkah-langkah algoritma insertion sort:
 Pada langkah 2 dan 3, elemen kedua akan dibandingkan dengan elemen-elemen sebelumnya secara berurutan. Jika elemen kedua lebih kecil dari elemen sebelumnya, maka elemen kedua akan disisipkan di depan elemen tersebut.
 
 #### 2. Selection Sort
-Algoritma selection sort sering juga disebut dengan metode maksimum atau minimum. Metode maksimum karena didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan. Konsepnya dengan memilih elemen maksimum kemudian mempertukarkan elemen maksimum tersebut dengan elemen paling akhir untuk urutan ascending dan elemen pertama untuk descending [jurnal endang retnoningsih]. 
+Algoritma selection sort sering juga disebut dengan metode maksimum atau minimum. Metode maksimum karena didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan. Konsepnya dengan memilih elemen maksimum kemudian mempertukarkan elemen maksimum tersebut dengan elemen paling akhir untuk urutan ascending dan elemen pertama untuk descending [3]. 
 
 Algoritma selection sort memiliki langkah-langkah sebagai berikut:
 
@@ -29,7 +29,7 @@ Algoritma selection sort memiliki langkah-langkah sebagai berikut:
 3. Ulangi langkah 1 dan 2 untuk elemen-elemen berikutnya.
 
 #### 3. Bubble Sort
-Metode ini merupakan metode sorting yang paling mudah, namun paling lambat dibandingkan dengan metode lainnya. Algoritma Bubble Sort merupakan proses pengurutan yang secara berangsur-angsur memindahkan data ke posisi yang tepat. Karena itulah, algoritma ini dinamakan “bubble” atau yang jika diterjemahkan ke dalam Bahasa Indonesia, artinya yaitu gelembung. Secara sederhana, bisa didefinisikan bahwa algoritma Bubble Sort adalah pengurutan dengan cara pertukaran data dengan data di sebelahnya secara terus menerus sampai pada satu iterasi tertentu dimana tidak ada lagi perubahan yang signifikan [web dosenit]. 
+Metode ini merupakan metode sorting yang paling mudah, namun paling lambat dibandingkan dengan metode lainnya. Algoritma Bubble Sort merupakan proses pengurutan yang secara berangsur-angsur memindahkan data ke posisi yang tepat. Karena itulah, algoritma ini dinamakan “bubble” atau yang jika diterjemahkan ke dalam Bahasa Indonesia, artinya yaitu gelembung. Secara sederhana, bisa didefinisikan bahwa algoritma Bubble Sort adalah pengurutan dengan cara pertukaran data dengan data di sebelahnya secara terus menerus sampai pada satu iterasi tertentu dimana tidak ada lagi perubahan yang signifikan [4]. 
 
 Langkah-langkah algoritma bubble sort:
 
@@ -186,6 +186,7 @@ int main() {
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/013ce921-65d7-4b5d-be03-986ebcfb349f)
 
 Kode ini digunakan untuk mengurutkan array berisi nilai prestasi semester mahasiswa. Algoritma yang digunakan adalah sorting selection sort. Kompleksitas waktu algoritma ini adalah O(n^2), karena dalam setiap iterasi, kita mencari nilai minimum dari array yang belum diurutkan. Kompleksitas ruang algoritma ini adalah O(1), karena kita hanya membutuhkan ruang untuk menyimpan nilai array dan variabel temp.
+
 Di dalam kode ini, fungsi ```selection_sort``` menerima dua parameter yaitu array yang akan diurutkan dan panjang array tersebut. Fungsi ```print_array``` menerima dua parameter yaitu array yang akan ditampilkan dan panjang array tersebut. Fungsi ini digunakan untuk menampilkan nilai array. Dalam proses pengurutan, kita menggunakan dua variabel ```i``` dan ```j``` untuk mengindikasikan posisi dalam array. Kita menggunakan variabel ```min``` untuk menyimpan posisi nilai minimum dalam array. Kemudian, kita menggunakan variabel ```temp``` untuk menyimpan nilai yang akan dipindahkan. Pada fungsi ```main()```, program menginisialisasi array ```arr``` dengan panjang 5 dan mengisi nilai array dengan nilai prestasi semester mahasiswa. Terakhir, program mencetak nilai array sebelum diurutkan dan setelah diurutkan.
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
@@ -240,7 +241,10 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/0a6e192c-aa4c-4fb7-973b-3d3e0c09236c)
 
-Kode di atas 
+Kode di atas digunakan untuk mengurutkan sebuah array string menggunakan algoritma sorting bubble sort. Algoritma bubble sort adalah salah satu algoritma sorting yang paling sederhana, tetapi memiliki kompleksitas waktu beraturan O(n^2), dimana n adalah panjang array. Hal ini disebabkan karena proses perbandingan dan penggantian elemen array yang dilakukan dalam setiap iterasi, yang mencapai n-1 iterasi. Algoritma bubble sort memiliki kompleksitas ruang beraturan O(1), dimana ruang yang dibutuhkan untuk menyimpan array dan beberapa variabel bantu. Hal ini disebabkan karena tidak ada alokasi memori yang berubah-ubah selama proses sorting.
+
+Fungsi ```bubble_sort``` menerima array string dan panjang array sebagai parameter. Fungsi ```print_array``` digunakan untuk menampilkan isi array string.
+Dalam fungsi ```main()```, array string ```a``` didefinisikan dengan panjang 10 dan isinya adalah beberapa nama. Proses sorting dilakukan dengan menyebutkan fungsi ```bubble_sort``` dengan parameter array ```a``` dan panjang ```length```. Setelah sorting, isi array ```a``` dicetak menggunakan fungsi ```print_array```. Terakhir, program akan menampilkan nama-nama sebelum sorting dan setelah sorting.
 
 ### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/82918b9b-dd41-4c7d-bf96-236cd5c2c6b9)
@@ -290,9 +294,11 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/f4d40206-d609-4f09-bd1e-6f248bdf50b3)
 
-Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasangan data berupa key dan value. mapNamaNilai menyimpan pasangan nama dan nilai siswa. Kemudian untuk menambahkan, mengubah, dan menghapus data dari map menggunakan fungsi 'insert()', '[]', dan 'erase().
+Kode diatas digunakan untuk mengurutkan karakter yang diinputkan secara ascending dan descending. Pengguna pertama-tama diminta untuk memasukkan jumlah karakter (n) yang ingin diurutkan. Kemudian, pengguna diminta untuk memasukkan setiap karakter satu per satu. Setiap karakter yang dimasukkan akan disimpan dalam vektor. Kemudian program akan mengeluarkan urutan karakter sebelum sorting. Setelah itu, urutan karakter sebelum dan sesudah diurutkan akan ditampilkan. Ini dilakukan dengan menggunakan fungsi ```sort()``` dari library ```algorithm``` dengan dua parameter, yaitu ```begin()``` dan ```end()``` untuk urutan naik, dan ```rbegin()``` dan ```rend()``` untuk urutan turun. Fungsi ```sort``` dari library ```algorithm``` kemudian digunakan untuk mengurutkan vektor ```characters``` dalam urutan menaik.
+
+Program ini memiliki kompleksitas waktu operasi sorting O(n * log(n)), di mana n adalah jumlah elemen dalam vektor. Ini karena algoritma sorting yang digunakan (quick sort atau merge sort) memiliki kompleksitas waktu yang buruk sebesar O(n * log(n)). Kompleksitas ruang operasi sorting adalah O(n), karena array sementara dengan ukuran n dibutuhkan untuk operasi sorting.
 
 ## Kesimpulan
 
@@ -302,7 +308,7 @@ Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya
 3. Bubble Sort: algoritma pengurutan yang melakukan proses pengurutan secara berangsur-angsur memindahkan data ke posisi yang tepat.
 
 ## Referensi
-[1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
-[2] Warno, “Pembelajaran Pemrograman Bahasa Java Dan Arti Keyword,” Pembelajaran Pemrograman Bhs. Java Dan Arti Keyword, vol. 8, no. 1, pp. 40–51, 2020.
-[3] D. Rosadi, “ADT (Abstract Data Type) C++,” medium.com. Accessed: Mar. 10, 2024. [Online]. Available: https://medium.com/@111202214191/adt-abstract-data-type-c-4cdcf4441d8c
-[4] R. Muliono, “ABSTRACT DATA TYPE (ADT),” blog.uma.ac.id. Accessed: Mar. 10, 2024. [Online]. Available: https://rizkimuliono.blog.uma.ac.id/wp-content/uploads/sites/365/2017/05/ADT-Abstract-Data-Type.pdf
+[1] R. Firliana, “Algoritma & Pemrograman C++,” Algoritma & Pemrograman C++. 2018. [Online]. Available: http://repository.unpkediri.ac.id/id/eprint/2468
+[2] D. S. Rita Wahyuni Arifin, “Algoritma Metode Pengurutan Bubble Sort dan Quick Dalam Bahasa Pemrograman C++,” Inf. Syst. Educ. Prof., vol. 4, no. 2, pp. 178–187, 2020.
+[3] Endang Retnoningsih, “Algoritma Pengurutan Data (Sorting) Dengan Metode Insertion Sort dan Selection Sort,” Inf. Manag. Educ. Prof., vol. 3, no. 1, pp. 95–106, 2018.
+[4] Sutiono, “Apa itu Algoritma Bubble Sort?,” DosenIT.com. Accessed: Apr. 01, 2024. [Online]. Available: https://dosenit.com/kuliah-it/rpl/algoritma-bubble-sort
