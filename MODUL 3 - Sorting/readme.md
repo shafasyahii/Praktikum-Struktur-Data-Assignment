@@ -1,20 +1,23 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
 <p align="center">Shafa Syahida</p>
 
 ## Dasar Teori
 
 ### Konsep Dasar Sorting
-Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu ataupun secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu [buku]. Meskipun pengurutan ini sepertinya hanya sebuah masalah klasik dalam keinformatikaan, namun perannya tidak dapat dipisahkan terutama dalam pengolahan data. Secara umum ada 2 jenis pengurutan (sorting) data yaitu pengurutan naik (ascending), yaitu jika data disusun mulai dari nilai yang paling kecil hingga yang paling besar dan pengurutan turun (descending), yaitu jika data yang disusun mulai dari nilai yang paling besar hingga paling kecil. Algoritma pemrograman pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Karena materi pengurutan salah satu materi yang sangat banyak dipelajari sehingga banyak metode pengurutan yang ditemukan atau digunakan untuk melakukan pengurutan data diantaranya metode Insertion sort, Selection sort dan Bubble Sort [jurnal rita wahyuni].
 
-#### 1. Tipe Data Primitif
-Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
-4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+
+#### 1. insertion Sort
+Insertion sort adalah algoritma pengurutan yang bekerja dengan cara menyisipkan element baru ke dalam posisi yang tepat dalam array yang sudah terurut. Algoritma ini dimulai dari elemen kedua, dan membandingkannya dengan elemen pertama. Jika element kedua lebih kecil dari elemen pertama, maka elemen kedua disisipkan di depan elemen pertama. Proses ini diulangi untuk elemen ketiga, keempat, dan seterusnya.
+
+Langkah-langkah algoritma insertion sort:
+
+1. Mulai dari element kedua dalam array.
+2. Bandingkan element kedua dengan element pertama.
+3. Jika element kedua lebih kecil dari element pertama, maka sisipkan element kedua di depan element pertama.
+4. Ulangi langkah 2 dan 3 untuk elemen-element berikutnya.
+
+Pada langkah 2 dan 3, element kedua akan dibandingkan dengan elemen-element sebelumnya secara berturut-turut. Jika element kedua lebih kecil dari element sebelumnya, maka element kedua akan disisipkan di depan element tersebut.
 
 #### 2. Tipe Data Abstrak
 ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
