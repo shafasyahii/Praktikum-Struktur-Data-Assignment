@@ -296,10 +296,10 @@ Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasa
 
 ## Kesimpulan
 
-Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu atau secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu. Terdapat 2 jenis pengurutan data, yaitu pengurutan naik (ascending) dan pengurutan turun (descending). Algoritma pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Terdapat 3 algoritma pengurutan yang populer, yaitu:
-1. Insertion Sort: algoritma pengurutan yang bekerja dengan cara menyisipkan element baru ke dalam posisi yang tepat dalam array yang sudah terurut.
+Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu atau secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu. Terdapat 2 jenis pengurutan data, yaitu pengurutan naik (ascending) dan pengurutan turun (descending). Algoritma pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Terdapat 3 algoritma pengurutan yang paling sering digunakan, yaitu:
+1. Insertion Sort: algoritma pengurutan yang bekerja dengan cara menyisipkan elemen baru ke dalam posisi yang tepat dalam array yang sudah terurut.
 2. Selection Sort: algoritma pengurutan yang didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan.
-3. Bubble Sort: algoritma pengurutan yang paling mudah, namun paling lambat dibandingkan dengan metode lainnya. Algoritma Bubble Sort merupakan proses pengurutan yang secara berangsur-angsur memindahkan data ke posisi yang tepat.
+3. Bubble Sort: algoritma pengurutan yang melakukan proses pengurutan secara berangsur-angsur memindahkan data ke posisi yang tepat.
 
 ## Referensi
 [1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
