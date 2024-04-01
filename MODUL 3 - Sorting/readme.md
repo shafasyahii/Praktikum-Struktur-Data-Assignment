@@ -17,13 +17,26 @@ Langkah-langkah algoritma insertion sort:
 3. Jika element kedua lebih kecil dari element pertama, maka sisipkan element kedua di depan element pertama.
 4. Ulangi langkah 2 dan 3 untuk elemen-element berikutnya.
 
-Pada langkah 2 dan 3, element kedua akan dibandingkan dengan elemen-element sebelumnya secara berturut-turut. Jika element kedua lebih kecil dari element sebelumnya, maka element kedua akan disisipkan di depan element tersebut.
+Pada langkah 2 dan 3, elemen kedua akan dibandingkan dengan elemen-elemen sebelumnya secara berurutan. Jika elemen kedua lebih kecil dari elemen sebelumnya, maka elemen kedua akan disisipkan di depan elemen tersebut.
 
-#### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
+#### 2. Selection Sort
+Algoritma selection sort sering juga disebut dengan metode maksimum atau minimum. Metode maksimum karena didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan. Konsepnya dengan memilih elemen maksimum kemudian mempertukarkan elemen maksimum tersebut dengan elemen paling akhir untuk urutan ascending dan elemen pertama untuk descending [jurnal endang retnoningsih]. 
 
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+Algoritma selection sort memiliki langkah-langkah sebagai berikut:
+
+1. Pilih element terkecil dalam array dengan cara membandingkan element satu per satu (menggunakan perulangan).
+2. Tukar posisi element terkecil dengan element pertama.
+3. Ulangi langkah 1 dan 2 untuk elemen-elemen berikutnya.
+
+#### 3. Bubble Sort
+Metode ini merupakan metode sorting yang paling mudah, namun paling lambat dibandingkan dengan metode lainnya. Algoritma Bubble Sort merupakan proses pengurutan yang secara berangsur-angsur memindahkan data ke posisi yang tepat. Karena itulah, algoritma ini dinamakan “bubble” atau yang jika diterjemahkan ke dalam Bahasa Indonesia, artinya yaitu gelembung. Secara sederhana, bisa didefinisikan bahwa algoritma Bubble Sort adalah pengurutan dengan cara pertukaran data dengan data di sebelahnya secara terus menerus sampai pada satu iterasi tertentu dimana tidak ada lagi perubahan yang signifikan [web dosenit]. 
+
+Langkah-langkah algoritma bubble sort:
+
+1. Masukkan array yang akan diurutkan.
+2. Lakukan perulangan sebanyak ```n-1``` kali, di mana ```n``` adalah jumlah elemen dalam array.
+3. Bandingkan elemen yang ada di sebelahnya. Jika elemen sebelumnya lebih besar dari elemen berikutnya, tukar posisi keduanya.
+4. Lanjutkan perulangan hingga tidak ada lagi pertukaran yang perlu dilakukan.
 
 ## Guided 
 
@@ -283,7 +296,10 @@ Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasa
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+Pengurutan data atau sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu atau secara acak, sehingga menjadi tersusun secara teratur menurut aturan tertentu. Terdapat 2 jenis pengurutan data, yaitu pengurutan naik (ascending) dan pengurutan turun (descending). Algoritma pengurutan sangat banyak dan bervariasi dari yang sederhana hingga yang kompleks. Terdapat 3 algoritma pengurutan yang populer, yaitu:
+1. Insertion Sort: algoritma pengurutan yang bekerja dengan cara menyisipkan element baru ke dalam posisi yang tepat dalam array yang sudah terurut.
+2. Selection Sort: algoritma pengurutan yang didasarkan pada pemilihan data atau elemen maksimum sebagai dasar pengurutan.
+3. Bubble Sort: algoritma pengurutan yang paling mudah, namun paling lambat dibandingkan dengan metode lainnya. Algoritma Bubble Sort merupakan proses pengurutan yang secara berangsur-angsur memindahkan data ke posisi yang tepat.
 
 ## Referensi
 [1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
