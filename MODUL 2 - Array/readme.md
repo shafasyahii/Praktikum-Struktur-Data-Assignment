@@ -326,7 +326,6 @@ Array satu dimensi merupakan sebuah variabel yang menyimpan sekumpulan elemen de
 
 [2] W. Eko S, Logika & Algoritma untuk Pemula. 2020.
 
-[3] MateriDosen, “Array Dua Dimensi C++, Lengkap Contoh Program dan Penjelasan.” Accessed: Mar. 24, 2024. [Online]. Available: https://
-www.materidosen.com/2017/06/array-dua-dimensi-c-lengkap-contoh.html
+[3] MateriDosen, “Array Dua Dimensi C++, Lengkap Contoh Program dan Penjelasan.” Accessed: Mar. 24, 2024. [Online]. Available: https://www.materidosen.com/2017/06/array-dua-dimensi-c-lengkap-contoh.html
 
 [4] Z. Musiafa, STRUKTUR DATA DAN IMPLEMENTASI ALGORITMA. 2022.
