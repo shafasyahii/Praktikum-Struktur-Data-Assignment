@@ -122,136 +122,153 @@ Kode di atas menggunakan struct yang digunakan untuk menyimpan beberapa variabel
 
 ## Unguided
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Kelas S1 IF 2016 G memiliki 5 mahasiswa. Pada akhir semester mereka menerima lembar Indeks Prestasi Semester (IPS), masing-masing mahasiswa tersebut memiliki IPS sebagai berikut: {3.8, 2.9, 3.3, 4.0, 2.4}. Buatlah program untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort! 
 
 ```C++
 #include <iostream>
 using namespace std;
 
-// int untuk bilangan bulat
-int add(int a, int b) {
-    return a + b;
+void selection_sort(float arr[], int length) {
+    int i, j, min;
+    float temp;
+
+    for (i = 0; i < length; i++) {
+        min = i;
+        for (j = i + 1; j < length; j++) {
+            if (arr[j] > arr[min]) {
+                min = j;
+            }
+        }
+
+        // Swap the elements
+        temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+    }
 }
 
-// float untuk bilangan desimal
-float subtract(float a, float b) {
-    return a - b;
+void print_array(float arr[], int length) {
+    for (int i = 0; i < length; i++) {
+        cout << arr[i] << "\t";
+    }
+    cout << endl;
 }
 
-// Main program
 int main() {
-    int a = 5, b = 3;
-    int result1;
-    float result2;
+    int length = 5;
+    float arr[5] = {3.8, 2.9, 3.3, 4.0, 2.4};
 
-    // Memanggil fungsi add dan menampilkan hasilnya
-    result1 = add(a, b);
-    cout << "Addition: " << result1 << endl;
+    cout << "Indeks Prestasi Semester before sorting: " << endl;
+    print_array(arr, length);
 
-    // Memanggil fungsi substract dan menampilkan hasilnya
-    result2 = subtract(5.5, 2.5);
-    cout << "Subtraction: " << result2 << endl;
+    selection_sort(arr, length);
 
-    return 0;
+    cout << "\nIndeks Prestasi Semester after sorting: " << endl;
+    print_array(arr, length);
 }
 ```
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-Kode di atas memiliki dua fungsi, yaitu fungsi 'add' dan 'substract'. Fungsi 'add' menerima dua parameter berupa tipe data integer dan mengembalikan nilai yang merupakan hasil penjumlahan dari kedua parameter. Sedangkan fungsi 'substract' menerima dua parameter berupa tipe data float dan mengembalikan nilai yang adalah hasil pengurangan dari kedua parameter. Pada bagian main program, kode ini akan dijalankan dan memberikan output yang sesuai dengan perintah.
+Kode di atas digunakan untuk  
 
-Dalam materi tipe data primitif, dijelaskan tentang beberapa tipe data dasar yang digunakan untuk menyimpan suatu nilai. Setiap tipe data primitif memiliki ukuran dan rentang nilai yang telah ditetapkan serta tidak dapat diubah. 
-
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
-
-Fungsi dari class dan struct:
-1. Membantu mengorganisir kode menjadi lebih terstruktur dan mudah dipahami.
-2. Data dapat disembunyikan dan hanya dapat diakses melalui fungsi yang telah ditentukan.
-3. Memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda tergantung pada objek yang digunakan.
-   
-Berikut contoh program dari class dan struct:
+### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
 ```C++
 #include <iostream>
 #include <string>
+#include <algorithm>
 
-// struct
-struct Mahasiswa {
-    std::string nama;
-    int semester;
-};
+using namespace std;
 
-// class
-class Dosen {
-public:
-    std::string nama;
-    std::string prodi;
+void bubble_sort(string arr[], int length){
+    bool not_sorted = true;
+    int j=0;
+    string tmp;
 
-    void printInfo() {
-        std::cout << "Dosen Pembimbing: " << nama << ", Homebase Prodi: " << prodi << std::endl;
+    while (not_sorted){
+        not_sorted = false;
+        j++;
+        for (int i=0; i < length - j; i++){
+            if (arr[i] > arr[i + 1]) {
+                tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+                not_sorted = true;
+            }
+        }
     }
-};
+}
 
-// Main program
+void print_array(string a[], int length) {
+    for(int i=0; i<length; i++) {
+        cout << a[i] << "\t";
+    }
+    cout << endl;
+}
+
 int main() {
-    // Membuat object dari struct
-    Mahasiswa mhs;
-    mhs.nama = "Shofiari Qonita";
-    mhs.semester = 9;
 
-    // Membuat object dari class
-    Dosen dosen;
-    dosen.nama = "Alfiani";
-    dosen.prodi = "Sains Data";
+    int length = 10;
+    string a[] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};
 
-    // Menampilkan informasi
-    std::cout << "Mahasiswa: " << mhs.nama << ", Semester: " << mhs.semester << std::endl;
-    dosen.printInfo();
+    cout << "Nama-nama sebelum sorting: " << endl;
+    print_array(a, length);
 
-    return 0;
+    bubble_sort(a, length);
+
+    cout << "\nNama-nama setelah sorting: " << endl;
+    print_array(a, length);
 }
 ```
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
 
-Kode di atas menggabungkan struct dan class, dengan struct "Mahasiswa" digunakan untuk menyimpan informasi tentang mahasiswa tersebut, seperti nama dan semester. Sedangkan class "Dosen" digunakan untuk menyimpan informasi dosen, seperti nama dan homebase prodi. Class "Dosen" juga memiliki fungsi 'printInfo' yang digunakan untuk menampilkan informasi tentang dosen. Pada bagian main program, dua object dari struct dan class tersebut dibuat dan diisi dengan informasi yang relevan, kemudian ditampilkan menggunakan perintah 'std::cout <<'.
+Kode di atas 
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/82918b9b-dd41-4c7d-bf96-236cd5c2c6b9)
 
 ```C++
 #include <iostream>
-#include <map>
+#include <vector>
+#include <algorithm>
 
-// Main program
+using namespace std;
+
 int main() {
-    // Membuat map dengan tipe string sebagai key dan tipe integer sebagai value
-    std::map<std::string, int> mapNamaNilai;
+    int n;
+    cout << "Masukkan jumlah karakter (n): ";
+    cin >> n;
 
-    // Menambahkan data ke dalam map
-    mapNamaNilai.insert(std::make_pair("Susi", 25));
-    mapNamaNilai.insert(std::make_pair("Budi", 30));
-    mapNamaNilai.insert(std::make_pair("Agung", 35));
-
-    // Mencetak semua data pada map
-    for (const auto& item : mapNamaNilai) {
-        std::cout << "Nama: " << item.first << ", Nilai: " << item.second << std::endl;
+    vector<char> characters(n);
+    for (int i = 0; i < n; ++i) {
+        cout << "Masukkan karakter ke-" << i + 1 << ": ";
+        cin >> characters[i];
     }
 
-    // Mengubah nilai dari key "Susi"
-    mapNamaNilai["Susi"] = 26;
-
-    // Menambahkan data baru ke dalam map
-    mapNamaNilai["Dewi"] = 40;
-
-    // Menghapus data dari key "Budi"
-    mapNamaNilai.erase("Budi");
-
-    // Mencetak semua data pada map setelah diubah
-    std::cout << std::endl;
-    for (const auto& item : mapNamaNilai) {
-        std::cout << "Nama: " << item.first << ", Nilai: " << item.second << std::endl;
+    // Urutan sebelum sorting
+    cout << "Urutan karakter sebelum sorting:\n";
+    for (char c : characters) {
+        cout << c << " ";
     }
+    cout << "\n";
+
+    // Ascending sort
+    sort(characters.begin(), characters.end());
+    cout << "Urutan karakter setelah ascending sort:\n";
+    for (char c : characters) {
+        cout << c << " ";
+    }
+    cout << "\n";
+
+    // Descending sort
+    sort(characters.rbegin(), characters.rend());
+    cout << "Urutan karakter setelah descending sort:\n";
+    for (char c : characters) {
+        cout << c << " ";
+    }
+    cout << "\n";
 
     return 0;
 }
@@ -260,11 +277,6 @@ int main() {
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
 
 Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasangan data berupa key dan value. mapNamaNilai menyimpan pasangan nama dan nilai siswa. Kemudian untuk menambahkan, mengubah, dan menghapus data dari map menggunakan fungsi 'insert()', '[]', dan 'erase().
-
-Perbedaan array dan map:
-1. Array hanya dapat menyimpan data dengan tipe data yang sama, sedangkan map dapat menyimpan data dengan tipe yang berbeda.
-2. Array memiliki indeks yang dimulai dari 0 dan hanya dapat diakses menggunakan indeks, sedangkan map memiliki key yang digunakan sebagai indeks dan dapat diakses menggunakan key.
-3. Array memiliki ukuran yang terbatas dan tidak dapat diubah, sedangkan map memiliki ukuran yang fleksibel dan dapat diubah sesuai kebutuhan.
 
 ## Kesimpulan
 
