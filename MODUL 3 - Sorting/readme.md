@@ -87,7 +87,7 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode di atas mengimplementasikan operator aritmatika (+,-,*,/) pada dua angka float. Program ini menggunakan struktur kontrol 'switch' untuk mengevaluasi operator yang diberikan pengguna, kemudian menampilkan hasil operasi yang sesuai.
+Kode di atas mengimplementasikan sorting algorithm yang disebut Bubble Sort. Algoritma ini digunakan untuk mengurutkan sebuah array dari bilangan acak menjadi terurut. Fungsi ```bubble_sort``` menerima dua parameter, yaitu array yang akan diurutkan dan panjangnya. Algoritma Bubble Sort bekerja dengan membandingkan dua elemen berdekatan, dan elemen yang lebih besar dipindahkan ke posisi yang lebih kanan. Proses ini dilakukan berulang kali sampai array diurutkan. Fungsi ```print_array``` digunakan untuk mencetak isi array ke layar dengan format tertentu. Di fungsi ```main()```, array a dideklarasikan dan diinisialisasikan dengan 5 elemen acak, lalu mencetak urutan sebelum dan sesudah diurutkan.
 
 ### 2. Insertion Sort
 
@@ -132,9 +132,8 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode di atas menggunakan struct yang digunakan untuk menyimpan beberapa variabel terkait dalam satu unit. Setelah dijalankan, program akan menampilkan informasi tentang dua mahasiswa, yang berisi nama, alamat, dan umur.
-
-
+Kode di atas digunakan untuk mencetak urutan karakter sebelum dan setelah melakukan sorting menggunakan algoritma insertion sort. Fungsi ```insertion_sort``` ini menerima dua parameter, array ```arr``` dan panjang array ```length```. Fungsi ini menggunakan looping nested untuk membandingkan karakter dalam array dan memindahkan karakter jika diperlukan. Fungsi ```print_array``` digunakan untuk mencetak urutan karakter dalam array. Fungsi ini menerima dua parameter, array ```a``` dan panjang array ```length```. Fungsi ini menggunakan looping for untuk mencetak semua karakter dalam array.
+Dalam fungsi ```main()```, array ```a``` diisi dengan karakter 'c', 'f', 'a', 'z', 'd', dan 'p'. Program mencetak urutan karakter sebelum sorting dan setelah sorting dengan menggunakan fungsi ```print_array```.
 
 ## Unguided
 
@@ -184,9 +183,10 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/013ce921-65d7-4b5d-be03-986ebcfb349f)
 
-Kode di atas digunakan untuk  
+Kode ini digunakan untuk mengurutkan array berisi nilai prestasi semester mahasiswa. Algoritma yang digunakan adalah sorting selection sort. Kompleksitas waktu algoritma ini adalah O(n^2), karena dalam setiap iterasi, kita mencari nilai minimum dari array yang belum diurutkan. Kompleksitas ruang algoritma ini adalah O(1), karena kita hanya membutuhkan ruang untuk menyimpan nilai array dan variabel temp.
+Di dalam kode ini, fungsi ```selection_sort``` menerima dua parameter yaitu array yang akan diurutkan dan panjang array tersebut. Fungsi ```print_array``` menerima dua parameter yaitu array yang akan ditampilkan dan panjang array tersebut. Fungsi ini digunakan untuk menampilkan nilai array. Dalam proses pengurutan, kita menggunakan dua variabel ```i``` dan ```j``` untuk mengindikasikan posisi dalam array. Kita menggunakan variabel ```min``` untuk menyimpan posisi nilai minimum dalam array. Kemudian, kita menggunakan variabel ```temp``` untuk menyimpan nilai yang akan dipindahkan. Pada fungsi ```main()```, program menginisialisasi array ```arr``` dengan panjang 5 dan mengisi nilai array dengan nilai prestasi semester mahasiswa. Terakhir, program mencetak nilai array sebelum diurutkan dan setelah diurutkan.
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
@@ -238,7 +238,7 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/0a6e192c-aa4c-4fb7-973b-3d3e0c09236c)
 
 Kode di atas 
 
