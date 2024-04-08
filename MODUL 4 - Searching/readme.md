@@ -4,12 +4,12 @@
 ## Dasar Teori
 
 ### Searching
-Searching adalah tindakan mengambil data dari kumpulan data berdasarkan kunci (key) atau referensi data [buku]. Tujuan utama dari algoritma ini adalah untuk menemukan posisi atau keberadaan elemen yang dicari. Pada algoritma searching (pencarian) ada 2 metode yang digunakan yaitu : Pencarian sekuensial (Sequential search) dan pencarian biner (Binary search).
+Searching adalah tindakan mengambil data dari kumpulan data berdasarkan kunci (key) atau referensi data [1]. Tujuan utama dari algoritma ini adalah untuk menemukan posisi atau keberadaan elemen yang dicari. Pada algoritma searching (pencarian) ada 2 metode yang digunakan yaitu : Pencarian sekuensial (Sequential search) dan pencarian biner (Binary search).
 
 #### 1. Sequential Search
-Pencarian sekuensial, juga dikenal sebagai linear search, dilakukan dengan membandingkan setiap elemen data secara berurutan dengan elemen yang dicari. Metode ini termasuk metode yang paling sederhana. Proses pencarian sequensial yaitu dengan membandingkan setiap elemen array satu per satu secara beruntun, dimulai dengan elemen pertama, sampai elemen yang dicari ditemukan atau sampai elemen terakhir dari array. Pencarian sekuensial dapat dilakukan pada elemen array yang tidak diurutkan atau pada elemen array yang diurutkan [buku]. 
+Pencarian sekuensial, juga dikenal sebagai linear search, dilakukan dengan membandingkan setiap elemen data secara berurutan dengan elemen yang dicari. Metode ini termasuk metode yang paling sederhana. Proses pencarian sequensial yaitu dengan membandingkan setiap elemen array satu per satu secara beruntun, dimulai dengan elemen pertama, sampai elemen yang dicari ditemukan atau sampai elemen terakhir dari array. Pencarian sekuensial dapat dilakukan pada elemen array yang tidak diurutkan atau pada elemen array yang diurutkan [1]. 
 
-Urutan	Algoritma	Sequential	Searching [jurnal ismail fauziah]:
+Urutan	Algoritma	Sequential	Searching [2]:
 1) I	<-0
 2) Ketemu	<- false
 3) Selama	(tidak	ketemu)	dan	(I	<	N)	kerjakan	baris	4
@@ -17,7 +17,7 @@ Urutan	Algoritma	Sequential	Searching [jurnal ismail fauziah]:
 5) Jika	(ketemu)	maka	I	adalah	indeks	dari	data	yang	dicari
 
 #### 2. Binary Search
-Pencarian   Biner   (binary   Search)   adalah   metode pencarian  data  pada  array  yang  telah terurut,  metode  ini lebih  effisien  dari  pada  metode pencarian  linier  dimana semua  elemen  di  dalam  array  diuji  satu  persatu  sampai ditemukan elemen yang diinginkan [Mutiawani,  Viska,  and Irvanizam  Juwita.  "Penerapan  algoritma pencarian  biner  dalam  aplikasi  kamus  e-Acesia."  In Prosiding Seminar Nasional Informatika. 2011.]. Algoritma pencarian ini menggunakan prinsip divide and conquer, sebuah masalah atau tujuan di selesaikan dengan cara mempartisi masala menjadi bagian yang lebih kecil. Algoritma ini membagi sebuah tabel menjadi bagian yang lebih kecil atau membagi sebuah tabel menjadi dua dan memproses menjadi satu [jurnal Moh zulfitrah]. Algoritma  ini  bekerja  dengan  cara  memilih  record dengan  indeks  tengah  dari  tabel  dan  membandingkannya dengan  record  yang  hendak  dicari.  Jika  record  tersebut lebih  rendah  atau  lebih  tinggi,  maka  tabel  tersebut  dibagi dua  dan  bagian  tabel  yang  bersesuaian  akan  diproses kembali secara rekursif [jurnal rozali toyib].
+Pencarian   Biner   (binary   Search)   adalah   metode pencarian  data  pada  array  yang  telah terurut,  metode  ini lebih  effisien  dari  pada  metode pencarian  linier  dimana semua  elemen  di  dalam  array  diuji  satu  persatu  sampai ditemukan elemen yang diinginkan [3]. Algoritma pencarian ini menggunakan prinsip divide and conquer, sebuah masalah atau tujuan di selesaikan dengan cara mempartisi masala menjadi bagian yang lebih kecil. Algoritma ini membagi sebuah tabel menjadi bagian yang lebih kecil atau membagi sebuah tabel menjadi dua dan memproses menjadi satu [4]. Algoritma  ini  bekerja  dengan  cara  memilih  record dengan  indeks  tengah  dari  tabel  dan  membandingkannya dengan  record  yang  hendak  dicari.  Jika  record  tersebut lebih  rendah  atau  lebih  tinggi,  maka  tabel  tersebut  dibagi dua  dan  bagian  tabel  yang  bersesuaian  akan  diproses kembali secara rekursif [5].
 
 ## Guided 
 
@@ -272,7 +272,13 @@ Kode di atas merupakan implemetasi dari algoritma pencarian secara urut (Sequent
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+Searching adalah tindakan mengambil data dari kumpulan data berdasarkan kunci (key) atau referensi data. Tujuan utama dari algoritma ini adalah untuk menemukan posisi atau keberadaan elemen yang dicari. Ada dua metode pencarian yang digunakan, yaitu pencarian sekuensial (Sequential search) dan pencarian biner (Binary search).
+
+Sequential search dilakukan dengan membandingkan setiap elemen data secara berurutan dengan elemen yang dicari, dimulai dari elemen pertama hingga elemen terakhir. Metode ini termasuk metode yang paling sederhana. Pencarian sekuensial dapat dilakukan pada elemen array yang tidak diurutkan atau pada elemen array yang diurutkan. Pencarian Biner (binary Search) adalah metode pencarian data pada array yang telah terurut, lebih effisien dari pencarian linier. Algoritma pencarian ini menggunakan prinsip divide and conquer. Algoritma ini bekerja dengan cara memilih record dengan indeks tengah dari tabel dan membandingkannya dengan record yang hendak dicari. Jika record tersebut lebih rendah atau lebih tinggi, maka tabel tersebut dibagi dua dan bagian tabel yang bersesuaian akan diproses kembali secara rekursif.
 
 ## Referensi
-
+[1] M. T. Putra, Munawir, and A. R. Yuniarti, Belajar Pemrograman Lanjut Dengan C++. 2023.
+[2] Ismail, Fauziah, and Hayati Nur, “Algoritma Sequential Search Dan Binary Search Pada Sistem Pencarian E-Arsip Berbasis Web,” Kumpul. J. Ilmu Komput., vol. 09, pp. 1–11, 2022.
+[3] Mutiawani,  Viska,  and Irvanizam  Juwita.  "Penerapan  algoritma pencarian  biner  dalam  aplikasi  kamus  e-Acesia."  In Prosiding Seminar Nasional Informatika. 2011.
+[4] M. Z. Fitrah, R. Satra, and L. Budi Ilmawan, “Penerapan Algoritma Binary Search Pada Aplikasi Kamus Bahasa Wolio (Buton),” Bul. Sist. Inf. dan Teknol. Islam, vol. 2, no. 4, pp. 265–274, 2021, doi: 10.33096/busiti.v2i4.998.
+[5] R. Toyib, Y. Darnita, and A. R. S. Deva, “Penerapan Algoritma Binary Search Pada Aplikasi E-Order,” J. Media Infotama, vol. 17, no. 1, pp. 30–37, 2021, doi: 10.37676/jmi.v17i1.1314.
