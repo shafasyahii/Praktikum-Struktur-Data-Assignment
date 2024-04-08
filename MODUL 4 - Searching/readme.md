@@ -278,7 +278,11 @@ Sequential search dilakukan dengan membandingkan setiap elemen data secara berur
 
 ## Referensi
 [1] M. T. Putra, Munawir, and A. R. Yuniarti, Belajar Pemrograman Lanjut Dengan C++. 2023.
+
 [2] Ismail, Fauziah, and Hayati Nur, “Algoritma Sequential Search Dan Binary Search Pada Sistem Pencarian E-Arsip Berbasis Web,” Kumpul. J. Ilmu Komput., vol. 09, pp. 1–11, 2022.
+
 [3] Mutiawani,  Viska,  and Irvanizam  Juwita.  "Penerapan  algoritma pencarian  biner  dalam  aplikasi  kamus  e-Acesia."  In Prosiding Seminar Nasional Informatika. 2011.
+
 [4] M. Z. Fitrah, R. Satra, and L. Budi Ilmawan, “Penerapan Algoritma Binary Search Pada Aplikasi Kamus Bahasa Wolio (Buton),” Bul. Sist. Inf. dan Teknol. Islam, vol. 2, no. 4, pp. 265–274, 2021, doi: 10.33096/busiti.v2i4.998.
+
 [5] R. Toyib, Y. Darnita, and A. R. S. Deva, “Penerapan Algoritma Binary Search Pada Aplikasi E-Order,” J. Media Infotama, vol. 17, no. 1, pp. 30–37, 2021, doi: 10.37676/jmi.v17i1.1314.
