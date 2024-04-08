@@ -1,291 +1,284 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Searching</h1>
 <p align="center">Shafa Syahida</p>
 
 ## Dasar Teori
 
-### Tipe Data
-Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+### Searching
+Searching adalah tindakan mengambil data dari kumpulan data berdasarkan kunci (key) atau referensi data [1]. Tujuan utama dari algoritma ini adalah untuk menemukan posisi atau keberadaan elemen yang dicari. Pada algoritma searching (pencarian) ada 2 metode yang digunakan yaitu : Pencarian sekuensial (Sequential search) dan pencarian biner (Binary search).
 
-#### 1. Tipe Data Primitif
-Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
-4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+#### 1. Sequential Search
+Pencarian sekuensial, juga dikenal sebagai linear search, dilakukan dengan membandingkan setiap elemen data secara berurutan dengan elemen yang dicari. Metode ini termasuk metode yang paling sederhana. Proses pencarian sequensial yaitu dengan membandingkan setiap elemen array satu per satu secara beruntun, dimulai dengan elemen pertama, sampai elemen yang dicari ditemukan atau sampai elemen terakhir dari array. Pencarian sekuensial dapat dilakukan pada elemen array yang tidak diurutkan atau pada elemen array yang diurutkan [1]. 
 
-#### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
+Urutan	Algoritma	Sequential	Searching [2]:
+1) I	<-0
+2) Ketemu	<- false
+3) Selama	(tidak	ketemu)	dan	(I	<	N)	kerjakan	baris	4
+4) Jika	(Data(i)	=	key)	maka	ketemu	<- true	jika	tidak	i<-i+1
+5) Jika	(ketemu)	maka	I	adalah	indeks	dari	data	yang	dicari
 
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+#### 2. Binary Search
+Pencarian   Biner   (binary   Search)   adalah   metode pencarian  data  pada  array  yang  telah terurut,  metode  ini lebih  effisien  dari  pada  metode pencarian  linier  dimana semua  elemen  di  dalam  array  diuji  satu  persatu  sampai ditemukan elemen yang diinginkan [3]. Algoritma pencarian ini menggunakan prinsip divide and conquer, sebuah masalah atau tujuan di selesaikan dengan cara mempartisi masala menjadi bagian yang lebih kecil. Algoritma ini membagi sebuah tabel menjadi bagian yang lebih kecil atau membagi sebuah tabel menjadi dua dan memproses menjadi satu [4]. Algoritma  ini  bekerja  dengan  cara  memilih  record dengan  indeks  tengah  dari  tabel  dan  membandingkannya dengan  record  yang  hendak  dicari.  Jika  record  tersebut lebih  rendah  atau  lebih  tinggi,  maka  tabel  tersebut  dibagi dua  dan  bagian  tabel  yang  bersesuaian  akan  diproses kembali secara rekursif [5].
 
 ## Guided 
 
-### 1. Tipe Data Primitif
+### 1. Buatlah sebuah project dengan menggunakan sequential search sederhana untuk melakukan pencarian data
 
 ```C++
 #include <iostream>
+
 using namespace std;
-// Main program
-main()
-{
-    char op;
-    float num1, num2;
-    // It allows user to enter operator i.e. +, -, *, /
-    cin >> op;
-    // It allow user to enter the operands
-    cin >> num1 >> num2;
-    // Switch statement begins
-    
-    switch(op)
-    {
-    // If user enter +
-    case '+':
-        cout << num1 + num2;
-        break;
-    // If user enter -
-    case '-':
-        cout << num1 - num2;
-        break;
-    // If user enter *
-    case '*':
-        cout << num1 * num2;
-        break;
-    // If user enter /
-    case '/':
-        cout << num1 / num2;
-        break;
-    // If the operator is other than +, -, * or /,
-    // error message will display
-    default:
-        cout << "Error! operator is not correct";
-    } // switch statement ends
-    return 0;
-}
-```
-Kode di atas mengimplementasikan operator aritmatika (+,-,*,/) pada dua angka float. Program ini menggunakan struktur kontrol 'switch' untuk mengevaluasi operator yang diberikan pengguna, kemudian menampilkan hasil operasi yang sesuai.
 
-### 2. Tipe Data Abstrak
+int main() {
+    int n = 10;
+    int data[n] = {9, 4, 1, 7, 5, 12, 4, 13, 4, 10};
+    int cari = 10;
+    bool ketemu = false;
+    int i;
 
-```C++
-#include <stdio.h>
-
-// Struct
-struct Mahasiswa
-{
-    const char *name;
-    const char *address;
-    int age;
-};
-
-int main()
-{
-
-    // Menggunakan struct
-    struct Mahasiswa mhs1, mhs2;
-    // mengisi nilai ke struct
-    mhs1.name = "Dian";
-    mhs1.address = "Mataram";
-    mhs1.age = 22;
-    mhs2.name = "Bambang";
-    mhs2.address = "Surabaya";
-    mhs2.age = 23;
-
-    // mencetak isi struct
-    printf("## Mahasiswa 1 ##\n");
-    printf("Nama: %s\n", mhs1.name);
-    printf("Alamat: %s\n", mhs1.address);
-    printf("Umur: %d\n", mhs1.age);
-    printf("## Mahasiswa 2 ##\n");
-    printf("Nama: %s\n", mhs2.name);
-    printf("Alamat: %s\n", mhs2.address);
-    printf("Umur: %d\n", mhs2.age);
-    return 0;
+    // algoritma sequential search
+    for (i = 0; i < n; i++) {
+        if(data[i] == cari) {
+            ketemu = true;
+            break;
+        }
     }
-```
-Kode di atas menggunakan struct yang digunakan untuk menyimpan beberapa variabel terkait dalam satu unit. Setelah dijalankan, program akan menampilkan informasi tentang dua mahasiswa, yang berisi nama, alamat, dan umur.
+    cout << "\t Program Sequential Search Sederhana\n" << endl;
+    cout << "data: {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}" << endl;
 
-### 3. Tipe Data Koleksi
-
-```C++
-#include <iostream>
-using namespace std;
-int main()
-{
-    //deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
-
-    // mencetak array
-    cout << "Isi array pertama :" << nilai[0] << endl;
-    cout << "Isi array kedua :" << nilai[1] << endl;
-    cout << "Isi array ketiga :" << nilai[2] << endl;
-    cout << "Isi array keempat :" << nilai[3] << endl;
-    cout << "Isi array kelima :" << nilai[4] << endl;
+    if (ketemu){
+        cout << "\n angka "<< cari << " ditemukan pada indeks ke-" << i << endl;
+    } else {
+        cout << cari << " tidak dapat ditemukan pada data." << endl;
+    }
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak isi array yang telah disisipkan. Pada program tersebut, ada sebuah array yang disisipkan dengan nilai 23, 50, 34, 78, dan 90. Setelah itu, menggunakan perintah cout, program akan menampilkan isi array yang telah disisipkan satu per satu.
+#### Output :
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/2fbc2cf9-472b-49a6-b4db-1ea12d1d26ee)
+
+Kode di atas merupakan implementasi algoritma pencarian sekuensial (sequential search). Algoritma ini digunakan untuk mencari elemen tertentu dalam sebuah array dengan cara memeriksa setiap elemen satu per satu hingga ditemukan elemen yang dicari atau sampai seluruh array telah diperiksa. Pertama kita inisialisasi data dengan memasukkan array ```data``` berisi 10 angka, yaitu {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}. Kemudian membuat variabel ```cari```, angka yang ingin dicari adalah 10. Melalui loop ```for```, program memeriksa setiap elemen array ```data```. Jika ditemukan angka yang sama dengan ```cari```, variabel ```ketemu``` diubah menjadi ```true``` dan indeks elemen tersebut disimpan dalam variabel ```i```. Hasil dari program ini akan menunjukkan apakah angka 10 ada dalam array ```data``` dan jika iya, pada indeks ke berapa. Angka 10 ditemukan pada indeks ke-9 (indeks dimulai dari 0).
+
+### 2. Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search
+
+```C++
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+
+using namespace std;
+
+int cari;
+
+void selection_sort(int data[], int length) {
+    int temp, min, i, j;
+    for(i = 0; i < length; i++) {
+        min= i;
+        for(j = i + 1; j < length; j++) {
+            if(data[j] < data[min]) {
+                min = j;
+            }
+        }
+        temp = data[i];
+        data[i] = data[min];
+        data[min] = temp;
+    }
+}
+
+void binarysearch(int data[], int length) {
+    int awal, akhir, tengah, b_flag = 0;
+    awal = 0;
+    akhir = length - 1;
+    while (b_flag == 0 && awal <= akhir) {
+        tengah = (awal + akhir) / 2;
+        if(data[tengah] == cari) {
+            b_flag = 1;
+            break;
+        } else if(data[tengah] < cari)
+            awal = tengah + 1;
+        else
+            akhir = tengah - 1;
+    }
+    if(b_flag == 1)
+        cout << "\n Data ditemukan pada index ke- " << tengah << endl;
+    else
+        cout << "\n Data tidak ditemukan\n";
+}
+
+int main() {
+    int data[7] = {1, 8, 2, 5, 4, 9, 7};
+    int length = sizeof(data) / sizeof(data[0]);
+
+    cout << "\t BINARY SEARCH " << endl;
+    cout << "\n Data : ";
+    // Tampilkan data awal
+    for(int x = 0; x < length; x++)
+        cout << setw(3) << data[x];
+    cout << endl;
+
+    cout << "\n Masukkan data yang ingin anda cari : ";
+    cin >> cari;
+
+    cout << "\n Data diurutkan : ";
+    // urutkan data dengan selection sort
+    selection_sort(data, length);
+
+    // tampilkan data setelah diurutkan
+    for(int x = 0; x < length; x++)
+        cout << setw(3) << data[x];
+    cout << endl;
+
+    binarysearch(data, length);
+    _getche();
+    return EXIT_SUCCESS;
+}
+```
+#### Output :
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/2b01ab53-2a59-422a-bd03-d69aa7367f96)
+
+Kode di atas adalah implementasi dari algoritma Binary Search. Program ini bertujuan untuk mencari suatu data tertentu dalam sebuah array menggunakan metode Binary Search. Data yang ingin dicari dimasukkan oleh pengguna melalui input. Pertama, program menampilkan data awal yang terdapat pada array. Kemudian, data diurutkan menggunakan algoritma Selection Sort agar dapat melakukan pencarian dengan efisien. Setelah data diurutkan, program meminta pengguna memasukkan data yang ingin dicari. Algoritma Binary Search digunakan untuk mencari data yang ingin dicari tadi pada array yang sudah ditentukan diawal. Jika data ditemukan, program menampilkan index tempat data tersebut berada. Jika tidak ditemukan, program memberikan pesan bahwa data tidak ditemukan.
 
 ## Unguided
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!
 
 ```C++
 #include <iostream>
+#include <algorithm>
+#include <string>
+
 using namespace std;
 
-// int untuk bilangan bulat
-int add(int a, int b) {
-    return a + b;
+// Fungsi untuk melakukan binary search pada string
+int binarySearch(const string& kalimat, char huruf) {
+    int left = 0;
+    int right = kalimat.size() - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (kalimat[mid] == huruf) {
+            return mid; // Huruf ditemukan pada indeks mid
+        } else if (kalimat[mid] < huruf) {
+            left = mid + 1; // Cari di bagian kanan
+        } else {
+            right = mid - 1; // Cari di bagian kiri
+        }
+    }
+
+    return -1; // Huruf tidak ditemukan
 }
 
-// float untuk bilangan desimal
-float subtract(float a, float b) {
-    return a - b;
-}
-
-// Main program
 int main() {
-    int a = 5, b = 3;
-    int result1;
-    float result2;
+    string kalimat;
+    char huruf;
 
-    // Memanggil fungsi add dan menampilkan hasilnya
-    result1 = add(a, b);
-    cout << "Addition: " << result1 << endl;
+    cout << "Masukkan kalimat atau huruf: ";
+    getline(cin, kalimat);
 
-    // Memanggil fungsi substract dan menampilkan hasilnya
-    result2 = subtract(5.5, 2.5);
-    cout << "Subtraction: " << result2 << endl;
+    cout << "Masukkan huruf yang ingin dicari: ";
+    cin >> huruf;
+
+    // Ubah semua huruf menjadi lowercase untuk pencarian yang case-insensitive
+    transform(kalimat.begin(), kalimat.end(), kalimat.begin(), ::tolower);
+
+    int hasil = binarySearch(kalimat, huruf);
+
+    if (hasil != -1) {
+        cout << "Huruf '" << huruf << "' ditemukan pada indeks ke-" << hasil << endl;
+    } else {
+        cout << "Huruf '" << huruf << "' tidak ditemukan dalam kalimat atau huruf yang diinput." << endl;
+    }
 
     return 0;
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/29f55d58-d38c-4192-9cdb-f6df23fbd639)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-Kode di atas memiliki dua fungsi, yaitu fungsi 'add' dan 'substract'. Fungsi 'add' menerima dua parameter berupa tipe data integer dan mengembalikan nilai yang merupakan hasil penjumlahan dari kedua parameter. Sedangkan fungsi 'substract' menerima dua parameter berupa tipe data float dan mengembalikan nilai yang adalah hasil pengurangan dari kedua parameter. Pada bagian main program, kode ini akan dijalankan dan memberikan output yang sesuai dengan perintah.
+Kode di atas digunakan untuk melakukan binary search pada string. Fungsi ```binarySearch``` menerima dua parameter yaitu ```kalimat``` yang berisi sebuah string dan ```huruf``` yang berisi sebuah karakter. Fungsi ini menggunakan algoritma binary search untuk mencari posisi karakter ```huruf``` dalam string ```kalimat```. Jika karakter ```huruf``` ditemukan, fungsi akan mengembalikan indeksnya. Jika karakter ```huruf``` tidak ditemukan, fungsi akan mengembalikan -1. Selama belum menemukan karakter yang dicarit, fungsi ini akan melakukan iterasi sampai batas kiri lebih besar dari batas kanan. Pada setiap iterasi, fungsi akan membagi data menjadi dua bagian dan memilih bagian tengah untuk dibandingkan dengan karakter yang ingin dicari. Jika karakter yang dicari lebih besar dari karakter pada indeks tengah, maka fungsi akan melakukan pencarian pada bagian kanan. Sebaliknya, jika karakter yang dicari lebih kecil dari karakter pada indeks tengah, maka fungsi akan melakukan pencarian pada bagian kiri. Proses ini akan terus dilakukan sampai karakter dicari ditemukan atau bagian data habis.
 
-Dalam materi tipe data primitif, dijelaskan tentang beberapa tipe data dasar yang digunakan untuk menyimpan suatu nilai. Setiap tipe data primitif memiliki ukuran dan rentang nilai yang telah ditetapkan serta tidak dapat diubah. 
-
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
-
-Fungsi dari class dan struct:
-1. Membantu mengorganisir kode menjadi lebih terstruktur dan mudah dipahami.
-2. Data dapat disembunyikan dan hanya dapat diakses melalui fungsi yang telah ditentukan.
-3. Memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda tergantung pada objek yang digunakan.
-   
-Berikut contoh program dari class dan struct:
+### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
 
 ```C++
 #include <iostream>
 #include <string>
 
-// struct
-struct Mahasiswa {
-    std::string nama;
-    int semester;
-};
+using namespace std;
 
-// class
-class Dosen {
-public:
-    std::string nama;
-    std::string prodi;
-
-    void printInfo() {
-        std::cout << "Dosen Pembimbing: " << nama << ", Homebase Prodi: " << prodi << std::endl;
-    }
-};
-
-// Main program
 int main() {
-    // Membuat object dari struct
-    Mahasiswa mhs;
-    mhs.nama = "Shofiari Qonita";
-    mhs.semester = 9;
+    string sentence;
+    int vowel_count = 0;
 
-    // Membuat object dari class
-    Dosen dosen;
-    dosen.nama = "Alfiani";
-    dosen.prodi = "Sains Data";
+    cout << "Enter a sentence: ";
+    getline(cin, sentence);
 
-    // Menampilkan informasi
-    std::cout << "Mahasiswa: " << mhs.nama << ", Semester: " << mhs.semester << std::endl;
-    dosen.printInfo();
+    for (char c : sentence) {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
+            c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+            vowel_count++;
+        }
+    }
+
+    cout << "Jumlah huruf vokal: " << vowel_count << endl;
 
     return 0;
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/06ac61d8-cc37-4aab-9582-a7179b7de33e)
 
-Kode di atas menggabungkan struct dan class, dengan struct "Mahasiswa" digunakan untuk menyimpan informasi tentang mahasiswa tersebut, seperti nama dan semester. Sedangkan class "Dosen" digunakan untuk menyimpan informasi dosen, seperti nama dan homebase prodi. Class "Dosen" juga memiliki fungsi 'printInfo' yang digunakan untuk menampilkan informasi tentang dosen. Pada bagian main program, dua object dari struct dan class tersebut dibuat dan diisi dengan informasi yang relevan, kemudian ditampilkan menggunakan perintah 'std::cout <<'.
+Kode di atas bertujuan untuk menghitung jumlah huruf vokal dalam sebuah kalimat yang dimasukkan oleh pengguna. Pertama, program meminta pengguna untuk memasukkan sebuah kalimat sesuai yang diinginkan. Setelah menerima input kalimat, program akan mengiterasi melalui setiap karakter dalam kalimat tersebut. Jika karakter adalah huruf vokal (baik huruf kecil maupun huruf besar), maka variabel ```vowel_count``` akan bertambah satu. Setelah selesai menghitung, program akan menampilkan jumlah huruf vokal yang ada dalam kalimat yang telah diinput pengguna.
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 
 ```C++
 #include <iostream>
-#include <map>
 
-// Main program
-int main() {
-    // Membuat map dengan tipe string sebagai key dan tipe integer sebagai value
-    std::map<std::string, int> mapNamaNilai;
+using namespace std;
 
-    // Menambahkan data ke dalam map
-    mapNamaNilai.insert(std::make_pair("Susi", 25));
-    mapNamaNilai.insert(std::make_pair("Budi", 30));
-    mapNamaNilai.insert(std::make_pair("Agung", 35));
-
-    // Mencetak semua data pada map
-    for (const auto& item : mapNamaNilai) {
-        std::cout << "Nama: " << item.first << ", Nilai: " << item.second << std::endl;
+// Fungsi Sequential Search
+int sequentialSearch(int arr[], int n, int target) {
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] == target) {
+            return i; // Mengembalikan indeks pertama kali ditemukan
+        }
     }
+    return -1; // Jika tidak ditemukan, mengembalikan -1
+}
 
-    // Mengubah nilai dari key "Susi"
-    mapNamaNilai["Susi"] = 26;
+int main() {
+    int data[] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
+    int n = sizeof(data) / sizeof(data[0]);
+    int target = 4;
 
-    // Menambahkan data baru ke dalam map
-    mapNamaNilai["Dewi"] = 40;
+    int result = sequentialSearch(data, n, target);
 
-    // Menghapus data dari key "Budi"
-    mapNamaNilai.erase("Budi");
+    cout << "\t Program Sequential Search Sederhana\n" << endl;
+    cout << "data: {9, 4, 1, 4, 7, 10, 5, 4, 12, 4}\n" << endl;
 
-    // Mencetak semua data pada map setelah diubah
-    std::cout << std::endl;
-    for (const auto& item : mapNamaNilai) {
-        std::cout << "Nama: " << item.first << ", Nilai: " << item.second << std::endl;
+    if (result != -1) {
+        cout << "Angka " << target << " ditemukan pada indeks: " << result << endl;
+    } else {
+        cout << "Angka " << target << " tidak ditemukan dalam data." << endl;
     }
 
     return 0;
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ad1fa6d3-3904-4e90-a603-2a68701b4585)
 
-Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasangan data berupa key dan value. mapNamaNilai menyimpan pasangan nama dan nilai siswa. Kemudian untuk menambahkan, mengubah, dan menghapus data dari map menggunakan fungsi 'insert()', '[]', dan 'erase().
-
-Perbedaan array dan map:
-1. Array hanya dapat menyimpan data dengan tipe data yang sama, sedangkan map dapat menyimpan data dengan tipe yang berbeda.
-2. Array memiliki indeks yang dimulai dari 0 dan hanya dapat diakses menggunakan indeks, sedangkan map memiliki key yang digunakan sebagai indeks dan dapat diakses menggunakan key.
-3. Array memiliki ukuran yang terbatas dan tidak dapat diubah, sedangkan map memiliki ukuran yang fleksibel dan dapat diubah sesuai kebutuhan.
+Kode di atas merupakan implemetasi dari algoritma pencarian secara urut (Sequential Search) untuk mencari angka yang diinginkan dalam array. Jika angka yang diinginkan ditemukan, fungsi akan mengembalikan indeks pertama kali ditemukan. Jika tidak ditemukan, fungsi akan mengembalikan -1. Dalam program ini, array ```data``` berisi angka-angka yang akan dicari. Variabel ```n``` berisi jumlah elemen dalam array. Variabel ```target``` berisi angka yang akan dicari. Program menggunakan fungsi ```sequentialSearch``` untuk mencari angka ```target``` dalam array ```data```. Fungsi ini menggunakan perulangan untuk melakukan pencarian. Hasil pencarian akan ditampilkan melalui output. Jika angka target ditemukan, output akan menampilkan indeks pertama kali ditemukan. Jika tidak ditemukan, output akan menampilkan pesan "Angka [target] tidak ditemukan dalam data."
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+Searching adalah tindakan mengambil data dari kumpulan data berdasarkan kunci (key) atau referensi data. Tujuan utama dari algoritma ini adalah untuk menemukan posisi atau keberadaan elemen yang dicari. Ada dua metode pencarian yang digunakan, yaitu pencarian sekuensial (Sequential search) dan pencarian biner (Binary search).
+
+Sequential search dilakukan dengan membandingkan setiap elemen data secara berurutan dengan elemen yang dicari, dimulai dari elemen pertama hingga elemen terakhir. Metode ini termasuk metode yang paling sederhana. Pencarian sekuensial dapat dilakukan pada elemen array yang tidak diurutkan atau pada elemen array yang diurutkan. Pencarian Biner (binary Search) adalah metode pencarian data pada array yang telah terurut, lebih effisien dari pencarian linier. Algoritma pencarian ini menggunakan prinsip divide and conquer. Algoritma ini bekerja dengan cara memilih record dengan indeks tengah dari tabel dan membandingkannya dengan record yang hendak dicari. Jika record tersebut lebih rendah atau lebih tinggi, maka tabel tersebut dibagi dua dan bagian tabel yang bersesuaian akan diproses kembali secara rekursif.
 
 ## Referensi
-[1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
-[2] Warno, “Pembelajaran Pemrograman Bahasa Java Dan Arti Keyword,” Pembelajaran Pemrograman Bhs. Java Dan Arti Keyword, vol. 8, no. 1, pp. 40–51, 2020.
-[3] D. Rosadi, “ADT (Abstract Data Type) C++,” medium.com. Accessed: Mar. 10, 2024. [Online]. Available: https://medium.com/@111202214191/adt-abstract-data-type-c-4cdcf4441d8c
-[4] R. Muliono, “ABSTRACT DATA TYPE (ADT),” blog.uma.ac.id. Accessed: Mar. 10, 2024. [Online]. Available: https://rizkimuliono.blog.uma.ac.id/wp-content/uploads/sites/365/2017/05/ADT-Abstract-Data-Type.pdf
+[1] M. T. Putra, Munawir, and A. R. Yuniarti, Belajar Pemrograman Lanjut Dengan C++. 2023.
+[2] Ismail, Fauziah, and Hayati Nur, “Algoritma Sequential Search Dan Binary Search Pada Sistem Pencarian E-Arsip Berbasis Web,” Kumpul. J. Ilmu Komput., vol. 09, pp. 1–11, 2022.
+[3] Mutiawani,  Viska,  and Irvanizam  Juwita.  "Penerapan  algoritma pencarian  biner  dalam  aplikasi  kamus  e-Acesia."  In Prosiding Seminar Nasional Informatika. 2011.
+[4] M. Z. Fitrah, R. Satra, and L. Budi Ilmawan, “Penerapan Algoritma Binary Search Pada Aplikasi Kamus Bahasa Wolio (Buton),” Bul. Sist. Inf. dan Teknol. Islam, vol. 2, no. 4, pp. 265–274, 2021, doi: 10.33096/busiti.v2i4.998.
+[5] R. Toyib, Y. Darnita, and A. R. S. Deva, “Penerapan Algoritma Binary Search Pada Aplikasi E-Order,” J. Media Infotama, vol. 17, no. 1, pp. 30–37, 2021, doi: 10.37676/jmi.v17i1.1314.
