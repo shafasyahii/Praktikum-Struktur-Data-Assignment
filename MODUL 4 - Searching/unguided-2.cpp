@@ -17,7 +17,7 @@ int main() {
         }
     }
 
-    cout << "Number of vowels: " << vowel_count << endl;
+    cout << "Jumlah huruf vokal: " << vowel_count << endl;
 
     return 0;
 }

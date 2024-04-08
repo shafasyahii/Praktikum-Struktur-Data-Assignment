@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <string>
 
-using namespace std; // Tambahkan ini
+using namespace std;
 
 // Fungsi untuk melakukan binary search pada string
 int binarySearch(const string& kalimat, char huruf) {
