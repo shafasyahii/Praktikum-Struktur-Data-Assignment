@@ -3,24 +3,21 @@
 
 ## Dasar Teori
 
-### Tipe Data
-Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+### Searching
+Searching adalah tindakan mengambil data dari kumpulan data berdasarkan kunci (key) atau referensi data [buku]. Tujuan utama dari algoritma ini adalah untuk menemukan posisi atau keberadaan elemen yang dicari. Pada algoritma searching (pencarian) ada 2 metode yang digunakan yaitu : Pencarian sekuensial (Sequential search) dan pencarian biner (Binary search).
 
-#### 1. Tipe Data Primitif
-Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
-4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+#### 1. Sequential Search
+Pencarian sekuensial, juga dikenal sebagai linear search, dilakukan dengan membandingkan setiap elemen data secara berurutan dengan elemen yang dicari. Metode ini termasuk metode yang paling sederhana. Proses pencarian sequensial yaitu dengan membandingkan setiap elemen array satu per satu secara beruntun, dimulai dengan elemen pertama, sampai elemen yang dicari ditemukan atau sampai elemen terakhir dari array. Pencarian sekuensial dapat dilakukan pada elemen array yang tidak diurutkan atau pada elemen array yang diurutkan [buku]. 
 
-#### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
+Urutan	Algoritma	Sequential	Searching [jurnal ismail fauziah]:
+1) I	<-0
+2) Ketemu	<- false
+3) Selama	(tidak	ketemu)	dan	(I	<	N)	kerjakan	baris	4
+4) Jika	(Data(i)	=	key)	maka	ketemu	<- true	jika	tidak	i<-i+1
+5) Jika	(ketemu)	maka	I	adalah	indeks	dari	data	yang	dicari
 
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+#### 2. Binary Search
+Pencarian   Biner   (binary   Search)   adalah   metode pencarian  data  pada  array  yang  telah terurut,  metode  ini lebih  effisien  dari  pada  metode pencarian  linier  dimana semua  elemen  di  dalam  array  diuji  satu  persatu  sampai ditemukan elemen yang diinginkan [Mutiawani,  Viska,  and Irvanizam  Juwita.  "Penerapan  algoritma pencarian  biner  dalam  aplikasi  kamus  e-Acesia."  In Prosiding Seminar Nasional Informatika. 2011.]. Algoritma pencarian ini menggunakan prinsip divide and conquer, sebuah masalah atau tujuan di selesaikan dengan cara mempartisi masala menjadi bagian yang lebih kecil. Algoritma ini membagi sebuah tabel menjadi bagian yang lebih kecil atau membagi sebuah tabel menjadi dua dan memproses menjadi satu [jurnal Moh zulfitrah]. Algoritma  ini  bekerja  dengan  cara  memilih  record dengan  indeks  tengah  dari  tabel  dan  membandingkannya dengan  record  yang  hendak  dicari.  Jika  record  tersebut lebih  rendah  atau  lebih  tinggi,  maka  tabel  tersebut  dibagi dua  dan  bagian  tabel  yang  bersesuaian  akan  diproses kembali secara rekursif [jurnal rozali toyib].
 
 ## Guided 
 
