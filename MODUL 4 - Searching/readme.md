@@ -56,7 +56,7 @@ int main() {
 #### Output :
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/2fbc2cf9-472b-49a6-b4db-1ea12d1d26ee)
 
-Kode di atas mengimplementasikan 
+Kode di atas merupakan implementasi algoritma pencarian sekuensial (sequential search). Algoritma ini digunakan untuk mencari elemen tertentu dalam sebuah array dengan cara memeriksa setiap elemen satu per satu hingga ditemukan elemen yang dicari atau sampai seluruh array telah diperiksa. Pertama kita inisialisasi data dengan memasukkan array ```data``` berisi 10 angka, yaitu {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}. Kemudian membuat variabel ```cari```, angka yang ingin dicari adalah 10. Melalui loop ```for```, program memeriksa setiap elemen array ```data```. Jika ditemukan angka yang sama dengan ```cari```, variabel ```ketemu``` diubah menjadi ```true``` dan indeks elemen tersebut disimpan dalam variabel ```i```. Hasil dari program ini akan menunjukkan apakah angka 10 ada dalam array ```data``` dan jika iya, pada indeks ke berapa. Angka 10 ditemukan pada indeks ke-9 (indeks dimulai dari 0).
 
 ### 2. Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search
 
@@ -135,7 +135,7 @@ int main() {
 #### Output :
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/2b01ab53-2a59-422a-bd03-d69aa7367f96)
 
-Kode di atas menggunakan 
+Kode di atas adalah implementasi dari algoritma Binary Search. Program ini bertujuan untuk mencari suatu data tertentu dalam sebuah array menggunakan metode Binary Search. Data yang ingin dicari dimasukkan oleh pengguna melalui input. Pertama, program menampilkan data awal yang terdapat pada array. Kemudian, data diurutkan menggunakan algoritma Selection Sort agar dapat melakukan pencarian dengan efisien. Setelah data diurutkan, program meminta pengguna memasukkan data yang ingin dicari. Algoritma Binary Search digunakan untuk mencari data yang ingin dicari tadi pada array yang sudah ditentukan diawal. Jika data ditemukan, program menampilkan index tempat data tersebut berada. Jika tidak ditemukan, program memberikan pesan bahwa data tidak ditemukan.
 
 ## Unguided
 
@@ -195,7 +195,7 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/29f55d58-d38c-4192-9cdb-f6df23fbd639)
 
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk melakukan binary search pada string. Fungsi ```binarySearch``` menerima dua parameter yaitu ```kalimat``` yang berisi sebuah string dan ```huruf``` yang berisi sebuah karakter. Fungsi ini menggunakan algoritma binary search untuk mencari posisi karakter ```huruf``` dalam string ```kalimat```. Jika karakter ```huruf``` ditemukan, fungsi akan mengembalikan indeksnya. Jika karakter ```huruf``` tidak ditemukan, fungsi akan mengembalikan -1. Selama belum menemukan karakter yang dicarit, fungsi ini akan melakukan iterasi sampai batas kiri lebih besar dari batas kanan. Pada setiap iterasi, fungsi akan membagi data menjadi dua bagian dan memilih bagian tengah untuk dibandingkan dengan karakter yang ingin dicari. Jika karakter yang dicari lebih besar dari karakter pada indeks tengah, maka fungsi akan melakukan pencarian pada bagian kanan. Sebaliknya, jika karakter yang dicari lebih kecil dari karakter pada indeks tengah, maka fungsi akan melakukan pencarian pada bagian kiri. Proses ini akan terus dilakukan sampai karakter dicari ditemukan atau bagian data habis.
 
 ### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
 
@@ -219,15 +219,15 @@ int main() {
         }
     }
 
-    cout << "Number of vowels: " << vowel_count << endl;
+    cout << "Jumlah huruf vokal: " << vowel_count << endl;
 
     return 0;
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/5e81fa65-ff51-4ecd-9bef-849133f7a35a)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/06ac61d8-cc37-4aab-9582-a7179b7de33e)
 
-Kode di atas 
+Kode di atas bertujuan untuk menghitung jumlah huruf vokal dalam sebuah kalimat yang dimasukkan oleh pengguna. Pertama, program meminta pengguna untuk memasukkan sebuah kalimat sesuai yang diinginkan. Setelah menerima input kalimat, program akan mengiterasi melalui setiap karakter dalam kalimat tersebut. Jika karakter adalah huruf vokal (baik huruf kecil maupun huruf besar), maka variabel ```vowel_count``` akan bertambah satu. Setelah selesai menghitung, program akan menampilkan jumlah huruf vokal yang ada dalam kalimat yang telah diinput pengguna.
 
 ### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 
@@ -268,7 +268,7 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ad1fa6d3-3904-4e90-a603-2a68701b4585)
 
-Kode di atas merupakan contoh dari fungsi 
+Kode di atas merupakan implemetasi dari algoritma pencarian secara urut (Sequential Search) untuk mencari angka yang diinginkan dalam array. Jika angka yang diinginkan ditemukan, fungsi akan mengembalikan indeks pertama kali ditemukan. Jika tidak ditemukan, fungsi akan mengembalikan -1. Dalam program ini, array ```data``` berisi angka-angka yang akan dicari. Variabel ```n``` berisi jumlah elemen dalam array. Variabel ```target``` berisi angka yang akan dicari. Program menggunakan fungsi ```sequentialSearch``` untuk mencari angka ```target``` dalam array ```data```. Fungsi ini menggunakan perulangan untuk melakukan pencarian. Hasil pencarian akan ditampilkan melalui output. Jika angka target ditemukan, output akan menampilkan indeks pertama kali ditemukan. Jika tidak ditemukan, output akan menampilkan pesan "Angka [target] tidak ditemukan dalam data."
 
 ## Kesimpulan
 
