@@ -252,7 +252,7 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ad1fa6d3-3904-4e90-a603-2a68701b4585)
+![Screenshot 2024-04-28 201233](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/854d8f84-964a-49be-8628-802fe4ff6048)
 
 Kode di atas digunakan untuk menghitung berapa kali angka 4 muncul dalam sebuah array bilangan bulat. Pertama, array data yang berisi nilai-nilai bilangan bulat dibuat. Kemudian, loop ```for``` digunakan untuk mengulangi setiap elemen dalam array. Di dalam loop, program akan memeriksa apakah elemen array sama dengan 4. Jika ya, variabel ```count``` akan bertambah 1. Setelah loop selesai, nilai ```count``` akan menunjukkan jumlah kemunculan angka 4 dalam array. Terakhir, hasil perhitungan ditampilkan ke konsol dengan pesan "The number of occurrences of 4 in the data is: " diikuti dengan nilai ```count```.
 
