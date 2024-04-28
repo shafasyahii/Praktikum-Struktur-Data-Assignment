@@ -233,34 +233,20 @@ Kode di atas bertujuan untuk menghitung jumlah huruf vokal dalam sebuah kalimat 
 
 ```C++
 #include <iostream>
-
 using namespace std;
-
-// Fungsi Sequential Search
-int sequentialSearch(int arr[], int n, int target) {
-    for (int i = 0; i < n; ++i) {
-        if (arr[i] == target) {
-            return i; // Mengembalikan indeks pertama kali ditemukan
-        }
-    }
-    return -1; // Jika tidak ditemukan, mengembalikan -1
-}
 
 int main() {
     int data[] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
     int n = sizeof(data) / sizeof(data[0]);
-    int target = 4;
+    int count = 0;
 
-    int result = sequentialSearch(data, n, target);
-
-    cout << "\t Program Sequential Search Sederhana\n" << endl;
-    cout << "data: {9, 4, 1, 4, 7, 10, 5, 4, 12, 4}\n" << endl;
-
-    if (result != -1) {
-        cout << "Angka " << target << " ditemukan pada indeks: " << result << endl;
-    } else {
-        cout << "Angka " << target << " tidak ditemukan dalam data." << endl;
+    for (int i = 0; i < n; i++) {
+        if (data[i] == 4) {
+            count++;
+        }
     }
+
+    cout << "The number of occurrences of 4 in the data is: " << count << endl;
 
     return 0;
 }
@@ -268,7 +254,7 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ad1fa6d3-3904-4e90-a603-2a68701b4585)
 
-Kode di atas merupakan implemetasi dari algoritma pencarian secara urut (Sequential Search) untuk mencari angka yang diinginkan dalam array. Jika angka yang diinginkan ditemukan, fungsi akan mengembalikan indeks pertama kali ditemukan. Jika tidak ditemukan, fungsi akan mengembalikan -1. Dalam program ini, array ```data``` berisi angka-angka yang akan dicari. Variabel ```n``` berisi jumlah elemen dalam array. Variabel ```target``` berisi angka yang akan dicari. Program menggunakan fungsi ```sequentialSearch``` untuk mencari angka ```target``` dalam array ```data```. Fungsi ini menggunakan perulangan untuk melakukan pencarian. Hasil pencarian akan ditampilkan melalui output. Jika angka target ditemukan, output akan menampilkan indeks pertama kali ditemukan. Jika tidak ditemukan, output akan menampilkan pesan "Angka [target] tidak ditemukan dalam data."
+Kode di atas digunakan untuk menghitung berapa kali angka 4 muncul dalam sebuah array bilangan bulat. Pertama, array data yang berisi nilai-nilai bilangan bulat dibuat. Kemudian, loop ```for``` digunakan untuk mengulangi setiap elemen dalam array. Di dalam loop, program akan memeriksa apakah elemen array sama dengan 4. Jika ya, variabel ```count``` akan bertambah 1. Setelah loop selesai, nilai ```count``` akan menunjukkan jumlah kemunculan angka 4 dalam array. Terakhir, hasil perhitungan ditampilkan ke konsol dengan pesan "The number of occurrences of 4 in the data is: " diikuti dengan nilai ```count```.
 
 ## Kesimpulan
 
