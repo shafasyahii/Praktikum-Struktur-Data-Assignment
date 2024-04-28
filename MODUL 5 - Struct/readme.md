@@ -203,7 +203,7 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/7724986d-8afc-41c0-9e6a-64b64ce1ac14)
 
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menyimpan dan mengeluarkan informasi tentang lima buku favorit. Program ini menggunakan struktur data bernama ```buku``` untuk menyimpan data-data tersebut. Struktur buku terdiri dari lima array, yaitu ```judul_buku```, ```pengarang```, ```penerbit```, ```tebal_halaman```, dan ```harga_buku```, yang berukuran masing-masing 5. Array-array ini akan digunakan untuk menyimpan judul, nama pengarang, nama penerbit, tebal halaman, dan harga buku-buku favorit. Dalam fungsi ```main()```, variabel favorit dideklarasikan sebagai instance dari struktur buku. Kemudian, data-data buku favorit diinisialisasi dan disimpan ke dalam array-array tersebut. Setelah itu, data-data tersebut dicetak menggunakan perulangan ```for``` dan fungsi ```cout```.
 
 ### 2. Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya?
 
@@ -278,7 +278,7 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/662124fc-e02f-4550-8979-d21e979ceba6)
 
-Kode di atas 
+Perubahan dari ```struct``` menjadi ```array``` memberikan akses data yang mudah dan fleksibilitas manipulasi. Akses data dapat dilakukan dengan mudah menggunakan indeks numerik, seperti judul_buku untuk mengakses buku ketiga. ```struct```, sebaliknya, memerlukan nama anggota untuk mengakses data, seperti favorit.judul_buku untuk mengakses buku ketiga. Selain itu, ```array``` memungkinkan penambahan dan penghapusan elemen dengan fungsi ```push_back()``` dan ```pop_back()``` yang mudah, sedangkan struct memerlukan penambahan dan penghapusan manual anggota yang mungkin rumit. ```Array``` juga mempunyai keterbatasan bahwa semua elemen harus memiliki tipe data yang sama, sedangkan ```struct``` memungkinkan elemen memiliki tipe data yang berbeda, memungkinkan fleksibilitas data.
 
 ## Kesimpulan
 
