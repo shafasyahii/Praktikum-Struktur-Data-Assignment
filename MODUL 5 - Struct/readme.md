@@ -24,261 +24,261 @@ Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengel
 
 ## Guided 
 
-### 1. Tipe Data Primitif
+### 1. Buatlah sebuah struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, harga_buku. Isi dengan nilai kemudian tampilkan.
 
 ```C++
 #include <iostream>
+
 using namespace std;
-// Main program
-main()
-{
-    char op;
-    float num1, num2;
-    // It allows user to enter operator i.e. +, -, *, /
-    cin >> op;
-    // It allow user to enter the operands
-    cin >> num1 >> num2;
-    // Switch statement begins
-    
-    switch(op)
-    {
-    // If user enter +
-    case '+':
-        cout << num1 + num2;
-        break;
-    // If user enter -
-    case '-':
-        cout << num1 - num2;
-        break;
-    // If user enter *
-    case '*':
-        cout << num1 * num2;
-        break;
-    // If user enter /
-    case '/':
-        cout << num1 / num2;
-        break;
-    // If the operator is other than +, -, * or /,
-    // error message will display
-    default:
-        cout << "Error! operator is not correct";
-    } // switch statement ends
-    return 0;
-}
-```
-Kode di atas mengimplementasikan operator aritmatika (+,-,*,/) pada dua angka float. Program ini menggunakan struktur kontrol 'switch' untuk mengevaluasi operator yang diberikan pengguna, kemudian menampilkan hasil operasi yang sesuai.
 
-### 2. Tipe Data Abstrak
-
-```C++
-#include <stdio.h>
-
-// Struct
-struct Mahasiswa
-{
-    const char *name;
-    const char *address;
-    int age;
+// Mendefinisikan struktur buku
+struct buku {
+    string judulBuku;
+    string pengarang;
+    string penerbit;
+    int tebalHalaman;
+    int hargaBuku;
 };
 
-int main()
-{
+int main() {
+    // Mendeklarasikan variabel favorit dengan tipe buku
+    buku favorit;
 
-    // Menggunakan struct
-    struct Mahasiswa mhs1, mhs2;
-    // mengisi nilai ke struct
-    mhs1.name = "Dian";
-    mhs1.address = "Mataram";
-    mhs1.age = 22;
-    mhs2.name = "Bambang";
-    mhs2.address = "Surabaya";
-    mhs2.age = 23;
+    // Mengisi data ke dalam variabel favorit
+    favorit.judulBuku = "The Alpha Girl's Guide";
+    favorit.pengarang = "Henry Manampiring";
+    favorit.penerbit = "Gagas Media";
+    favorit.tebalHalaman = 253;
+    favorit.hargaBuku = 79000;
 
-    // mencetak isi struct
-    printf("## Mahasiswa 1 ##\n");
-    printf("Nama: %s\n", mhs1.name);
-    printf("Alamat: %s\n", mhs1.address);
-    printf("Umur: %d\n", mhs1.age);
-    printf("## Mahasiswa 2 ##\n");
-    printf("Nama: %s\n", mhs2.name);
-    printf("Alamat: %s\n", mhs2.address);
-    printf("Umur: %d\n", mhs2.age);
+    // Menampilkan informasi buku favorit
+    cout << "\tBuku Favorit Saya" << endl;
+    cout << "\tJudul Buku : " << favorit.judulBuku << endl;
+    cout << "\tPengarang : " << favorit.pengarang << endl;
+    cout << "\tPenerbit : " << favorit.penerbit << endl;
+    cout << "\tTebal Halaman: " << favorit.tebalHalaman << " halaman" << endl;
+    cout << "\tHarga Buku : Rp " << favorit.hargaBuku << endl;
+ 
     return 0;
-    }
+}
 ```
-Kode di atas menggunakan struct yang digunakan untuk menyimpan beberapa variabel terkait dalam satu unit. Setelah dijalankan, program akan menampilkan informasi tentang dua mahasiswa, yang berisi nama, alamat, dan umur.
+Kode di atas digunakan untuk menampilkan informasi tentang buku favorit pengguna. Pengguna mendefinisikan struktur buku dengan anggota judul, pengarang, penerbit, tebal halaman, dan harga menggunakan fungsi ```struct```. Kemudian variabel ```favorit``` dibuat dengan tipe buku dan diisi dengan informasi buku favorit yang telah dibuat pada struktur tadi. Program kemudian menampilkan informasi tersebut ke konsol menggunakan fungsi ```cout```.
 
-### 3. Tipe Data Koleksi
+### 2. Buatlah sebuah struktur dengan skema seperti dibawah, isi dengan nilai kemudian jalankan.
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/08a9387a-68c1-4021-a735-26a7ac89b314)
+
 
 ```C++
 #include <iostream>
 using namespace std;
-int main()
-{
-    //deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
 
-    // mencetak array
-    cout << "Isi array pertama :" << nilai[0] << endl;
-    cout << "Isi array kedua :" << nilai[1] << endl;
-    cout << "Isi array ketiga :" << nilai[2] << endl;
-    cout << "Isi array keempat :" << nilai[3] << endl;
-    cout << "Isi array kelima :" << nilai[4] << endl;
+struct hewan {
+    string namaHewan;
+    string jenisKelamin;
+    string caraBerkembangbiak;
+    string alatPernafasan;
+    string tempatHidup;
+    bool Karnivora;
+};
+
+struct hewanDarat {
+    int jumlahKaki;
+    bool menyusui;
+    string suara;
+};
+
+struct hewanLaut {
+    string bentukSirip;
+    string bentukPertahananDiri;
+};
+
+int main() {
+    hewanDarat kelinci; // Menggunakan tipe data hewanDarat untuk kelinci
+    kelinci.jumlahKaki = 4;
+    kelinci.menyusui = true;
+    kelinci.suara = "Citcit";
+
+    hewanLaut ikan; // Menggunakan tipe data hewanLaut untuk ikan
+    ikan.bentukSirip = "Sirip ekor";
+    ikan.bentukPertahananDiri = "Sisik";
+
+    hewan serigala; // Tetap menggunakan tipe data hewan untuk serigala
+    serigala.namaHewan = "Serigala";
+    serigala.jenisKelamin = "Jantan";
+    serigala.caraBerkembangbiak = "Melahirkan";
+    serigala.alatPernafasan = "Paru-paru";
+    serigala.tempatHidup = "Hutan terbuka";
+    serigala.Karnivora = true;
+
+    cout << "\t\tHewan" << endl;
+    cout << "\t" << serigala.namaHewan << endl;
+    cout << "\tJenis kelamin : " << serigala.jenisKelamin << endl;
+    cout << "\tCara berkembangbiak : " << serigala.caraBerkembangbiak << endl;
+    cout << "\tAlat pernafasan : " << serigala.alatPernafasan << endl;
+    cout << "\tTempat hidup : " << serigala.tempatHidup << endl;
+    cout << "\tKarnivora : " << (serigala.Karnivora ? "Yes" : "No") << endl << endl;
+
+    cout << "\t\tHewan Darat" << endl;
+    cout << "\tKelinci" << endl;
+    cout << "\tJumlah kaki : " << kelinci.jumlahKaki << endl;
+    cout << "\tMenyusui : " << (kelinci.menyusui ? "Yes" : "No") << endl;
+    cout << "\tSuara : " << kelinci.suara << endl << endl;
+
+    cout << "\t\tHewan Laut" << endl;
+    cout << "\tIkan" << endl;
+    cout << "\tBentuk sirip : " << ikan.bentukSirip << endl;
+    cout << "\tBentuk pertahanan diri: " << ikan.bentukPertahananDiri << endl;
+
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak isi array yang telah disisipkan. Pada program tersebut, ada sebuah array yang disisipkan dengan nilai 23, 50, 34, 78, dan 90. Setelah itu, menggunakan perintah cout, program akan menampilkan isi array yang telah disisipkan satu per satu.
+Kode di atas mendefinisikan struktur data untuk hewan dan menampilkan informasi tentang mereka. Struktur data dibagi menjadi tiga jenis: hewan secara umum, hewan darat, dan hewan laut yang dibuat menggunakan fungsi ```struct```. Masing-masing struktur memiliki ciri yang sesuai, seperti nama, jenis kelamin, cara berkembang biak, alat pernapasan, tempat hidup, dan karakteristik khusus (misalnya, jumlah kaki untuk hewan darat atau bentuk sirip untuk hewan laut). Kode selanjutnya mendeklarasikan tiga variabel kelinci, ikan, dan serigala menggunakan structs yang telah didefinisikan sebelumnya. Kode kemudian menginisialisasi variabel dengan nilai tertentu. Terakhir, kode menampilkan data setiap hewan menggunakan fungsi ```cout```.
 
 ## Unguided
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
-
-```C++
-#include <iostream>
-using namespace std;
-
-// int untuk bilangan bulat
-int add(int a, int b) {
-    return a + b;
-}
-
-// float untuk bilangan desimal
-float subtract(float a, float b) {
-    return a - b;
-}
-
-// Main program
-int main() {
-    int a = 5, b = 3;
-    int result1;
-    float result2;
-
-    // Memanggil fungsi add dan menampilkan hasilnya
-    result1 = add(a, b);
-    cout << "Addition: " << result1 << endl;
-
-    // Memanggil fungsi substract dan menampilkan hasilnya
-    result2 = subtract(5.5, 2.5);
-    cout << "Subtraction: " << result2 << endl;
-
-    return 0;
-}
-```
-#### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
-
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-Kode di atas memiliki dua fungsi, yaitu fungsi 'add' dan 'substract'. Fungsi 'add' menerima dua parameter berupa tipe data integer dan mengembalikan nilai yang merupakan hasil penjumlahan dari kedua parameter. Sedangkan fungsi 'substract' menerima dua parameter berupa tipe data float dan mengembalikan nilai yang adalah hasil pengurangan dari kedua parameter. Pada bagian main program, kode ini akan dijalankan dan memberikan output yang sesuai dengan perintah.
-
-Dalam materi tipe data primitif, dijelaskan tentang beberapa tipe data dasar yang digunakan untuk menyimpan suatu nilai. Setiap tipe data primitif memiliki ukuran dan rentang nilai yang telah ditetapkan serta tidak dapat diubah. 
-
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
-
-Fungsi dari class dan struct:
-1. Membantu mengorganisir kode menjadi lebih terstruktur dan mudah dipahami.
-2. Data dapat disembunyikan dan hanya dapat diakses melalui fungsi yang telah ditentukan.
-3. Memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda tergantung pada objek yang digunakan.
-   
-Berikut contoh program dari class dan struct:
+### 1. Modifikasi tugas guided pertama, sehingga setiap item yang terdapat pada struct buku berupa array yang berukuran 5, isi dengan data kemudian tampilkan.
 
 ```C++
 #include <iostream>
 #include <string>
 
-// struct
-struct Mahasiswa {
-    std::string nama;
-    int semester;
+using namespace std;
+
+// Create a structure named 'buku' with arrays of size 5
+struct buku {
+    string judul_buku[5];
+    string pengarang[5];
+    string penerbit[5];
+    int tebal_halaman[5];
+    double harga_buku[5];
 };
 
-// class
-class Dosen {
-public:
-    std::string nama;
-    std::string prodi;
-
-    void printInfo() {
-        std::cout << "Dosen Pembimbing: " << nama << ", Homebase Prodi: " << prodi << std::endl;
-    }
-};
-
-// Main program
 int main() {
-    // Membuat object dari struct
-    Mahasiswa mhs;
-    mhs.nama = "Shofiari Qonita";
-    mhs.semester = 9;
+    // Initialize and fill the 'buku' structure
+    buku favorit;
+    favorit.judul_buku[0] = "The Catcher in the Rye";
+    favorit.judul_buku[1] = "Catch-22";
+    favorit.judul_buku[2] = "To Kill a Mockingbird";
+    favorit.judul_buku[3] = "1984";
+    favorit.judul_buku[4] = "Brave New World";
 
-    // Membuat object dari class
-    Dosen dosen;
-    dosen.nama = "Alfiani";
-    dosen.prodi = "Sains Data";
+    favorit.pengarang[0] = "J.D. Salinger";
+    favorit.pengarang[1] = "Joseph Heller";
+    favorit.pengarang[2] = "Harper Lee";
+    favorit.pengarang[3] = "George Orwell";
+    favorit.pengarang[4] = "Aldous Huxley";
 
-    // Menampilkan informasi
-    std::cout << "Mahasiswa: " << mhs.nama << ", Semester: " << mhs.semester << std::endl;
-    dosen.printInfo();
+    favorit.penerbit[0] = "Little, Brown and Company";
+    favorit.penerbit[1] = "Simon & Schuster";
+    favorit.penerbit[2] = "Harper & Row";
+    favorit.penerbit[3] = "Secker and Warburg";
+    favorit.penerbit[4] = "Chatto & Windus";
+
+    favorit.tebal_halaman[0] = 277;
+    favorit.tebal_halaman[1] = 453;
+    favorit.tebal_halaman[2] = 281;
+    favorit.tebal_halaman[3] = 328;
+    favorit.tebal_halaman[4] = 199;
+
+    favorit.harga_buku[0] = 9.99;
+    favorit.harga_buku[1] = 12.99;
+    favorit.harga_buku[2] = 7.99;
+    favorit.harga_buku[3] = 10.99;
+    favorit.harga_buku[4] = 8.99;
+
+    // Display the content of the 'buku' structure
+    for (int i = 0; i < 5; i++) {
+        cout << "\tBuku Favorit Saya" << endl;
+        cout << "\tJudul Buku : " << favorit.judul_buku[i] << endl;
+        cout << "\tPengarang : " << favorit.pengarang[i] << endl;
+        cout << "\tPenerbit : " << favorit.penerbit[i] << endl;
+        cout << "\tTebal Halaman: " << favorit.tebal_halaman[i] << " halaman" << endl;
+        cout << "\tHarga Buku : Rp " << favorit.harga_buku[i] << endl;
+        cout << "-------------------------" << endl;
+    }
 
     return 0;
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/7724986d-8afc-41c0-9e6a-64b64ce1ac14)
 
-Kode di atas menggabungkan struct dan class, dengan struct "Mahasiswa" digunakan untuk menyimpan informasi tentang mahasiswa tersebut, seperti nama dan semester. Sedangkan class "Dosen" digunakan untuk menyimpan informasi dosen, seperti nama dan homebase prodi. Class "Dosen" juga memiliki fungsi 'printInfo' yang digunakan untuk menampilkan informasi tentang dosen. Pada bagian main program, dua object dari struct dan class tersebut dibuat dan diisi dengan informasi yang relevan, kemudian ditampilkan menggunakan perintah 'std::cout <<'.
+Kode di atas digunakan untuk 
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 2. Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya?
+
+Mengubah struktur data dari struct ke array akan menghasilkan kode yang berbeda dengan beberapa perubahan fungsional.
+
+#### Perbedaan Utama:
+- Tipe data: ```struct``` mendefinisikan tipe data baru, ```array``` adalah koleksi elemen.
+- Organisasi data: ```struct``` terstruktur, ```array``` berurutan.
+- Penggunaan memori: ```struct``` menggunakan memori lebih efisien untuk data terkait erat, ```array``` membutuhkan lebih banyak memori.
+
+Jika kita ubah ```struct``` buku menjadi ```array```, kodenya akan menjadi seperti berikut:
 
 ```C++
 #include <iostream>
-#include <map>
+#include <string>
 
-// Main program
+using namespace std;
+
 int main() {
-    // Membuat map dengan tipe string sebagai key dan tipe integer sebagai value
-    std::map<std::string, int> mapNamaNilai;
+    // Deklarasi array
+    string judul_buku[5];
+    string pengarang[5];
+    string penerbit[5];
+    int tebal_halaman[5];
+    double harga_buku[5];
 
-    // Menambahkan data ke dalam map
-    mapNamaNilai.insert(std::make_pair("Susi", 25));
-    mapNamaNilai.insert(std::make_pair("Budi", 30));
-    mapNamaNilai.insert(std::make_pair("Agung", 35));
+    // Mengisi data
+    judul_buku[0] = "The Catcher in the Rye";
+    judul_buku[1] = "Catch-22";
+    judul_buku[2] = "To Kill a Mockingbird";
+    judul_buku[3] = "1984";
+    judul_buku[4] = "Brave New World";
 
-    // Mencetak semua data pada map
-    for (const auto& item : mapNamaNilai) {
-        std::cout << "Nama: " << item.first << ", Nilai: " << item.second << std::endl;
-    }
+    pengarang[0] = "J.D. Salinger";
+    pengarang[1] = "Joseph Heller";
+    pengarang[2] = "Harper Lee";
+    pengarang[3] = "George Orwell";
+    pengarang[4] = "Aldous Huxley";
 
-    // Mengubah nilai dari key "Susi"
-    mapNamaNilai["Susi"] = 26;
+    penerbit[0] = "Little, Brown and Company";
+    penerbit[1] = "Simon & Schuster";
+    penerbit[2] = "Harper & Row";
+    penerbit[3] = "Secker and Warburg";
+    penerbit[4] = "Chatto & Windus";
 
-    // Menambahkan data baru ke dalam map
-    mapNamaNilai["Dewi"] = 40;
+    tebal_halaman[0] = 277;
+    tebal_halaman[1] = 453;
+    tebal_halaman[2] = 281;
+    tebal_halaman[3] = 328;
+    tebal_halaman[4] = 199;
 
-    // Menghapus data dari key "Budi"
-    mapNamaNilai.erase("Budi");
+    harga_buku[0] = 9.99;
+    harga_buku[1] = 12.99;
+    harga_buku[2] = 7.99;
+    harga_buku[3] = 10.99;
+    harga_buku[4] = 8.99;
 
-    // Mencetak semua data pada map setelah diubah
-    std::cout << std::endl;
-    for (const auto& item : mapNamaNilai) {
-        std::cout << "Nama: " << item.first << ", Nilai: " << item.second << std::endl;
+    // Menampilkan data (mirip dengan kode sebelumnya)
+    for (int i = 0; i < 5; i++) {
+        cout << "\tBuku Favorit Saya" << endl;
+        cout << "\tJudul Buku : " << judul_buku[i] << endl;
+        cout << "\tPengarang : " << pengarang[i] << endl;
+        cout << "\tPenerbit : " << penerbit[i] << endl;
+        cout << "\tTebal Halaman: " << tebal_halaman[i] << " halaman" << endl;
+        cout << "\tHarga Buku : Rp " << harga_buku[i] << endl;
+        cout << "-------------------------" << endl;
     }
 
     return 0;
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/662124fc-e02f-4550-8979-d21e979ceba6)
 
-Kode di atas merupakan contoh dari fungsi map yang digunakan untuk meyimpan pasangan data berupa key dan value. mapNamaNilai menyimpan pasangan nama dan nilai siswa. Kemudian untuk menambahkan, mengubah, dan menghapus data dari map menggunakan fungsi 'insert()', '[]', dan 'erase().
-
-Perbedaan array dan map:
-1. Array hanya dapat menyimpan data dengan tipe data yang sama, sedangkan map dapat menyimpan data dengan tipe yang berbeda.
-2. Array memiliki indeks yang dimulai dari 0 dan hanya dapat diakses menggunakan indeks, sedangkan map memiliki key yang digunakan sebagai indeks dan dapat diakses menggunakan key.
-3. Array memiliki ukuran yang terbatas dan tidak dapat diubah, sedangkan map memiliki ukuran yang fleksibel dan dapat diubah sesuai kebutuhan.
+Kode di atas 
 
 ## Kesimpulan
 
