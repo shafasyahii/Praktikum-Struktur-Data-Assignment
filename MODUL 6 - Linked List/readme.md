@@ -885,7 +885,7 @@ Kode di atas digunakan untuk mengelola daftar mahasiswa (berupa nama dan NIM) me
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+hhhhh
 
 ## Referensi
 [1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
