@@ -258,7 +258,7 @@ Kode di atas merupakan implementasi Single Linked List Non-Circular yang digunak
 7. Pembersihan List ```clearList()```: Menghapus semua elemen dalam list.
 8. Tampilan List ```tampil()```: Menampilkan semua data elemen dalam list.
 
-Fungsi main() dalam program ini digunakan untuk mendemonstrasikan penggunaan fungsi-fungsi tersebut.
+Kemudian untuk fungsi main() dalam program ini digunakan sebagai demonstrasi penggunaan fungsi-fungsi tersebut.
 
 ### 2. Double Linked List
 
@@ -399,7 +399,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas menggunakan struct yang digunakan untuk menyimpan beberapa variabel terkait dalam satu unit. Setelah dijalankan, program akan menampilkan informasi tentang dua mahasiswa, yang berisi nama, alamat, dan umur.
+Kode di atas digunakan untuk mengimplementasikan sebuah linked list yang dapat beroperasi secara double-ended, yaitu dapat menambahkan, menghapus, mengupdate, dan menghapus semua data dalam linked list. Kode ini terdiri dari dua kelas: ```Node``` dan ```DoublyLinkedList```. Kelas ```Node``` digunakan untuk mewakili setiap elemen dalam linked list, yang memiliki atribut ```data```, ```prev``` (pointer ke elemen sebelumnya), dan ```next``` (pointer ke elemen berikutnya). Kelas ```DoublyLinkedList``` digunakan untuk mengelola linked list secara keseluruhan. Kelas ini memiliki atribut ```head``` (pointer ke elemen pertama dalam linked list) dan ```tail``` (pointer ke elemen terakhir dalam linked list). Kelas ini juga memiliki beberapa metode untuk mengoperasikan linked list, seperti ```push``` untuk menambahkan elemen baru, ```pop``` untuk menghapus elemen pertama, ```update``` untuk mengupdate data elemen, ```deleteAll``` untuk menghapus semua elemen, dan ```display``` untuk menampilkan semua elemen dalam linked list. Dalam fungsi ```main()```, pengguna dapat memilih operasi yang ingin dilakukan terhadap linked list, seperti menambahkan data, menghapus data, mengupdate data, menghapus semua data, atau menampilkan data.
 
 ### 3. Linked List Non Circular
 
@@ -640,7 +640,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak isi array yang telah disisipkan. Pada program tersebut, ada sebuah array yang disisipkan dengan nilai 23, 50, 34, 78, dan 90. Setelah itu, menggunakan perintah cout, program akan menampilkan isi array yang telah disisipkan satu per satu.
+Kode di atas digunakan untuk mengimplementasikan Single Linked List Circular (SLLC). SLLC adalah struktur data yang terdiri dari node-node yang saling terhubung dengan pointer next, dan tidak memiliki pointer prev seperti dalam Double Linked List. SLLC memiliki beberapa operasi dasar seperti insert, delete, dan traversal. Program ini dapat diinisialisasi dengan fungsi ```init()```, yang mengatur ```head``` dan ```tail``` menjadi ```NULL```. Selain itu, program juga memiliki fungsi ```isEmpty()``` untuk mengecek apakah SLLC masih kosong atau tidak. Fungsi ```buatNode(string data)``` digunakan untuk membuat node baru dengan data yang diberikan. Program ini juga memiliki fungsi untuk menghitung jumlah node dalam SLLC, yaitu ```hitungList()```. Selain itu, program juga memiliki fungsi untuk menambahkan node baru di depan, tengah, dan belakang SLLC, yaitu ```insertDepan(string data)```, ```insertTengah(string data, int posisi)```, dan ```insertBelakang(string data)```. Fungsi ```hapusDepan()```, ```hapusBelakang()```, dan ```hapusTengah(int posisi)``` digunakan untuk menghapus node di depan, belakang, dan tengah SLLC. Fungsi ```clearList()``` digunakan untuk menghapus semua node dalam SLLC. Program ini juga memiliki fungsi ```tampil()``` untuk menampilkan isi SLLC. Dalam contoh program, SLLC digunakan untuk menampilkan daftar hewan, seperti ayam, bebek, cicak, domba, sapi, dan lain-lain. Program ini juga menunjukkan bagaimana melakukan operasi insert, delete, dan traversal pada SLLC.
 
 ## Unguided
 
@@ -874,8 +874,7 @@ int main() {
     return 0;
 }
 ```
-
-Kode di atas digunakan 
+Kode di atas digunakan untuk mengelola daftar mahasiswa (berupa nama dan NIM) menggunakan struktur data Linked List Non-Circular. Mahasiswa disimpan dalam struktur data bernama ```Node``` yang memiliki field ```nama``` (string) dan ```nim``` (string). Beberapa fungsi disediakan untuk menambah data mahasiswa baru di depan, belakang, atau posisi tertentu, serta menghapus mahasiswa di depan, belakang, atau posisi tertentu. Fungsi ```updateNode``` memungkinkan perubahan data mahasiswa pada posisi tertentu. Fungsi ```displayList``` menampilkan daftar mahasiswa dengan format yang rapi, yaitu nama dan NIM mahasiswa. Program ini didesain secara interaktif, pengguna dapat memilih operasi yang diinginkan melalui menu yang disediakan. Jika pengguna sudah selesai memasukkan data mahasiswa, program akan menampilkan data tersebut. Program akan berhenti jika pengguna memilih menu KELUAR dengan menggunakan fungsi ```break```.
 
 #### 2. Setelah membuat menu tersebut, masukkan data sesuai urutan berikut, lalu  tampilkan data yang telah dimasukkan. (Gunakan insert depan, belakang atau tengah)
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b7a57459-9a68-4e92-9af5-c4fe0704df91)
