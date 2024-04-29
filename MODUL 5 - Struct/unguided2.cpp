@@ -44,11 +44,12 @@ int main() {
 
     // Menampilkan data (mirip dengan kode sebelumnya)
     for (int i = 0; i < 5; i++) {
-        cout << "Book Title: " << judul_buku[i] << endl;
-        cout << "Author: " << pengarang[i] << endl;
-        cout << "Publisher: " << penerbit[i] << endl;
-        cout << "Page Thickness: " << tebal_halaman[i] << endl;
-        cout << "Book Price: $" << harga_buku[i] << endl;
+        cout << "\tBuku Favorit Saya" << endl;
+        cout << "\tJudul Buku : " << judul_buku[i] << endl;
+        cout << "\tPengarang : " << pengarang[i] << endl;
+        cout << "\tPenerbit : " << penerbit[i] << endl;
+        cout << "\tTebal Halaman: " << tebal_halaman[i] << " halaman" << endl;
+        cout << "\tHarga Buku : Rp " << harga_buku[i] << endl;
         cout << "-------------------------" << endl;
     }
 

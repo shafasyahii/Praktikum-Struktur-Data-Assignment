@@ -1,212 +1,192 @@
 #include <iostream>
 using namespace std;
 
-/// PROGRAM SINGLE LINKED LIST CIRCULAR
-
+/// PROGRAM SINGLE LINKED LIST NON-CIRCULAR
 // Deklarasi Struct Node
 struct Node {
-    string data;
+    int data;
     Node *next;
 };
 
-Node *head, *tail, *baru, *bantu, *hapus;
+Node *head;
+Node *tail;
 
+// Inisialisasi Node
 void init() {
     head = NULL;
-    tail = head;
+    tail = NULL;
 }
 
-// Pengecekan
-int isEmpty() {
-    if (head == NULL)
-        return 1; // true
-    else
-        return 0; // false
+// Pengecekan apakah list kosong
+bool isEmpty() {
+    return (head == NULL);
 }
 
-// Buat Node Baru
-void buatNode(string data) {
-    baru = new Node;
-    baru->data = data;
+// Tambah Data di Depan
+void insertDepan(int nilai) {
+    Node *baru = new Node;
+    baru->data = nilai;
     baru->next = NULL;
+    if (isEmpty()) {
+        head = tail = baru;
+    } else {
+        baru->next = head;
+        head = baru;
+    }
 }
 
-// Hitung List
-int hitungList() {
-    bantu = head;
-    int jumlah = 0;
-
-    while (bantu != NULL) {
-        jumlah++;
-        bantu = bantu->next;
+// Tambah Data di Belakang
+void insertBelakang(int nilai) {
+    Node *baru = new Node;
+    baru->data = nilai;
+    baru->next = NULL;
+    if (isEmpty()) {
+        head = tail = baru;
+    } else {
+        tail->next = baru;
+        tail = baru;
     }
+}
 
+// Hitung Jumlah Node
+int hitungList() {
+    Node *hitung = head;
+    int jumlah = 0;
+    while (hitung != NULL) {
+        jumlah++;
+        hitung = hitung->next;
+    }
     return jumlah;
 }
 
-// Tambah Depan
-void insertDepan(string data) {
-    // Buat Node baru
-    buatNode(data);
-
-    if (isEmpty() == 1) {
-        head = baru;
-        tail = head;
-        baru->next = head;
+// Tambah Data di Tengah
+void insertTengah(int data, int posisi) {
+    if (posisi < 1 || posisi > hitungList()) {
+        cout << "Posisi diluar jangkauan" << endl;
+    } else if (posisi == 1) {
+        cout << "Posisi bukan posisi tengah" << endl;
     } else {
-        while (tail->next != head) {
-            tail = tail->next;
-        }
-
-        baru->next = head;
-        head = baru;
-        tail->next = head;
-    }
-}
-
-// Tambah Tengah
-void insertTengah(string data, int posisi) {
-    if (isEmpty() == 1) {
-        head = baru;
-        tail = head;
-        baru->next = head;
-    } else {
+        Node *baru = new Node();
         baru->data = data;
-
-        // transversing
-        int nomor = 1;
-        bantu = head;
-
-        while (nomor < posisi -1) {
+        Node *bantu = head;
+        for (int nomor = 1; nomor < posisi - 1; nomor++) {
             bantu = bantu->next;
-            nomor++;
         }
-
         baru->next = bantu->next;
         bantu->next = baru;
     }
 }
 
-// Tambah Belakang
-void insertBelakang(string data) {
-    // Buat Node Baru
-    buatNode(data);
-
-    if (isEmpty() == 1) {
-        head = baru;
-        tail = head;
-        baru->next = head;
-    } else {
-        while (tail->next != head) {
-            tail = tail->next;
-        }
-
-        tail->next = baru;
-        baru->next = head;
-    }
-}
-
-// Hapus Depan
+// Hapus Node di Depan
 void hapusDepan() {
-    if (isEmpty() == 0) {
-        hapus = head;
-        tail = head;
-
-        if (hapus->next == head) {
-            head = NULL;
-            tail = NULL;
-            delete hapus;
-        } else {
-            while (tail->next != hapus) {
-                tail = tail->next;
-            }
-
+    if (!isEmpty()) {
+        Node *hapus = head;
+        if (head->next != NULL) {
             head = head->next;
-            tail->next = head;
-            hapus->next = NULL;
-            delete hapus;
-        }
-    } else {
-        cout << "List masih kosong!" << endl;
-    }
-}
-
-// Hapus Belakang
-void hapusBelakang() {
-    if (isEmpty() == 0) {
-        hapus = head;
-        tail = head;
-
-        if (hapus->next == head) {
-            head = NULL;
-            tail = NULL;
-            delete hapus;
         } else {
-            while (hapus->next != head) {
-                hapus = hapus->next;
-            }
-
-            while (tail->next != hapus) {
-                tail = tail->next;
-            }
-
-            tail->next = head;
-            hapus->next = NULL;
-            delete hapus;
+            head = tail = NULL;
         }
+        delete hapus;
     } else {
-        cout << "List masih kosong!" << endl;
+        cout << "List kosong!" << endl;
     }
 }
 
-// Hapus Tengah
-void hapusTengah(int posisi) {
-    if (isEmpty() == 0) {
-        // transvering
-        int nomor = 1;
-        bantu = head;
-
-        while (nomor < posisi - 1) {
-            bantu = bantu->next;
-            nomor++;
+// Hapus Node di Belakang
+void hapusBelakang() {
+    if (!isEmpty()) {
+        Node *hapus = tail;
+        if (head != tail) {
+            Node *bantu = head;
+            while (bantu->next != tail) {
+                bantu = bantu->next;
+            }
+            tail = bantu;
+            tail->next = NULL;
+        } else {
+            head = tail = NULL;
         }
+        delete hapus;
+    } else {
+        cout << "List kosong!" << endl;
+    }
+}
 
+// Hapus Node di Tengah
+void hapusTengah(int posisi) {
+    if (posisi < 1 || posisi > hitungList()) {
+        cout << "Posisi di luar jangkauan" << endl;
+    } else if (posisi == 1) {
+        cout << "Posisi bukan posisi tengah" << endl;
+    } else {
+        Node *hapus;
+        Node *bantu = head;
+        for (int nomor = 1; nomor < posisi - 1; nomor++) {
+            bantu = bantu->next;
+        }
         hapus = bantu->next;
         bantu->next = hapus->next;
         delete hapus;
+    }
+}
+
+// Ubah Data di Depan
+void ubahDepan(int data) {
+    if (!isEmpty()) {
+        head->data = data;
     } else {
         cout << "List masih kosong!" << endl;
     }
 }
 
-// Hapus List
-void clearList() {
-    if (head != NULL) {
-        hapus = head->next;
-
-        while (hapus != head) {
-            bantu = hapus-> next;
-            delete hapus;
-            hapus = bantu;
+// Ubah Data di Tengah
+void ubahTengah(int data, int posisi) {
+    if (!isEmpty()) {
+        if (posisi < 1 || posisi > hitungList()) {
+            cout << "Posisi di luar jangkauan" << endl;
+        } else if (posisi == 1) {
+            cout << "Posisi bukan posisi tengah" << endl;
+        } else {
+            Node *bantu = head;
+            for (int nomor = 1; nomor < posisi; nomor++) {
+                bantu = bantu->next;
+            }
+            bantu->data = data;
         }
-
-        delete head;
-        head = NULL;
+    } else {
+        cout << "List masih kosong!" << endl;
     }
+}
 
+// Ubah Data di Belakang
+void ubahBelakang(int data) {
+    if (!isEmpty()) {
+        tail->data = data;
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// Hapus Semua Node
+void clearList() {
+    Node *hapus;
+    while (head != NULL) {
+        hapus = head;
+        head = head->next;
+        delete hapus;
+    }
+    tail = NULL;
     cout << "List berhasil terhapus!" << endl;
 }
 
-//Tampilan List
+// Tampilkan List
 void tampil() {
-    if (isEmpty() == 0) {
-        tail = head;
-
-        do {
-            cout << tail->data << ends;
-            tail = tail->next;
-        } while (tail != head);
-
+    Node *bantu = head;
+    if (!isEmpty()) {
+        while (bantu != NULL) {
+            cout << bantu->data << " ";
+            bantu = bantu->next;
+        }
         cout << endl;
     } else {
         cout << "List masih kosong!" << endl;
@@ -215,21 +195,17 @@ void tampil() {
 
 int main() {
     init();
-    insertDepan("Ayam");
-    tampil();
-    insertDepan("Bebek");
-    tampil();
-    insertBelakang("Cicak");
-    tampil();
-    insertBelakang("Domba");
-    tampil();
-    hapusBelakang();
-    tampil();
-    hapusDepan();
-    tampil();
-    insertTengah("Sapi", 2);
-    tampil();
-    hapusTengah(2);
-    tampil();
+    insertDepan(3); tampil();
+    insertBelakang(5); tampil();
+    insertDepan(2); tampil();
+    insertDepan(1); tampil();
+    hapusDepan(); tampil();
+    hapusBelakang(); tampil();
+    insertTengah(7, 2); tampil();
+    hapusTengah(2); tampil();
+    ubahDepan(1); tampil();
+    ubahBelakang(8); tampil();
+    ubahTengah(11, 2); tampil();
+    clearList();
     return 0;
 }
