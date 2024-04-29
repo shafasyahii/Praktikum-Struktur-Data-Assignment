@@ -239,26 +239,9 @@ int main() {
     return 0;
 }
 ```
-Kode di atas merupakan implementasi Single Linked List Non-Circular yang digunakan untuk mengelola data. Fungsionalitas utama program ini meliputi inisialisasi list, pengecekan list kosong, penambahan data di depan, belakang, dan tengah, penghapusan data di depan, belakang, dan tengah, perubahan data di depan, belakang, dan tengah, penghitungan jumlah node, pembersihan list, dan tampilan list. Berikut penjelasan fungsi-fungsi utama pada program tersebut :
-1. Inisialisasi ```init()```: Mengatur pointer head dan tail ke NULL untuk menunjukkan bahwa list kosong.
-2. Pengecekan apakah list kosong ```isEmpty()```: Mengembalikan nilai true jika list kosong (head = NULL), dan false jika list tidak kosong.
-3. Penambahan Data: 
-    - Depan ```insertDepan(nilai)```: Menambahkan elemen baru di depan list.
-    - Belakang ```insertBelakang(nilai)```: Menambahkan elemen baru di belakang list.
-    - Tengah ```insertTengah(data, posisi)```: Menambahkan elemen baru di posisi tertentu (tengah) list.
-4. Penghapusan Data: 
-    - Depan ```hapusDepan()```: Menghapus elemen di depan list.
-    - Belakang ```hapusBelakang()```: Menghapus elemen di belakang list.
-    - Tengah ```hapusTengah(posisi)```: Menghapus elemen di posisi tertentu (tengah) list.
-5. Perubahan Data: 
-    - Depan ```ubahDepan(data)```: Mengubah data elemen di depan list.
-    - Belakang ```ubahBelakang(data)```: Mengubah data elemen di belakang list.
-    - Tengah ```ubahTengah(data, posisi)```: Mengubah data elemen di posisi tertentu (tengah) list.
-6. Penghitungan Jumlah Node ```hitungList()```: Menghitung dan mengembalikan jumlah elemen dalam list.
-7. Pembersihan List ```clearList()```: Menghapus semua elemen dalam list.
-8. Tampilan List ```tampil()```: Menampilkan semua data elemen dalam list.
+Kode di atas digunakan untuk mengimplementasikan operasi pada Single Linked List (SLL) non-circular, yaitu sebuah struktur data yang terdiri dari node-node yang terhubung satu sama lain melalui pointer. SLL non-circular berbeda dengan SLL circular karena tidak memiliki pointer yang mengarah ke node pertama ketika mencapai node terakhir.
 
-Kemudian untuk fungsi main() dalam program ini digunakan sebagai demonstrasi penggunaan fungsi-fungsi tersebut.
+Program ini terdiri dari beberapa fungsi yang digunakan untuk mengelola SLL. Fungsi ```init()``` digunakan untuk inisialisasi SLL dengan mengatur pointer ```head``` dan ```tail``` menjadi ```NULL```. Fungsi ```isEmpty()``` digunakan untuk mengecek apakah SLL masih kosong. Fungsi ```insertDepan(int nilai)``` dan ```insertBelakang(int nilai)``` digunakan untuk menambahkan data di depan dan belakang SLL, masing-masing. Fungsi ```hitungList()``` digunakan untuk menghitung jumlah node dalam SLL. Fungsi ```insertTengah(int data, int posisi)``` digunakan untuk menambahkan data di tengah SLL, sedangkan fungsi ```hapusDepan()```, ```hapusBelakang()```, dan ```hapusTengah(int posisi)``` digunakan untuk menghapus node di depan, belakang, dan tengah SLL, masing-masing. Fungsi ```ubahDepan(int data)```, ```ubahTengah(int data, int posisi)```, dan ```ubahBelakang(int data)``` digunakan untuk mengubah data di depan, tengah, dan belakang SLL, masing-masing. Fungsi ```clearList()``` digunakan untuk menghapus semua node dalam SLL. Fungsi tampil() digunakan untuk menampilkan isi SLL. Terakhir, 'fjn  ungsi ```main()``` digunakan untuk menguji operasi-operasi yang telah diimplementasikan.
 
 ### 2. Double Linked List
 
