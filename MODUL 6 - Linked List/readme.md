@@ -859,13 +859,14 @@ int main() {
 ```
 Kode di atas digunakan untuk mengelola daftar mahasiswa (berupa nama dan NIM) menggunakan struktur data Linked List Non-Circular. Mahasiswa disimpan dalam struktur data bernama ```Node``` yang memiliki field ```nama``` (string) dan ```nim``` (string). Beberapa fungsi disediakan untuk menambah data mahasiswa baru di depan, belakang, atau posisi tertentu, serta menghapus mahasiswa di depan, belakang, atau posisi tertentu. Fungsi ```updateNode``` memungkinkan perubahan data mahasiswa pada posisi tertentu. Fungsi ```displayList``` menampilkan daftar mahasiswa dengan format yang rapi, yaitu nama dan NIM mahasiswa. Program ini didesain secara interaktif, pengguna dapat memilih operasi yang diinginkan melalui menu yang disediakan. Jika pengguna sudah selesai memasukkan data mahasiswa, program akan menampilkan data tersebut. Program akan berhenti jika pengguna memilih menu KELUAR dengan menggunakan fungsi ```break```.
 
+##### Output:
+![Screenshot 2024-04-29 141735](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/a2b79113-15bc-458f-b1e9-0a50aafe7ccd)
+
 #### 2. Setelah membuat menu tersebut, masukkan data sesuai urutan berikut, lalu  tampilkan data yang telah dimasukkan. (Gunakan insert depan, belakang atau tengah)
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b7a57459-9a68-4e92-9af5-c4fe0704df91)
 
 ##### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
-
-Kode di atas menggabungkan
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/60e2e086-8716-409a-8b5f-770692060b90)
 
 #### 3. Lakukan perintah berikut: 
 - Tambahkan data berikut diantara Farrel dan Denis: Wati 2330004
@@ -880,9 +881,7 @@ Kode di atas menggabungkan
 - Tampilkan seluruh data
 
 ##### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
-
-Kode di atas merupakan 
+![Screenshot 2024-04-29 145033](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/313950ba-af77-4140-8544-01d596c9de15)
 
 ## Kesimpulan
 
