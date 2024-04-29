@@ -243,17 +243,17 @@ Kode di atas merupakan implementasi Single Linked List Non-Circular yang digunak
 1. Inisialisasi ```init()```: Mengatur pointer head dan tail ke NULL untuk menunjukkan bahwa list kosong.
 2. Pengecekan apakah list kosong ```isEmpty()```: Mengembalikan nilai true jika list kosong (head = NULL), dan false jika list tidak kosong.
 3. Penambahan Data: 
-- Depan ```insertDepan(nilai)```: Menambahkan elemen baru di depan list.
-- Belakang ```insertBelakang(nilai)```: Menambahkan elemen baru di belakang list.
-- Tengah ```insertTengah(data, posisi)```: Menambahkan elemen baru di posisi tertentu (tengah) list.
+    - Depan ```insertDepan(nilai)```: Menambahkan elemen baru di depan list.
+    - Belakang ```insertBelakang(nilai)```: Menambahkan elemen baru di belakang list.
+    - Tengah ```insertTengah(data, posisi)```: Menambahkan elemen baru di posisi tertentu (tengah) list.
 4. Penghapusan Data: 
-- Depan ```hapusDepan()```: Menghapus elemen di depan list.
-- Belakang ```hapusBelakang()```: Menghapus elemen di belakang list.
-- Tengah ```hapusTengah(posisi)```: Menghapus elemen di posisi tertentu (tengah) list.
+    - Depan ```hapusDepan()```: Menghapus elemen di depan list.
+    - Belakang ```hapusBelakang()```: Menghapus elemen di belakang list.
+    - Tengah ```hapusTengah(posisi)```: Menghapus elemen di posisi tertentu (tengah) list.
 5. Perubahan Data: 
-- Depan ```ubahDepan(data)```: Mengubah data elemen di depan list.
-- Belakang ```ubahBelakang(data)```: Mengubah data elemen di belakang list.
-- Tengah ```ubahTengah(data, posisi)```: Mengubah data elemen di posisi tertentu (tengah) list.
+    - Depan ```ubahDepan(data)```: Mengubah data elemen di depan list.
+    - Belakang ```ubahBelakang(data)```: Mengubah data elemen di belakang list.
+    - Tengah ```ubahTengah(data, posisi)```: Mengubah data elemen di posisi tertentu (tengah) list.
 6. Penghitungan Jumlah Node ```hitungList()```: Menghitung dan mengembalikan jumlah elemen dalam list.
 7. Pembersihan List ```clearList()```: Menghapus semua elemen dalam list.
 8. Tampilan List ```tampil()```: Menampilkan semua data elemen dalam list.
