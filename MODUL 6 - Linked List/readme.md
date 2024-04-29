@@ -240,23 +240,23 @@ int main() {
 }
 ```
 Kode di atas merupakan implementasi Single Linked List Non-Circular yang digunakan untuk mengelola data. Fungsionalitas utama program ini meliputi inisialisasi list, pengecekan list kosong, penambahan data di depan, belakang, dan tengah, penghapusan data di depan, belakang, dan tengah, perubahan data di depan, belakang, dan tengah, penghitungan jumlah node, pembersihan list, dan tampilan list. Berikut penjelasan fungsi-fungsi utama pada program tersebut :
-•	Inisialisasi (init()): Mengatur pointer head dan tail ke NULL untuk menunjukkan bahwa list kosong.
-•	Pengecekan Kosong (isEmpty()): Mengembalikan nilai true jika list kosong (head = NULL), dan false jika list tidak kosong.
-•	Penambahan Data: 
+- Inisialisasi (init()): Mengatur pointer head dan tail ke NULL untuk menunjukkan bahwa list kosong.
+- Pengecekan Kosong (isEmpty()): Mengembalikan nilai true jika list kosong (head = NULL), dan false jika list tidak kosong.
+- Penambahan Data: 
 o	Depan (insertDepan(nilai)): Menambahkan elemen baru di depan list.
 o	Belakang (insertBelakang(nilai)): Menambahkan elemen baru di belakang list.
 o	Tengah (insertTengah(data, posisi)): Menambahkan elemen baru di posisi tertentu (tengah) list.
-•	Penghapusan Data: 
+- Penghapusan Data: 
 o	Depan (hapusDepan()): Menghapus elemen di depan list.
 o	Belakang (hapusBelakang()): Menghapus elemen di belakang list.
 o	Tengah (hapusTengah(posisi)): Menghapus elemen di posisi tertentu (tengah) list.
-•	Perubahan Data: 
+- Perubahan Data: 
 o	Depan (ubahDepan(data)): Mengubah data elemen di depan list.
 o	Belakang (ubahBelakang(data)): Mengubah data elemen di belakang list.
 o	Tengah (ubahTengah(data, posisi)): Mengubah data elemen di posisi tertentu (tengah) list.
-•	Penghitungan Jumlah Node (hitungList()): Menghitung dan mengembalikan jumlah elemen dalam list.
-•	Pembersihan List (clearList()): Menghapus semua elemen dalam list.
-•	Tampilan List (tampil()): Menampilkan semua data elemen dalam list.
+- Penghitungan Jumlah Node (hitungList()): Menghitung dan mengembalikan jumlah elemen dalam list.
+- Pembersihan List (clearList()): Menghapus semua elemen dalam list.
+- Tampilan List (tampil()): Menampilkan semua data elemen dalam list.
 
 Fungsi main() dalam program ini digunakan untuk mendemonstrasikan penggunaan fungsi-fungsi tersebut.
 
