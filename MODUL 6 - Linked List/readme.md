@@ -867,22 +867,16 @@ Kode di atas digunakan
 Kode di atas menggabungkan
 
 #### 3. Lakukan perintah berikut: 
-a) Tambahkan data berikut diantara Farrel dan Denis: 
-Wati 2330004 
-b) Hapus data Denis 
-c) Tambahkan data berikut di awal: 
-Owi 2330000 
-d) Tambahkan data berikut di akhir: 
-David 23300100 
-e) Ubah data Udin menjadi data berikut: 
-Idin 23300045 
-f) Ubah data terkahir menjadi berikut: 
-Lucy 23300101 
-g) Hapus data awal 
-h) Ubah data awal menjadi berikut: 
-Bagas 2330002 
-i) Hapus data akhir 
-j) Tampilkan seluruh data
+- Tambahkan data berikut diantara Farrel dan Denis: Wati 2330004
+- Hapus data Denis 
+- Tambahkan data berikut di awal: Owi 2330000 
+- Tambahkan data berikut di akhir: David 23300100 
+- Ubah data Udin menjadi data berikut: Idin 23300045 
+- Ubah data terkahir menjadi berikut: Lucy 23300101 
+- Hapus data awal 
+- Ubah data awal menjadi berikut: Bagas 2330002 
+- Hapus data akhir 
+- Tampilkan seluruh data
 
 ##### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b00b32cb-0776-4240-9e74-4a7c36b3e0b4)
