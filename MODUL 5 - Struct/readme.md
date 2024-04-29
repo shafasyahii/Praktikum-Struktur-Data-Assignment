@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Struct dan Implementasi</h1>
 <p align="center">Shafa Syahida</p>
 
 ## Dasar Teori
