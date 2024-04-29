@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Linked list adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer. Setiap simpul menyimpan data dan alamat (pointer) ke simpul berikutnya dalam urutan. Terdapat beberapa jenis linked list, antara lain: single linked list, double linked list, circular linked list, dan non-circular linked list[buku].
+Linked list adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer. Setiap simpul menyimpan data dan alamat (pointer) ke simpul berikutnya dalam urutan. Terdapat beberapa jenis linked list, antara lain: single linked list, double linked list, circular list[1].
 
 #### 1. Single Linked List
 Single Linked List adalah sekumpulan node yang saling terhubung dengan node lain melalui sebuah pointer. Rangkaian single linked list dimulai dengan sebuah head yang menyimpan alamat awal dan diakhiri dengan node yang mengarahkan pointer ke null.
@@ -11,10 +11,16 @@ Single Linked List adalah sekumpulan node yang saling terhubung dengan node lain
 Dalam single linked list, setiap node memiliki field yang berisi pointer ke node berikutnya, serta field yang berisi data. Node terakhir menunjuk ke null, yang digunakan sebagai kondisi berhenti saat membaca isi linked list. Keuntungan dari struktur dinamis ini adalah kemampuannya untuk menambah atau mengurangi elemen dengan mudah, berbeda dengan array yang memiliki ukuran tetap.
 
 #### 2. Double Linked List
+Double Linked List (dikenal juga sebagai Doubly Linked List) adalah jenis linked list yang memiliki dua pointer. Dalam struktur ini, setiap simpul (node) memiliki dua arah penunjuk: satu menunjuk ke simpul selanjutnya (next), dan yang lainnya menunjuk ke simpul sebelumnya (prev). Berbeda dengan single linked list, doubly linked list memungkinkan kita untuk melintasinya secara dua arah.
 
+Beberapa karakteristik dari double linked list:
 
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+1. Setiap simpul memiliki dua pointer: next dan prev.
+2. Pada simpul head, pointer prev akan bernilai NULL, karena simpul head adalah simpul pertama.
+3. Pada simpul tail, pointer next akan menunjuk ke NULL sebagai penanda data terakhir.
+
+#### 3. Circular List
+Circular list adalah bentuk lain dari linked list yang memberikan fleksibilitas dalam melewatkan elemen. Circular list bisa berupa single linked list atau double linked list, tetapi tidak mempunyai tail. Pada circular list, pointer next dari elemen terakhir menunjuk ke elemen pertama dan bukan menunjuk NULL. Pada double linked circular list, pointer prev dari elemen pertama menunjuk ke elemen terakhir. susunan dari single linked circular list, hanya menangani link dari elemen terakhir kembali ke elemen pertama[2].
 
 ## Guided 
 
@@ -882,7 +888,5 @@ Kode di atas digunakan untuk mengelola daftar mahasiswa (berupa nama dan NIM) me
 Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
 
 ## Referensi
-[1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
-[2] Warno, “Pembelajaran Pemrograman Bahasa Java Dan Arti Keyword,” Pembelajaran Pemrograman Bhs. Java Dan Arti Keyword, vol. 8, no. 1, pp. 40–51, 2020.
-[3] D. Rosadi, “ADT (Abstract Data Type) C++,” medium.com. Accessed: Mar. 10, 2024. [Online]. Available: https://medium.com/@111202214191/adt-abstract-data-type-c-4cdcf4441d8c
-[4] R. Muliono, “ABSTRACT DATA TYPE (ADT),” blog.uma.ac.id. Accessed: Mar. 10, 2024. [Online]. Available: https://rizkimuliono.blog.uma.ac.id/wp-content/uploads/sites/365/2017/05/ADT-Abstract-Data-Type.pdf
+[1] M. Erkamim et al., Buku Ajar Algoritma Dan Struktur Data, no. January. 2024.
+[2] A. Sindar, Struktur Data Dan Algoritma, no. December. 2018.
