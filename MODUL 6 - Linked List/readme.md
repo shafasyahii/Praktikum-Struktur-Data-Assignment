@@ -3,24 +3,24 @@
 
 ## Dasar Teori
 
-### Tipe Data
-Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+Linked list adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer. Setiap simpul menyimpan data dan alamat (pointer) ke simpul berikutnya dalam urutan. Terdapat beberapa jenis linked list, antara lain: single linked list, double linked list, circular list [1].
 
-#### 1. Tipe Data Primitif
-Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
-4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+#### 1. Single Linked List
+Single Linked List adalah sekumpulan node yang saling terhubung dengan node lain melalui sebuah pointer. Rangkaian single linked list dimulai dengan sebuah head yang menyimpan alamat awal dan diakhiri dengan node yang mengarahkan pointer ke null.
 
-#### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
+Dalam single linked list, setiap node memiliki field yang berisi pointer ke node berikutnya, serta field yang berisi data. Node terakhir menunjuk ke null, yang digunakan sebagai kondisi berhenti saat membaca isi linked list. Keuntungan dari struktur dinamis ini adalah kemampuannya untuk menambah atau mengurangi elemen dengan mudah, berbeda dengan array yang memiliki ukuran tetap.
 
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+#### 2. Double Linked List
+Double Linked List (dikenal juga sebagai Doubly Linked List) adalah jenis linked list yang memiliki dua pointer. Dalam struktur ini, setiap simpul (node) memiliki dua arah penunjuk: satu menunjuk ke simpul selanjutnya (next), dan yang lainnya menunjuk ke simpul sebelumnya (prev). Berbeda dengan single linked list, doubly linked list memungkinkan kita untuk melintasinya secara dua arah.
+
+Beberapa karakteristik dari double linked list:
+
+1. Setiap simpul memiliki dua pointer: next dan prev.
+2. Pada simpul head, pointer prev akan bernilai NULL, karena simpul head adalah simpul pertama.
+3. Pada simpul tail, pointer next akan menunjuk ke NULL sebagai penanda data terakhir.
+
+#### 3. Circular List
+Circular list adalah bentuk lain dari linked list yang memberikan fleksibilitas dalam melewatkan elemen. Circular list bisa berupa single linked list atau double linked list, tetapi tidak mempunyai tail. Pada circular list, pointer next dari elemen terakhir menunjuk ke elemen pertama dan bukan menunjuk NULL. Pada double linked circular list, pointer prev dari elemen pertama menunjuk ke elemen terakhir. susunan dari single linked circular list, hanya menangani link dari elemen terakhir kembali ke elemen pertama [2].
 
 ## Guided 
 
@@ -885,10 +885,9 @@ Kode di atas digunakan untuk mengelola daftar mahasiswa (berupa nama dan NIM) me
 
 ## Kesimpulan
 
-hhhhh
+Linked List adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer, dengan Single Linked List sebagai jenis paling sederhana yang memiliki pointer ke node berikutnya dan field untuk data, Double Linked List yang memiliki dua pointer untuk melintasi secara dua arah, dan Circular List yang memberikan fleksibilitas dalam melewatkan elemen dengan pointer next dari elemen terakhir menunjuk ke elemen pertama.
 
 ## Referensi
-[1] M. P. Putri et al., Algoritma Dan Struktur Data. 2022.
-[2] Warno, “Pembelajaran Pemrograman Bahasa Java Dan Arti Keyword,” Pembelajaran Pemrograman Bhs. Java Dan Arti Keyword, vol. 8, no. 1, pp. 40–51, 2020.
-[3] D. Rosadi, “ADT (Abstract Data Type) C++,” medium.com. Accessed: Mar. 10, 2024. [Online]. Available: https://medium.com/@111202214191/adt-abstract-data-type-c-4cdcf4441d8c
-[4] R. Muliono, “ABSTRACT DATA TYPE (ADT),” blog.uma.ac.id. Accessed: Mar. 10, 2024. [Online]. Available: https://rizkimuliono.blog.uma.ac.id/wp-content/uploads/sites/365/2017/05/ADT-Abstract-Data-Type.pdf
+[1] M. Erkamim et al., Buku Ajar Algoritma Dan Struktur Data, no. January. 2024.
+
+[2] A. Sindar, Struktur Data Dan Algoritma, no. December. 2018.
