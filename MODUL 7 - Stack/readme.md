@@ -3,136 +3,141 @@
 
 ## Dasar Teori
 
-### Tipe Data
-Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+Stack atau tumpukan adalah suatu stuktur data yang penting dalam pemrograman dengan metode pemrosesan yang bersifat LIFO (Last In First Out) dimana objek/benda yang terakhir masuk ke dalam stack akan menjadi benda pertama yang dikeluarkan dari stack. Dengan model demikian, maka hanya bagian paling atas saja dari stack (TOP) yang bisa di akses. Salah satu kelebihan stack adalah bahwa struktur data tersebut dapat di implementasikan baik pada array maupun pada linked list [1]. Misalkan sebuah kotak ditumpukkan, seperti pada gambar dibawah. Kotak A diletakkan pertama sekali kemudian diikuti secara berturut-turut kotak B, kotak C, kotak D, kotak E, dan terakhir kotak F. Maka untuk mengambil  tiap  kotak  dari  tumpukan  harus  dilakukan  secara berturut-turut mulai dari kotak F, kotak E, kotak D, kotak C, kotak B, kemudian kotak A. Karena jika kita membutuhkan kotak C misalnya dan langsung mengambil kotak C tanpa terlebih dahulu mengambil kotak di atasnya maka tumpukan akan tumbang.
+![alt text](image-3.png)
 
-#### 1. Tipe Data Primitif
-Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
-4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+### Operasi pada Stack
+Adapun operasi-operasi/fungsi yang dapat dilakukan pada stack adalah sebagai berikut [2] :
+1. ```Push``` : digunakan untuk menambah item pada stack pada tumpukan paling atas
+2. ```Pop``` : digunakan untuk mengambil item pada stack pada tumpukan paling atas
+3. ```Clear``` : digunakan untuk mengosongkan stack
+4. ```Create Stack``` : membuat tumpukan baru dengan jumlah elemen kosong
+5. ```MakeNull``` : mengosongkan tumpukan jika ada elemen maka semua elemen dihapus
+6. ```IsEmpty``` : fungsi yang digunakan untuk mengecek apakah stack sudah kosong
+7. ```IsFull``` : fungsi yang digunakan untuk mengecek apakah stack sudah penuh
 
-#### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
-
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+### Karakteristik Stack
+Dari  operasi  yang  dilakukan  diperoleh  bahwa  karakteristik  dari suatu Stack adalah [3] : 
+1. Elemen Stack yaitu item-item data yang terdapat dalam Stack. 
+2. Top menunjukkan posisi puncak pada Stack. 
+3. Max menunjukkan banyaknya maksimum item dari Stack. 
+4. Stack  Kosong tidak  mungkin  dilakukan  POP  karena akan terjadi kesalahan yang disebut underflow. Underflow terjadi karena tidak ada item yang dapat dihapus dari Stack kosong.
+5. Stack  Penuh tidak  mungkin  dilakukan  PUSH  karena akan terjadi kesalahan yang disebut overflow. Overflow terjadi karena tidak ada ruang tersisa dalam Stack untuk menyimpan item baru.
 
 ## Guided 
 
-### 1. Tipe Data Primitif
-
 ```C++
 #include <iostream>
+
 using namespace std;
-// Main program
-main()
-{
-    char op;
-    float num1, num2;
-    // It allows user to enter operator i.e. +, -, *, /
-    cin >> op;
-    // It allow user to enter the operands
-    cin >> num1 >> num2;
-    // Switch statement begins
-    
-    switch(op)
-    {
-    // If user enter +
-    case '+':
-        cout << num1 + num2;
-        break;
-    // If user enter -
-    case '-':
-        cout << num1 - num2;
-        break;
-    // If user enter *
-    case '*':
-        cout << num1 * num2;
-        break;
-    // If user enter /
-    case '/':
-        cout << num1 / num2;
-        break;
-    // If the operator is other than +, -, * or /,
-    // error message will display
-    default:
-        cout << "Error! operator is not correct";
-    } // switch statement ends
-    return 0;
+
+string arrayBuku[5];
+int maksimal = 5, top = 0;
+
+bool isFull() {
+    return (top == maksimal);
 }
-```
-Kode di atas mengimplementasikan operator aritmatika (+,-,*,/) pada dua angka float. Program ini menggunakan struktur kontrol 'switch' untuk mengevaluasi operator yang diberikan pengguna, kemudian menampilkan hasil operasi yang sesuai.
 
-### 2. Tipe Data Abstrak
+bool isEmpty() {
+    return (top == 0);
+}
 
-```C++
-#include <stdio.h>
-
-// Struct
-struct Mahasiswa
-{
-    const char *name;
-    const char *address;
-    int age;
-};
-
-int main()
-{
-
-    // Menggunakan struct
-    struct Mahasiswa mhs1, mhs2;
-    // mengisi nilai ke struct
-    mhs1.name = "Dian";
-    mhs1.address = "Mataram";
-    mhs1.age = 22;
-    mhs2.name = "Bambang";
-    mhs2.address = "Surabaya";
-    mhs2.age = 23;
-
-    // mencetak isi struct
-    printf("## Mahasiswa 1 ##\n");
-    printf("Nama: %s\n", mhs1.name);
-    printf("Alamat: %s\n", mhs1.address);
-    printf("Umur: %d\n", mhs1.age);
-    printf("## Mahasiswa 2 ##\n");
-    printf("Nama: %s\n", mhs2.name);
-    printf("Alamat: %s\n", mhs2.address);
-    printf("Umur: %d\n", mhs2.age);
-    return 0;
+void pushArrayBuku(string data) {
+    if (isFull()) {
+        cout << "Data telah penuh" << endl;
     }
-```
-Kode di atas menggunakan struct yang digunakan untuk menyimpan beberapa variabel terkait dalam satu unit. Setelah dijalankan, program akan menampilkan informasi tentang dua mahasiswa, yang berisi nama, alamat, dan umur.
 
-### 3. Tipe Data Koleksi
+    else {
+        arrayBuku[top] = data;
+        top++;
+    }
+}
 
-```C++
-#include <iostream>
-using namespace std;
-int main()
-{
-    //deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
+void popArrayBuku() {
+    if (isEmpty()) {
+        cout << "Tidak ada data yang dihapus" << endl;
+    } else {
+        arrayBuku[top - 1] == "";
+        top--;
+    }
+}
 
-    // mencetak array
-    cout << "Isi array pertama :" << nilai[0] << endl;
-    cout << "Isi array kedua :" << nilai[1] << endl;
-    cout << "Isi array ketiga :" << nilai[2] << endl;
-    cout << "Isi array keempat :" << nilai[3] << endl;
-    cout << "Isi array kelima :" << nilai[4] << endl;
+void peekArrayBuku(int posisi) {
+    if (isEmpty()) {
+        cout << "Tidak ada data yang bisa dilihat" << endl;
+    } else {
+        int index = top;
+        for (int i = 1; i <= posisi; i++) {
+            index--;
+        }
+
+        cout << "Posisi ke " << posisi << " adalah " << arrayBuku[index] << endl;
+    }
+}
+
+int countStack() {
+    return top;
+}
+
+void changeArrayBuku(int posisi, string data) {
+    if (posisi > top) {
+        cout << "Posisi melebihi data yang ada" << endl;
+    } else {
+        int index = top;
+        for (int i = 1; i <= posisi; i++) {
+            index--;
+        }
+        arrayBuku[index] = data;
+    }
+
+}
+
+void destroyArrayBuku () {
+    for (int i = top; i > 0; i--) {
+        arrayBuku[i] = "";
+    }
+    top = 0;
+}
+
+void cetakArrayBuku() {
+    if (isEmpty()) {
+        cout << "Tidak ada data yang 70 dicetak" << endl;
+    } else {
+        for (int i = top - 1; i >= 0; i--) {
+            cout << arrayBuku[i] << endl;
+        }
+    }
+}
+
+int main() {
+    pushArrayBuku("Kalkulus");
+    pushArrayBuku("Struktur Data");
+    pushArrayBuku("Matematika Diskrit");
+    pushArrayBuku("Dasar Multimedia");
+    pushArrayBuku("Inggris");
+
+    cetakArrayBuku();
+    cout << "\n";
+
+    cout << "Apakah data stack penuh?" << isFull() << endl;
+    cout << "Apakah data stack kosong?" << isEmpty() << endl;
+
+    peekArrayBuku(2);
+    popArrayBuku();
+
+    cout << "Banyaknya Data = " << countStack() << endl;
+    changeArrayBuku(2, "Bahasa Jerman");
+    cetakArrayBuku();
+
+    cout << "\n";
+
+    destroyArrayBuku();
+    cout << "Jumlah data setelah dihapus:" << top << endl;
+    cetakArrayBuku();
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak isi array yang telah disisipkan. Pada program tersebut, ada sebuah array yang disisipkan dengan nilai 23, 50, 34, 78, dan 90. Setelah itu, menggunakan perintah cout, program akan menampilkan isi array yang telah disisipkan satu per satu.
+Kode di atas mengimplementasikan mengimplementasikan struktur data stack (tumpukan) untuk mengelola daftar buku. Program ini memiliki beberapa fungsi, seperti ```pushArrayBuku``` untuk menambahkan buku ke dalam stack, ```popArrayBuku``` untuk menghapus buku dari stack, ```peekArrayBuku``` untuk melihat buku pada posisi tertentu, ```countStack``` untuk menghitung jumlah buku dalam stack, ```changeArrayBuku``` untuk mengubah buku pada posisi tertentu, dan ```destroyArrayBuku``` untuk menghapus semua buku dari stack. Terakhir, program ini juga memiliki fungsi ```cetakArrayBuku``` untuk mencetak semua buku dalam stack.
 
 ## Unguided
 
@@ -193,7 +198,9 @@ int main() {
 #### Output:
 ![alt text](image-1.png)
 
-Kode di atas digunakan untuk 
+Kode di atas adalah program sederhana yang memeriksa apakah string input yang diberikan adalah palindrom atau bukan. Palindrom adalah sebuah kata, frasa, angka, atau urutan karakter lain yang dibaca sama maju dan mundur, mengabaikan spasi, tanda baca, dan huruf besar.
+
+Program ini mendefinisikan fungsi yang disebut ```isPalindrome``` yang mengambil referensi konstan ke string sebagai argumen dan mengembalikan nilai boolean yang menunjukkan apakah string tersebut palindrom atau bukan. Fungsi ```isPalindrome``` bekerja dengan mengulang string dari kedua ujungnya ke tengah, membandingkan setiap karakter dengan karakter yang sesuai dari ujung lainnya. Jika menemukan pasangan karakter yang tidak cocok, fungsi ini akan segera mengembalikan nilai false. Jika berhasil memeriksa semua karakter tanpa menemukan ketidakcocokan, maka akan mengembalikan nilai true. Kemudian pada fungsi utama, user bisa memasukkan kalimat yang diinginkan dan program akan mencetak apakah kalimat tersebut merupakan palindrome atau bukan. Program ini menggunakan looping if else yang mana akan berhenti jika user ingin berhenti. 
 
 ### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
 
@@ -250,10 +257,25 @@ int main() {
 #### Output:
 ![alt text](image-2.png)
 
-Kode di atas menggabungkan 
+Kode di atas adalah program yang membalikkan urutan kata dalam kalimat menggunakan stack. Program ini memiliki dua fungsi, yaitu ```reverseWord()``` dan ````reverseSentence()````.
+
+Fungsi ```reverseWord()``` digunakan untuk membalikkan urutan karakter dalam sebuah kata. Fungsi ini menerima sebuah string sebagai parameter, kemudian memasukkan setiap karakter dari string tersebut ke dalam stack. Setelah itu, fungsi ini membuat string baru dengan mengambil karakter dari stack dan memasukkannya ke dalam string tersebut. Kemudian fungsi ```reverseSentence()``` digunakan untuk membalikkan urutan kata dalam sebuah kalimat. Fungsi ini menerima sebuah string sebagai parameter, kemudian memecah string tersebut menjadi beberapa kata berdasarkan spasi. Setiap kata yang dipecahkan kemudian dimasukkan ke dalam stack. Setelah itu, fungsi ini membuat string baru dengan mengambil kata dari stack dan membalikkan urutan karakter dari kata tersebut menggunakan fungsi ```reverseWord()```.
+
+Terakhir, di bagian ```main()```, program meminta pengguna untuk memasukkan sebuah kalimat. Setelah itu, program akan memanggil fungsi ```reverseSentence()``` untuk membalikkan urutan kata dalam kalimat tersebut. Hasilnya kemudian akan ditampilkan ke layar.
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+Stack adalah struktur data yang menggunakan metode LIFO (Last In First Out) di mana elemen terakhir yang masuk menjadi yang pertama keluar. Elemen stack hanya dapat diakses dari puncak (top). Stack dapat diimplementasikan dengan array atau linked list.
+
+Operasi yang dapat dilakukan pada stack adalah push (menambahkan elemen), pop (mengambil dan menghapus elemen), clear (mengosongkan), create stack (membuat stack baru), makeNull (mengosongkan stack), is_empty (memeriksa apakah stack kosong), dan is_full (memeriksa apakah stack penuh).
+
+Stack memiliki karakteristik yaitu memiliki elemen yang disebut item data, memiliki top yang menunjukkan puncak stack, memiliki batas maksimum elemen (max), tidak dapat melakukan pop pada stack kosong (underflow), dan tidak dapat melakukan push pada stack penuh (overflow).
+
+Stack bermanfaat untuk mengevaluasi ekspresi matematika, mengimplementasikan backtracking, menyimpan riwayat operasi, dan manajemen memori. Contoh penerapan stack adalah mesin kalkulator, web browser, kompiler, dan sistem operasi.
 
 ## Referensi
+[1] J. Sihombing, “Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java,” J. Ilm. Infokom, vol. 7, no. 2, pp. 15–24, 2019.
+
+[2] M. DIKI, “Pengertian Stack,” Strukt. Data, vol. 4, no. 1, pp. 88–100, 2017.
+
+[3] S, R. A. (2021). Struktur Data. Bandung. 
