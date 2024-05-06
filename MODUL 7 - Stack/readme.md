@@ -4,6 +4,7 @@
 ## Dasar Teori
 
 Stack atau tumpukan adalah suatu stuktur data yang penting dalam pemrograman dengan metode pemrosesan yang bersifat LIFO (Last In First Out) dimana objek/benda yang terakhir masuk ke dalam stack akan menjadi benda pertama yang dikeluarkan dari stack. Dengan model demikian, maka hanya bagian paling atas saja dari stack (TOP) yang bisa di akses. Salah satu kelebihan stack adalah bahwa struktur data tersebut dapat di implementasikan baik pada array maupun pada linked list [1]. Misalkan sebuah kotak ditumpukkan, seperti pada gambar dibawah. Kotak A diletakkan pertama sekali kemudian diikuti secara berturut-turut kotak B, kotak C, kotak D, kotak E, dan terakhir kotak F. Maka untuk mengambil  tiap  kotak  dari  tumpukan  harus  dilakukan  secara berturut-turut mulai dari kotak F, kotak E, kotak D, kotak C, kotak B, kemudian kotak A. Karena jika kita membutuhkan kotak C misalnya dan langsung mengambil kotak C tanpa terlebih dahulu mengambil kotak di atasnya maka tumpukan akan tumbang.
+
 ![Screenshot 2024-05-06 140236](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/15c260d3-8e60-4bb6-8e17-1676517d54a5)
 
 ### Operasi pada Stack
