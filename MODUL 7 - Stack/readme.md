@@ -4,7 +4,8 @@
 ## Dasar Teori
 
 Stack atau tumpukan adalah suatu stuktur data yang penting dalam pemrograman dengan metode pemrosesan yang bersifat LIFO (Last In First Out) dimana objek/benda yang terakhir masuk ke dalam stack akan menjadi benda pertama yang dikeluarkan dari stack. Dengan model demikian, maka hanya bagian paling atas saja dari stack (TOP) yang bisa di akses. Salah satu kelebihan stack adalah bahwa struktur data tersebut dapat di implementasikan baik pada array maupun pada linked list [1]. Misalkan sebuah kotak ditumpukkan, seperti pada gambar dibawah. Kotak A diletakkan pertama sekali kemudian diikuti secara berturut-turut kotak B, kotak C, kotak D, kotak E, dan terakhir kotak F. Maka untuk mengambil  tiap  kotak  dari  tumpukan  harus  dilakukan  secara berturut-turut mulai dari kotak F, kotak E, kotak D, kotak C, kotak B, kemudian kotak A. Karena jika kita membutuhkan kotak C misalnya dan langsung mengambil kotak C tanpa terlebih dahulu mengambil kotak di atasnya maka tumpukan akan tumbang.
-![alt text](image-3.png)
+
+![Screenshot 2024-05-06 140236](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/15c260d3-8e60-4bb6-8e17-1676517d54a5)
 
 ### Operasi pada Stack
 Adapun operasi-operasi/fungsi yang dapat dilakukan pada stack adalah sebagai berikut [2] :
@@ -196,7 +197,7 @@ int main() {
 }
 ```
 #### Output:
-![alt text](image-1.png)
+![Screenshot 2024-05-06 113935](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d79670d7-fe11-42ad-a9f7-482aebc03b89)
 
 Kode di atas adalah program sederhana yang memeriksa apakah string input yang diberikan adalah palindrom atau bukan. Palindrom adalah sebuah kata, frasa, angka, atau urutan karakter lain yang dibaca sama maju dan mundur, mengabaikan spasi, tanda baca, dan huruf besar.
 
@@ -255,7 +256,7 @@ int main() {
 }
 ```
 #### Output:
-![alt text](image-2.png)
+![Screenshot 2024-05-06 114218](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/30a7a387-c33d-4e01-8fa7-e6633ae20c37)
 
 Kode di atas adalah program yang membalikkan urutan kata dalam kalimat menggunakan stack. Program ini memiliki dua fungsi, yaitu ```reverseWord()``` dan ````reverseSentence()````.
 
