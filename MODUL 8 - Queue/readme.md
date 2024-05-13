@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Queue (antrian) adalah salah satu list linier dari struktur data yang beroperasi dengan cara First In First Out (FIFO) yaitu elemen pertama yang masuk merupakan elemen yang pertama keluar. Data-data di dalam antrian dapat bertipe integer, real, record dalam bentuk sederhana atau terstruktur. Queue dilakukan dengan cara penyisipan di satu ujung, sedang penghapusan di ujung lain. Ujung penyisipan biasa disebut rear/tail, sedang ujung penghapusa disebut front/head. 
+Queue (antrian) adalah salah satu list linier dari struktur data yang beroperasi dengan cara First In First Out (FIFO) yaitu elemen pertama yang masuk merupakan elemen yang pertama keluar. Data-data di dalam antrian dapat bertipe integer, real, record dalam bentuk sederhana atau terstruktur. Queue dilakukan dengan cara penyisipan di satu ujung, sedang penghapusan di ujung lain. Ujung penyisipan biasa disebut rear/tail, sedang ujung penghapusa disebut front/head [1]. 
 
 Sebuah queue dalam program setidaknya harus mengandung tiga variabel, yakni: head untuk penanda bagian depan antrian, tail untuk penanda bagian belakang antrian, dan array data untuk menyimpan data-data yang dimasukkan ke dalam queue tersebut [1]. 
 
@@ -20,8 +20,11 @@ char data [ maxsize ]; //array isi queue
 ```
 
 QUEUE merupakan struktur data dinamis, ketika program dijalankan, jumlah elemennya dapat berubah secara dinamis sesuai keperluan Berikut ini operasi-operasi standar pada queue [3]:
+
 a. Inisialisasi, merupakan prosedur untuk membuat queue pada kondisi awal, yaitu queue yang masih kosong (belum mempunyai elemen).
+
 b. InQueue, Insert Queue merupakan prosedur untuk memasukkan sebuah elemen baru pada queue. Jumlah elemen Queue akan bertambah satu dan elemen tersebut merupakan elemen belakang.
+
 c. DeQueue, Delete Queue merupakan prosedur untuk menghapus/mengambil sebuah elemen dari queue. Elemen yang diambil adalah elemen depan dan jumlah elemen queue akan berkurang satu.
 
 Operasi-operasi yang berhubungan dengan jumlah elemen suatu queue adalah [3]:
@@ -406,5 +409,7 @@ Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tip
 
 ## Referensi
 [1] N. Adlaimi, “SRUKTUR DATA MAJEMUK (QUEUE),” ResearchGate, 2019, doi: 10.31219/osf.io/cs53p.
+
 [2] J. Sihombing, “Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java,” J. Ilm. Infokom, vol. 7, no. 2, pp. 15–24, 2019.
+
 [3] A. Sindar, Struktur Data Dan Algoritma, no. December. 2018.
