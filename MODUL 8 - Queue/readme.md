@@ -3,24 +3,31 @@
 
 ## Dasar Teori
 
-### Tipe Data
-Tipe Data digunakan untuk mengklasifikasikan berbagai jenis data. Tipe data ini wajib ada agar kompiler dapat memahami bagaimana data harus diinterpretasikan. Berikut tipe data yang akan dipelajari:
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+Queue (antrian) adalah salah satu list linier dari struktur data yang beroperasi dengan cara First In First Out (FIFO) yaitu elemen pertama yang masuk merupakan elemen yang pertama keluar. Data-data di dalam antrian dapat bertipe integer, real, record dalam bentuk sederhana atau terstruktur. Queue dilakukan dengan cara penyisipan di satu ujung, sedang penghapusan di ujung lain. Ujung penyisipan biasa disebut rear/tail, sedang ujung penghapusa disebut front/head. 
 
-#### 1. Tipe Data Primitif
-Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman. Karena dasar, tipe ini tidak diturunkan dari tipe data lain [1]. Contoh tipe data primitif, antara lain:
-1. Int. Diambil dari kata integer, tipe data ini digunakan untuk menyimpan bilangan bulat, seperti 1, 2, 3 dan sebagainya.
-2. Float. Tipe data ini digunakan untuk menyimpan bilangan pecahan atau desimal, seperti 1.1, 2.5 dan sebagainya.
-3. Char. Diambil dari kata character, tipe data ini digunakan untuk menyimpan karakter tunggal yang didefinisikan dengan diawali dan diakhiri dengan tanda petik [2].  
-4. Bool. Diambil dari kata Boolean, tipe data ini digunakan untuk menyimpan dua nilai saja, yaitu true dan false.
+Sebuah queue dalam program setidaknya harus mengandung tiga variabel, yakni: head untuk penanda bagian depan antrian, tail untuk penanda bagian belakang antrian, dan array data untuk menyimpan data-data yang dimasukkan ke dalam queue tersebut [1]. 
 
-#### 2. Tipe Data Abstrak
-ADT atau Abstract Data Type merupakan suatu tipe data buatan diri sendiri sesuai keinginan. ADT dapat diimplementasikan menggunakan struktur data (struct) sebagai alternatif implementasi [3]. Dalam C++, ADT dapat dibuat dalam sebuah class yang merupakan pengembangan dari struct [4]. Data dan fungsi yang dideklarasikan private tidak dapat diakses secara langsung oleh client (class), sementara data dan fungsi yang didekralasikan public dapat diakses oleh client secara langsung (struct) [4].
+Queue dapat dideklarasikan dengan bentuk seperti berikut [2]:
 
-#### 3. Tipe Data Koleksi
-Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel. Beberapa tipe data koleksi yang umum digunakan adalah array, vector, dan map. Array adalah struktur data statis yang menyimpan elemen dengan tipe data yang sama. Sementara itu, vector adalah struktur data dinamis yang bisa menyesuaikan ukurannya saat program berjalan. Dan yang terakhir, map mirip dengan array namun dengan indeks yang memungkinkan untuk berupa tipe data selain integer. Map mengaitkan kunci dengan nilai sebagai satu pasangan.
+```C++
+define maxsize 100
+typdef struct {
+int jumlah; //jumlah data
+int depan; //ujung depan
+int belakang; //ujung belakang
+char data [ maxsize ]; //array isi queue
+} queue;
+```
+
+QUEUE merupakan struktur data dinamis, ketika program dijalankan, jumlah elemennya dapat berubah secara dinamis sesuai keperluan Berikut ini operasi-operasi standar pada queue [3]:
+a. Inisialisasi, merupakan prosedur untuk membuat queue pada kondisi awal, yaitu queue yang masih kosong (belum mempunyai elemen).
+b. InQueue, Insert Queue merupakan prosedur untuk memasukkan sebuah elemen baru pada queue. Jumlah elemen Queue akan bertambah satu dan elemen tersebut merupakan elemen belakang.
+c. DeQueue, Delete Queue merupakan prosedur untuk menghapus/mengambil sebuah elemen dari queue. Elemen yang diambil adalah elemen depan dan jumlah elemen queue akan berkurang satu.
+
+Operasi-operasi yang berhubungan dengan jumlah elemen suatu queue adalah [3]:
+1. Size, yaitu operasi untuk mendapatkan banyaknya elemen queue.
+2. Empty, yaitu prosedur untuk mengetahui apakah queue dalam keadaan kosong atau tidak. Dengan status ini maka dapat dicegah dilakukannya operasi Dequeue dari suatu queue yang kosong.
+3. Full, merupakan prosedur untuk mengetahui apakah Queue penuh atau tidak. Prosedur ini hanya berlaku untuk queue yang jumlahnya terbatas. 
 
 ## Guided 
 
@@ -118,7 +125,19 @@ int main() {
     return 0;
 }
 ```
-Kode di atas mengimplementasikan operator aritmatika (+,-,*,/) pada dua angka float. Program ini menggunakan struktur kontrol 'switch' untuk mengevaluasi operator yang diberikan pengguna, kemudian menampilkan hasil operasi yang sesuai.
+Kode ini digunakan untuk membuat simulasi antrian teller bank. Kode ini menggunakan array of string untuk menyimpan data antrian, dan beberapa fungsi untuk melakukan operasi pada antrian tersebut.
+
+Berikut adalah fungsi-fungsi yang terdapat pada kode tersebut:
+
+isFull(): Fungsi ini digunakan untuk mengecek apakah antrian sudah penuh.
+isEmpty(): Fungsi ini digunakan untuk mengecek apakah antrian masih kosong.
+enqueueAntrian(string data): Fungsi ini digunakan untuk menambahkan data (nama nasabah) ke dalam antrian.
+dequeueAntrian(): Fungsi ini digunakan untuk mengeluarkan data (nama nasabah) dari antrian.
+countQueue(): Fungsi ini digunakan untuk menghitung jumlah data yang ada di dalam antrian.
+clearQueue(): Fungsi ini digunakan untuk menghapus semua data yang ada di dalam antrian.
+viewQueue(): Fungsi ini digunakan untuk menampilkan data yang ada di dalam antrian.
+
+Pada fungsi main(), program terlebih dahulu menambahkan dua nama nasabah, yaitu "Andi" dan "Maya", ke dalam antrian. Kemudian, program menampilkan isi antrian dan jumlah antrian. Setelah itu, program mengeluarkan satu data dari antrian, lalu menampilkan kembali isi antrian dan jumlah antrian. Terakhir, program menghapus semua data yang ada di dalam antrian, dan kemudian menampilkan kembali isi antrian dan jumlah antrian.
 
 ## Unguided
 
@@ -240,7 +259,17 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
 
-Kode di atas digunakan untuk
+Pada kode ini, struct Node digunakan untuk mendefinisikan struktur data node dalam linked list. Setiap node memiliki dua atribut: data untuk menyimpan data antrian (nama nasabah) dan next untuk menunjuk ke node berikutnya dalam antrian.
+
+Fungsi-fungsi untuk operasi queue (seperti enqueueAntrian(), dequeueAntrian(), countQueue(), clearQueue(), dan viewQueue()) telah dimodifikasi untuk bekerja dengan linked list.
+
+Perubahan utama pada kode ini adalah:
+
+Tipe data queue: Tipe data queue diubah dari array of string menjadi Node*.
+Operasi enqueue dan dequeue: Operasi enqueue dan dequeue dimodifikasi untuk menambahkan dan menghapus node dalam linked list.
+Operasi viewQueue: Operasi viewQueue dimodifikasi untuk menelusuri linked list dan menampilkan data pada setiap node.
+
+Dengan menggunakan linked list, queue dapat menampung data tanpa batasan maksimum dan lebih efisien dalam hal penggunaan memori, terutama ketika antrian bertambah panjang.
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
@@ -363,11 +392,19 @@ int main() {
 #### Output:
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
 
-Kode di atas menggabungkan 
+Perubahan utama pada kode ini adalah:
+
+Struktur data node: Struktur data node diperbarui untuk menyertakan dua atribut baru: namaMahasiswa dan nimMahasiswa.
+Operasi enqueue dan dequeue: Operasi enqueue dan dequeue dimodifikasi untuk memperbarui data namaMahasiswa dan nimMahasiswa pada node yang ditambahkan atau dihapus.
+Operasi viewQueue: Operasi viewQueue dimodifikasi untuk menampilkan data namaMahasiswa dan nimMahasiswa pada setiap node.
+
+Dengan perubahan ini, antrian dapat menyimpan informasi yang lebih lengkap tentang mahasiswa, yaitu nama dan NIM mereka.
 
 ## Kesimpulan
 
 Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
 
 ## Referensi
-
+[1] N. Adlaimi, “SRUKTUR DATA MAJEMUK (QUEUE),” ResearchGate, 2019, doi: 10.31219/osf.io/cs53p.
+[2] J. Sihombing, “Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java,” J. Ilm. Infokom, vol. 7, no. 2, pp. 15–24, 2019.
+[3] A. Sindar, Struktur Data Dan Algoritma, no. December. 2018.
