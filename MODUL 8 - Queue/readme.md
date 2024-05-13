@@ -130,13 +130,13 @@ Kode ini digunakan untuk membuat simulasi antrian teller bank. Kode ini mengguna
 
 Berikut adalah fungsi-fungsi yang terdapat pada kode tersebut:
 
-isFull(): Fungsi ini digunakan untuk mengecek apakah antrian sudah penuh.
-isEmpty(): Fungsi ini digunakan untuk mengecek apakah antrian masih kosong.
-enqueueAntrian(string data): Fungsi ini digunakan untuk menambahkan data (nama nasabah) ke dalam antrian.
-dequeueAntrian(): Fungsi ini digunakan untuk mengeluarkan data (nama nasabah) dari antrian.
-countQueue(): Fungsi ini digunakan untuk menghitung jumlah data yang ada di dalam antrian.
-clearQueue(): Fungsi ini digunakan untuk menghapus semua data yang ada di dalam antrian.
-viewQueue(): Fungsi ini digunakan untuk menampilkan data yang ada di dalam antrian.
+- isFull(): Fungsi ini digunakan untuk mengecek apakah antrian sudah penuh.
+- isEmpty(): Fungsi ini digunakan untuk mengecek apakah antrian masih kosong.
+- enqueueAntrian(string data): Fungsi ini digunakan untuk menambahkan data (nama nasabah) ke dalam antrian.
+- dequeueAntrian(): Fungsi ini digunakan untuk mengeluarkan data (nama nasabah) dari antrian.
+- countQueue(): Fungsi ini digunakan untuk menghitung jumlah data yang ada di dalam antrian.
+- clearQueue(): Fungsi ini digunakan untuk menghapus semua data yang ada di dalam antrian.
+- viewQueue(): Fungsi ini digunakan untuk menampilkan data yang ada di dalam antrian.
 
 Pada fungsi main(), program terlebih dahulu menambahkan dua nama nasabah, yaitu "Andi" dan "Maya", ke dalam antrian. Kemudian, program menampilkan isi antrian dan jumlah antrian. Setelah itu, program mengeluarkan satu data dari antrian, lalu menampilkan kembali isi antrian dan jumlah antrian. Terakhir, program menghapus semua data yang ada di dalam antrian, dan kemudian menampilkan kembali isi antrian dan jumlah antrian.
 
@@ -258,7 +258,7 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/f78c1f22-82cc-4f06-a342-0718bba9bccf)
 
 Pada kode ini, struct Node digunakan untuk mendefinisikan struktur data node dalam linked list. Setiap node memiliki dua atribut: data untuk menyimpan data antrian (nama nasabah) dan next untuk menunjuk ke node berikutnya dalam antrian.
 
@@ -391,7 +391,7 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ad2162fa-6467-4a32-b0e4-9a1b0cf3b518)
 
 Perubahan utama pada kode ini adalah:
 
@@ -403,7 +403,7 @@ Dengan perubahan ini, antrian dapat menyimpan informasi yang lebih lengkap tenta
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+Queue (Antrian) adalah struktur data linier yang mengikuti aturan First In First Out (FIFO), di mana elemen pertama yang masuk akan menjadi elemen pertama yang keluar. Queue sering digunakan untuk simulasi antrian dalam kehidupan nyata, seperti antrean di kasir, antrean cetak dokumen, dan lain sebagainya. Queue dapat diimplementasikan menggunakan array atau linked list. Pada implementasi menggunakan array, perlu diperhatikan alokasi memori yang dinamis agar queue dapat menampung elemen sesuai kebutuhan.
 
 ## Referensi
 [1] N. Adlaimi, “SRUKTUR DATA MAJEMUK (QUEUE),” ResearchGate, 2019, doi: 10.31219/osf.io/cs53p.
