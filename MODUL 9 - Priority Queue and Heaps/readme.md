@@ -31,8 +31,10 @@ Pohon heap adalah struktur data yang berbentuk pohon yang memenuhi sifat-sifat h
 
 Adapun jenis-jenis heap property di antaranya:
 - Max-Heap: Kunci atau nilai yang ada di simpul mana pun harus lebih besar dari kunci/nilai yang ada di kedua simpul anaknya. Kunci terbesar ada di simpul akar (root node).
+  
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/bf72fceb-b95f-4436-879f-5363195d10da)
 - Min-Heap: Kunci yang ada di simpul mana pun harus lebih kecil dari kunci yang ada di kedua anaknya. Kunci terkecil ada di simpul akar.
+  
 ![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ccce1991-5c12-4dd7-afd9-42cab8634969)
 
 ## Guided 
