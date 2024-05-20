@@ -130,13 +130,13 @@ Kode ini digunakan untuk membuat simulasi antrian teller bank. Kode ini mengguna
 
 Berikut adalah fungsi-fungsi yang terdapat pada kode tersebut:
 
-isFull(): Fungsi ini digunakan untuk mengecek apakah antrian sudah penuh.
-isEmpty(): Fungsi ini digunakan untuk mengecek apakah antrian masih kosong.
-enqueueAntrian(string data): Fungsi ini digunakan untuk menambahkan data (nama nasabah) ke dalam antrian.
-dequeueAntrian(): Fungsi ini digunakan untuk mengeluarkan data (nama nasabah) dari antrian.
-countQueue(): Fungsi ini digunakan untuk menghitung jumlah data yang ada di dalam antrian.
-clearQueue(): Fungsi ini digunakan untuk menghapus semua data yang ada di dalam antrian.
-viewQueue(): Fungsi ini digunakan untuk menampilkan data yang ada di dalam antrian.
+- ```isFull()```: Fungsi ini digunakan untuk mengecek apakah antrian sudah penuh.
+- ```isEmpty()```: Fungsi ini digunakan untuk mengecek apakah antrian masih kosong.
+- ```enqueueAntrian(string data)```: Fungsi ini digunakan untuk menambahkan data (nama nasabah) ke dalam antrian.
+- ```dequeueAntrian()```: Fungsi ini digunakan untuk mengeluarkan data (nama nasabah) dari antrian.
+- ```countQueue()```: Fungsi ini digunakan untuk menghitung jumlah data yang ada di dalam antrian.
+- ```clearQueue()```: Fungsi ini digunakan untuk menghapus semua data yang ada di dalam antrian.
+- ```viewQueue()```: Fungsi ini digunakan untuk menampilkan data yang ada di dalam antrian.
 
 Pada fungsi main(), program terlebih dahulu menambahkan dua nama nasabah, yaitu "Andi" dan "Maya", ke dalam antrian. Kemudian, program menampilkan isi antrian dan jumlah antrian. Setelah itu, program mengeluarkan satu data dari antrian, lalu menampilkan kembali isi antrian dan jumlah antrian. Terakhir, program menghapus semua data yang ada di dalam antrian, dan kemudian menampilkan kembali isi antrian dan jumlah antrian.
 
@@ -258,19 +258,13 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/d5c8b1c3-93b7-4f74-85c9-1b3f1ff77d22)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/f78c1f22-82cc-4f06-a342-0718bba9bccf)
 
-Pada kode ini, struct Node digunakan untuk mendefinisikan struktur data node dalam linked list. Setiap node memiliki dua atribut: data untuk menyimpan data antrian (nama nasabah) dan next untuk menunjuk ke node berikutnya dalam antrian.
+Konsep Class Queue diterapkan dalam kode ini, di mana sebuah kelas dibuat untuk mewakili struktur data queue. Kelas Queue termasuk metode untuk berbagai operasi pada queue, seperti enqueue, dequeue, isEmpty, countQueue, clearQueue, dan viewQueue. Kelas Queue memiliki variabel front dan rear yang digunakan untuk menunjuk ke node pertama (front) dan node terakhir (rear) dalam queue. Variabel front dan rear diinisialisasi dalam konstruktor Queue().
 
-Fungsi-fungsi untuk operasi queue (seperti enqueueAntrian(), dequeueAntrian(), countQueue(), clearQueue(), dan viewQueue()) telah dimodifikasi untuk bekerja dengan linked list.
+Metode enqueue, dequeue, countQueue, clearQueue, dan viewQueue sekarang menjadi bagian dari kelas Queue, membuat kode lebih terstruktur dan modular. Akses ke variabel front dan rear dilakukan menggunakan operator titik pada objek Queue. Cara ini menawarkan beberapa keuntungan, termasuk pengertian dan pengelolaan operasi queue yang lebih mudah, serta kemampuan untuk menggunakan kembali kelas Queue dalam program lain yang memerlukan implementasi queue.
 
-Perubahan utama pada kode ini adalah:
-
-Tipe data queue: Tipe data queue diubah dari array of string menjadi Node*.
-Operasi enqueue dan dequeue: Operasi enqueue dan dequeue dimodifikasi untuk menambahkan dan menghapus node dalam linked list.
-Operasi viewQueue: Operasi viewQueue dimodifikasi untuk menelusuri linked list dan menampilkan data pada setiap node.
-
-Dengan menggunakan linked list, queue dapat menampung data tanpa batasan maksimum dan lebih efisien dalam hal penggunaan memori, terutama ketika antrian bertambah panjang.
+Perbedaan utama antara kode ini dengan versi sebelumnya adalah bahwa struktur Node sekarang didefinisikan dalam kelas Queue, serta variabel front dan rear sekarang menjadi variabel anggota kelas daripada variabel global. Selain itu, fungsi viewQueue masih menampilkan maksimal 5 elemen, namun queue sendiri tidak memiliki batasan ukuran karena implementasinya menggunakan linked list.
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
@@ -391,19 +385,13 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72c1e47f-85ee-46c8-aa1b-5a658049f510)
+![image](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/ad2162fa-6467-4a32-b0e4-9a1b0cf3b518)
 
-Perubahan utama pada kode ini adalah:
-
-Struktur data node: Struktur data node diperbarui untuk menyertakan dua atribut baru: namaMahasiswa dan nimMahasiswa.
-Operasi enqueue dan dequeue: Operasi enqueue dan dequeue dimodifikasi untuk memperbarui data namaMahasiswa dan nimMahasiswa pada node yang ditambahkan atau dihapus.
-Operasi viewQueue: Operasi viewQueue dimodifikasi untuk menampilkan data namaMahasiswa dan nimMahasiswa pada setiap node.
-
-Dengan perubahan ini, antrian dapat menyimpan informasi yang lebih lengkap tentang mahasiswa, yaitu nama dan NIM mereka.
+Kode ini masih menggunakan konsep class Queue untuk mengimplementasikan antrian, namun dengan perubahan pada struktur data yang disimpan dalam queue. Sebelumnya, class Queue menyimpan data berupa string generik. Pada kode ini, class Queue menyimpan data mahasiswa yang terdiri dari nama dan NIM mahasiswa. Untuk itu, struktur data Node dimodifikasi untuk memiliki atribut NamaMahasiswa dan NIMMahasiswa bertipe string. Fungsi-fungsi enqueue dan viewQueue juga dimodifikasi untuk bekerja dengan data mahasiswa tersebut. Antrian sekarang dapat menyimpan informasi yang lebih lengkap tentang mahasiswa yang mengantri. Fungsi viewQueue menampilkan nama dan NIM mahasiswa pada setiap node dalam antrian. Konsep class Queue dan fungsinya secara keseluruhan tetap sama. Class Queue masih menggunakan linked list untuk implementasi queue, sehingga tidak memiliki batasan ukuran maksimum.
 
 ## Kesimpulan
 
-Tipe data digunakan untuk mengklasifikasikan berbagai jenis data. Tiga jenis tipe data yang umum digunakan yaitu tipe data primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data dasar yang disediakan oleh banyak bahasa pemrograman, contohnya int, float, char, dan bool. Tipe data abstrak merupakan suatu tipe data buatan diri sendiri sesuai keinginan, yang dapat diimplementasikan menggunakan struct atau class. Tipe data koleksi adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data sekaligus dalam satu variabel, contohnya array, vector, dan map.
+Queue (Antrian) adalah struktur data linier yang mengikuti aturan First In First Out (FIFO), di mana elemen pertama yang masuk akan menjadi elemen pertama yang keluar. Queue sering digunakan untuk simulasi antrian dalam kehidupan nyata, seperti antrean di kasir, antrean cetak dokumen, dan lain sebagainya. Queue dapat diimplementasikan menggunakan array atau linked list. Pada implementasi menggunakan array, perlu diperhatikan alokasi memori yang dinamis agar queue dapat menampung elemen sesuai kebutuhan.
 
 ## Referensi
 [1] N. Adlaimi, “SRUKTUR DATA MAJEMUK (QUEUE),” ResearchGate, 2019, doi: 10.31219/osf.io/cs53p.
