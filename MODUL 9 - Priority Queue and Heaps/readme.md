@@ -8,6 +8,7 @@
 Priority Queue adalah suatu bentuk struktur data yang berbasiskan struktur Queue pada umumnya. Pada priority Queue, terdapat salah satu bentuk implementasi yaitu implementasi menggunakan struktur data heaps. Dalam implementasi ini ada 3 pokok atribut yaitu heaps, comparator, dan last. Dengan menggunakan fasilitas heap ini kita bisa melakukan insert atau remove elemen dalam kompleksitas waktu logaritmik. Pada priority Queue ini, secara keseluruhan akan dibentuk sebuah pohon biner yang seimbang. Dalam pembuatan pohon biner ini diusahakan ketinggian yang terbentuk adalah minimum. Keminimuman tinggi pohon inilah yang menyebabkan kompleksitas waktu dalam memanipulasi daun menjadi fungsi logaritmik [1].
 
 Struktur Priority Queue :
+
 ![Screenshot 2024-05-20 122259](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/50f545db-cc6c-47fe-9718-2663c34ef1b6)
 
 Heap menunjuk pada akar, last menunjuk pada elemen akhir, dan comparator menunjukan pembanding untuk menipulasi posisi [1].
