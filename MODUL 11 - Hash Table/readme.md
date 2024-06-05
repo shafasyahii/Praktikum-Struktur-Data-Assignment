@@ -13,7 +13,7 @@ Hash table menggunakan memori penyimpanan utama berbentuk array dengan tambahan 
 - key value/nilai yang didapat dari data(k),
 - hash value/hash index/indeks yang dituju(h).
 
-#### 1. Fungsi
+### 1. Fungsi
 Fungsi hash membuat pemetaan antara kunci dan nilai, hal ini dilakukan melalui penggunaan rumus matematika yang dikenal sebagai fungsi hash. Hasil dari fungsi hash disebut sebagai nilai hash atau hash. Nilai hash adalah representasi dari string karakter asli tetapi biasanya lebih kecil dari aslinya.
 
 ### 2. Operasi
@@ -28,7 +28,7 @@ Di C++, operasi tabel hash melibatkan berbagai tugas untuk penanganan data yang 
 - Traversal: Mengulangi pasangan nilai kunci untuk mengakses atau memproses data.
 - Clearing: Mengosongkan tabel hash dengan menghapus semua elemen.
 
-#### 3. Collison
+### 3. Collison
 Berikut contoh penggunaan hash table dengan hash function sederhana yaitu memodulus key value dengan ukuran array : h = k (mod m)
 
 Misal kita memiliki array dengan ukuran 13, maka hash function : h = k (mod 13).
@@ -79,7 +79,7 @@ Mksud formula di atas adalah jika alamat h telah terisi, maka alamat lain yang d
 
 Jadi jika m=23,maka nilai maksimal i adalah : ((23-1)/2)=11.
 
-1.	Closed Hashing
+1. Closed Hashing
 - Linear Probing
 Pada saat terjadi collision, maka akan mencari posisi yang kosong di bawah tempat terjadinya collision, jika masih penuh terus ke bawah, hingga ketemu tempat yang kosong. Jika tidak ada tempat yang kosong berarti HashTable sudah penuh.
 - Quadratic Probing
@@ -324,7 +324,7 @@ Pada program di atas, class HashNode merepresentasikan setiap node dalam hash ta
 
 ## Unguided
 
-### 1.	1.	Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. 
+### 1. Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. 
 Dengan ketentuan :
 a.	Setiap mahasiswa memiliki NIM dan nilai.
 b.	Program memiliki tampilan pilihan menu berisi poin C.
@@ -447,11 +447,34 @@ int main() {
 #### Output:
 ![Screenshot 2024-04-29 141735](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/a2b79113-15bc-458f-b1e9-0a50aafe7ccd)
 
-Kode di atas digunakan untuk 
+Berikut adalah penjelasan lebih detail untuk masing-masing bagian:
+
+#include <iostream>: Melampirkan library input/output untuk menggunakan fungsi-fungsi input/output seperti cout, cin, endl.
+#include <string>: Melampirkan library string untuk menggunakan tipe data string.
+#include <vector>: Melampirkan library vector, yang digunakan dalam kode ini tetapi tidak digunakan secara efektif.
+#include <unordered_map>: Melampirkan library unordered_map (hash table) yang digunakan untuk menyimpan data mahasiswa.
+using namespace std;: Menggunakan namespace std supaya tidak perlu mengetik std:: untuk setiap elemen yang berasal dari namespace tersebut.
+struct Mahasiswa { ... };: Struktur yang digunakan untuk menyimpan data mahasiswa, yaitu NIM dan nilai.
+unordered_map<string, Mahasiswa> hashTable;: Hash table yang digunakan untuk menyimpan data mahasiswa.
+tambahData(), hapusData(), cariDataNIM(), dan cariDataRentangNilai(): Fungsi-fungsi CRUD untuk mengelola data mahasiswa.
+main(): Fungsi utama yang akan dijalankan. Dalam fungsi ini, terdapat perulangan yang akan mengulangi menu hingga pengguna memilih untuk keluar.
+Dalam kode ini, pengguna akan diminta untuk memilih menu yang tersedia, dan kemudian akan diarahkan ke fungsi yang sesuai. Fungsi-fungsi tersebut akan melakukan operasi CRUD (Create, Read, Update, Delete) pada data mahasiswa yang disimpan dalam hash table.
 
 ## Kesimpulan
 
-Linked List adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer, dengan Single Linked List sebagai jenis paling sederhana yang memiliki pointer ke node berikutnya dan field untuk data, Double Linked List yang memiliki dua pointer untuk melintasi secara dua arah, dan Circular List yang memberikan fleksibilitas dalam melewatkan elemen dengan pointer next dari elemen terakhir menunjuk ke elemen pertama.
+Hash table adalah struktur data yang powerful dan efisien untuk menyimpan data secara asosiatif. Hash table menawarkan akses data yang cepat dan mudah, dengan berbagai operasi yang dapat dilakukan dengan waktu rata-rata O(1). Namun, hash table perlu diimplementasikan dengan hati-hati untuk menghindari collision yang sering dan memastikan kinerja yang optimal.
+
+#### Kelebihan hash table:
+
+- Akses data yang cepat dan efisien.
+- Mudah digunakan dan diimplementasikan.
+- Serbaguna dan dapat digunakan untuk berbagai jenis data.
+
+#### Kekurangan hash table:
+
+- Kinerja dapat menurun jika terjadi collision yang sering.
+- Membutuhkan fungsi hash yang baik untuk meminimalkan collision.
+- Membutuhkan memori tambahan untuk menyimpan tabel hash.
 
 ## Referensi
 [1] Barnes & Noble, Hash Tables, *Sparknotes*, http://www.sparknotes.com/ cs/searching/hashtables/section1.html.
@@ -462,4 +485,4 @@ Linked List adalah struktur data linier yang terdiri dari simpul-simpul yang sal
 
 [4] M.A. Weiss, *Data Structures and Algorithm Analysis in Java*, 3rd ed. Pearson Education, USA, 2012.
 
-[5] 
+[5] V. Mutiawani, “HASHTABLE SEBAGAI ALTERNATIF DARI ALGORITMA PENCARIAN BINER PADA APLIKASI E-ACESIA,” Informatika, 2014.
