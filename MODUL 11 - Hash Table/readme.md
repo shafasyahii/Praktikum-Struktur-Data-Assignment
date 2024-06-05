@@ -3,6 +3,8 @@
 
 ## Dasar Teori
 
+![Screenshot 2024-06-04 165113](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/f0969902-2af4-4742-b998-55e3f9369093)
+
 Tabel hash adalah sebuah cara untuk menyimpan suatu data pada memori ke dalam baris-baris dan kolom-kolom sehingga membentuk tabel yang dapat diakses dengan cepat [1]. Setiap sel yang merupakan pertemuan antara baris dan kolom di dalam tabel hash dimana data diarsipkan disebut dengan slot [2]. Sebuah tabel hash dapat dibuat dari dua bagian, yaitu sebuah larik atau array dan sebuah fungsi untuk memetakan, yang disebut dengan fungsi hash atau hash function. Fungsi hash adalah pemetaan ke dalam larik sesuai dengan kunci-kunci yang diberikan, dengan kata lain fungsi hash mendistribusikan data yang dimasukkan oleh pengguna ke dalam tabel atau larik yang telah disediakan [3].
 
 Algoritma Hash dapat melakukan proses tambah, hapus dan pencarian dalam waktu yang konstan [4]. Waktu konstan ini juga disebut sebagai kekompleksan waktu O(1). Teknik Hash merupakan suatu metode yang secara langsung mengakses data record dalam suatu tabel dengan melakukan penghitungan pada key yang menjadi alamat record pada tabel. Key merupakan suatu data yang unik dapat berupa nomor atau karakter string [5]. 
@@ -79,7 +81,6 @@ Mksud formula di atas adalah jika alamat h telah terisi, maka alamat lain yang d
 
 Jadi jika m=23,maka nilai maksimal i adalah : ((23-1)/2)=11.
 
-1. Closed Hashing
 - Linear Probing
 Pada saat terjadi collision, maka akan mencari posisi yang kosong di bawah tempat terjadinya collision, jika masih penuh terus ke bawah, hingga ketemu tempat yang kosong. Jika tidak ada tempat yang kosong berarti HashTable sudah penuh.
 - Quadratic Probing
@@ -445,7 +446,8 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-29 141735](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/a2b79113-15bc-458f-b1e9-0a50aafe7ccd)
+![Screenshot 2024-06-04 080629](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/c348b8ad-05ad-48f4-aa91-ea0c20bfe8f0)
+![Screenshot 2024-06-04 080645](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/92f27d82-46a5-4aee-90a9-1d761242d6da)
 
 Berikut adalah penjelasan lebih detail untuk masing-masing bagian:
 
