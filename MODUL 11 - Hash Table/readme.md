@@ -449,15 +449,16 @@ int main() {
 
 Berikut adalah penjelasan lebih detail untuk masing-masing bagian:
 
-#include <iostream>: Melampirkan library input/output untuk menggunakan fungsi-fungsi input/output seperti cout, cin, endl.
-#include <string>: Melampirkan library string untuk menggunakan tipe data string.
-#include <vector>: Melampirkan library vector, yang digunakan dalam kode ini tetapi tidak digunakan secara efektif.
-#include <unordered_map>: Melampirkan library unordered_map (hash table) yang digunakan untuk menyimpan data mahasiswa.
-using namespace std;: Menggunakan namespace std supaya tidak perlu mengetik std:: untuk setiap elemen yang berasal dari namespace tersebut.
-struct Mahasiswa { ... };: Struktur yang digunakan untuk menyimpan data mahasiswa, yaitu NIM dan nilai.
-unordered_map<string, Mahasiswa> hashTable;: Hash table yang digunakan untuk menyimpan data mahasiswa.
-tambahData(), hapusData(), cariDataNIM(), dan cariDataRentangNilai(): Fungsi-fungsi CRUD untuk mengelola data mahasiswa.
-main(): Fungsi utama yang akan dijalankan. Dalam fungsi ini, terdapat perulangan yang akan mengulangi menu hingga pengguna memilih untuk keluar.
+1. ```#include <iostream>```: Melampirkan library input/output untuk menggunakan fungsi-fungsi input/output seperti ```cout```, ```cin```, ```endl```.
+2. ```#include <string>```: Melampirkan library string untuk menggunakan tipe data string.
+3. ```#include <vector>```: Melampirkan library vector, yang digunakan dalam kode ini tetapi tidak digunakan secara efektif.
+4. ```#include <unordered_map>```: Melampirkan library unordered_map (hash table) yang digunakan untuk menyimpan data mahasiswa.
+5. ```using namespace std;```: Menggunakan namespace std supaya tidak perlu mengetik ```std::``` untuk setiap elemen yang berasal dari namespace tersebut.
+6. ```struct Mahasiswa { ... };```: Struktur yang digunakan untuk menyimpan data mahasiswa, yaitu NIM dan nilai.
+7. ```unordered_map<string, Mahasiswa> hashTable;```: Hash table yang digunakan untuk menyimpan data mahasiswa.
+8. ```tambahData()```, ```hapusData()```, ```cariDataNIM()```, dan ```cariDataRentangNilai()```: Fungsi-fungsi CRUD untuk mengelola data mahasiswa.
+9. ```main()```: Fungsi utama yang akan dijalankan. Dalam fungsi ini, terdapat perulangan yang akan mengulangi menu hingga pengguna memilih untuk keluar.
+
 Dalam kode ini, pengguna akan diminta untuk memilih menu yang tersedia, dan kemudian akan diarahkan ke fungsi yang sesuai. Fungsi-fungsi tersebut akan melakukan operasi CRUD (Create, Read, Update, Delete) pada data mahasiswa yang disimpan dalam hash table.
 
 ## Kesimpulan
