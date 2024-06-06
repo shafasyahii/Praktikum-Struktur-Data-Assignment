@@ -3,7 +3,6 @@
 
 ## Dasar Teori
 
-Linked list adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer. Setiap simpul menyimpan data dan alamat (pointer) ke simpul berikutnya dalam urutan. Terdapat beberapa jenis linked list, antara lain: single linked list, double linked list, circular list [1].
 
 #### 1. 
 
