@@ -5,22 +5,7 @@
 
 Linked list adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer. Setiap simpul menyimpan data dan alamat (pointer) ke simpul berikutnya dalam urutan. Terdapat beberapa jenis linked list, antara lain: single linked list, double linked list, circular list [1].
 
-#### 1. Single Linked List
-Single Linked List adalah sekumpulan node yang saling terhubung dengan node lain melalui sebuah pointer. Rangkaian single linked list dimulai dengan sebuah head yang menyimpan alamat awal dan diakhiri dengan node yang mengarahkan pointer ke null.
-
-Dalam single linked list, setiap node memiliki field yang berisi pointer ke node berikutnya, serta field yang berisi data. Node terakhir menunjuk ke null, yang digunakan sebagai kondisi berhenti saat membaca isi linked list. Keuntungan dari struktur dinamis ini adalah kemampuannya untuk menambah atau mengurangi elemen dengan mudah, berbeda dengan array yang memiliki ukuran tetap.
-
-#### 2. Double Linked List
-Double Linked List (dikenal juga sebagai Doubly Linked List) adalah jenis linked list yang memiliki dua pointer. Dalam struktur ini, setiap simpul (node) memiliki dua arah penunjuk: satu menunjuk ke simpul selanjutnya (next), dan yang lainnya menunjuk ke simpul sebelumnya (prev). Berbeda dengan single linked list, doubly linked list memungkinkan kita untuk melintasinya secara dua arah.
-
-Beberapa karakteristik dari double linked list:
-
-1. Setiap simpul memiliki dua pointer: next dan prev.
-2. Pada simpul head, pointer prev akan bernilai NULL, karena simpul head adalah simpul pertama.
-3. Pada simpul tail, pointer next akan menunjuk ke NULL sebagai penanda data terakhir.
-
-#### 3. Circular List
-Circular list adalah bentuk lain dari linked list yang memberikan fleksibilitas dalam melewatkan elemen. Circular list bisa berupa single linked list atau double linked list, tetapi tidak mempunyai tail. Pada circular list, pointer next dari elemen terakhir menunjuk ke elemen pertama dan bukan menunjuk NULL. Pada double linked circular list, pointer prev dari elemen pertama menunjuk ke elemen terakhir. susunan dari single linked circular list, hanya menangani link dari elemen terakhir kembali ke elemen pertama [2].
+#### 1. 
 
 ## Guided 
 
