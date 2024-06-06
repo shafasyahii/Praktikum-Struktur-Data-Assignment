@@ -141,7 +141,6 @@ Kode di atas digunakan untuk
 
 ## Kesimpulan
 
-Linked List adalah struktur data linier yang terdiri dari simpul-simpul yang saling terhubung melalui pointer, dengan Single Linked List sebagai jenis paling sederhana yang memiliki pointer ke node berikutnya dan field untuk data, Double Linked List yang memiliki dua pointer untuk melintasi secara dua arah, dan Circular List yang memberikan fleksibilitas dalam melewatkan elemen dengan pointer next dari elemen terakhir menunjuk ke elemen pertama.
 
 ## Referensi
 [1] M. Erkamim et al., Buku Ajar Algoritma Dan Struktur Data, no. January. 2024.
