@@ -21,8 +21,6 @@ Contoh: ```pangkatRekursif (x, n)```
 - Jawabannya: dikalikan dengan ```x```
 4. Aturan penggabungan: Hindari duplikasi pemanggilan rekursif untuk sub-problem yang sama.
 
-#### 1. 
-
 ## Guided 
 
 ### 1. Rekursif Langsung (Direct Recursion)
