@@ -212,7 +212,7 @@ Rekursif adalah teknik pemrograman yang memungkinkan suatu fungsi untuk memanggi
 - Memiliki kasus dasar: Kondisi yang menghentikan proses rekursif dan mengembalikan nilai.
 - Memiliki kasus rekursif: Memanggil fungsi itu sendiri dengan parameter yang lebih kecil, mengantarkannya ke kasus dasar.
 
-#### Manfaat rekursif:
+#### Kegunaan rekursif:
 - Menyederhanakan kode untuk masalah yang kompleks.
 - Mempermudah pemahaman dan pembacaan kode.
 - Menghindari penggunaan loop eksplisit.
