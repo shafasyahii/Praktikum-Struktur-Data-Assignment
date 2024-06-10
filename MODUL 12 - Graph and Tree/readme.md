@@ -6,6 +6,8 @@
 ### Graph
 Graph merupakan representasi dari suatu masalah yang digambarkan sebagai sekumpulan noktah atau simpul (vertex) yang dihubungkan dengan sekumpulan garis atau sisi (edge) [1]. Graf G didefisikan : pasangan himpunan (V, E) dengan notasi G = (V, E). Dalam hal ini, V adalah himpunan tidak kosong dari simpulsimpul (vertices atau node) dan E adalah himpunan sisi (edges atau arcs) yang menghubungkan sepasang simpul [2].  Secara geometri graf digambarkan sebagai sekumpulan noktah (simpul) di dalam bidang dua dimensi yang dihubungkan dengan sekumpulan garis (sisi) [3]. 
 
+![Screenshot 2024-06-10 144346](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/0915be4e-2417-4db3-bb13-4e27298d3ab8)
+
 Ada beberapa cara untuk menyimpan graph di dalam sitem komputer. Struktur data bergantung pada struktur graph dan algoritma yang digunakan untuk memanipulasi graph. Secara teori salah satu dari keduanya dapat dibedakan antara struktur list dan matriks, tetapi dalam penggunaannya struktur terbaik yang sering digunakan adalah kombinasi keduanya.
 1. Graph tak berarah (undirected graph atau non-directed graph)
 - Urutan simpul dalam sebuah busur tidak dipentingkan. Misal busur e1 dapat disebut busur AB atau BA
@@ -49,10 +51,17 @@ Kelebihan struktur Binary Tree :
 
 Dari Binary Tree ini, ada 2 tipe :
 - Full Binary Tree : Semua node, kecuali leaf pasti memiliki 2 anak dan tiap subpohon memiliki panjang path yang sama.
+
+![Screenshot 2024-06-10 145727](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/03e9e9c6-cdbd-4c86-ae7b-0ab0b6880695)
+
 - Complete Binary Tree : Tree yang mirip dengan full binary tree, tapi tiap subtree boleh memiliki panjang path yang berbeda dan tiap node (kecuali leaf) memiliki 2 anak.
+
+![Screenshot 2024-06-10 145737](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/8139b3a5-ebda-4c7d-bc62-8451c8234650)
 
 2. SKEWED BINARY TREE
 Binary tree yang semua nodenya (kecuali leaf) hanya memiliki satu anak.
+
+![Screenshot 2024-06-10 152330](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/6635e30f-b25e-4c82-bdc2-0242f77f2000)
 
 #### Operasi
 1. Create: membentuk sebuah tree baru yang kosong.
@@ -346,7 +355,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-05-20 112359](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72328a37-52f4-4d41-8896-f316a1f01025)
+![Screenshot 2024-06-10 152531](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/1a1435fa-9fde-4e2a-a4af-8eda3f8e28cc)
 
 Kode di atas digunakan untuk mengimplementasikan algoritma Dijkstra untuk menghitung jarak terpendek antar simpul dalam sebuah grafik. Algoritma Dijkstra digunakan untuk menghitung jarak terpendek dari simpul awal ke semua simpul lain. Matriks jarak berisi bobot antar simpul yang digunakan untuk menghitung jarak terpendek. Kodingan ini meminta inputan jumlah simpul, nama simpul, bobot antar simpul, dan simpul awal dari pengguna. Hasil output dari kodingan ini adalah jarak terpendek dari simpul awal ke setiap simpul lain.
 
@@ -513,7 +522,9 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-05-20 112359](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/72328a37-52f4-4d41-8896-f316a1f01025)
+![Screenshot 2024-06-10 140711](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/b092db89-dbe7-433d-b176-0c3358132f06)
+![Screenshot 2024-06-10 140720](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/8d56d75b-2d22-4a88-88a1-29d6101dc95e)
+![Screenshot 2024-06-10 140729](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/8e8c203a-8cea-44de-8cc2-50a602e020bb)
 
 Kode di atas digunakan untuk mengimplementasikan struktur data tree (pohon) serta melakukan beberapa operasi pada pohon tersebut.
 
