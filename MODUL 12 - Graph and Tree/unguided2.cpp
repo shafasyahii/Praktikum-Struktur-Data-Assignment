@@ -7,13 +7,42 @@ struct TNode {
     TNode *left;
     TNode *right;
 
-    // constructor
+    // Constructor
     TNode(int value) {
         data = value;
         left = NULL;
         right = NULL;
     }
 };
+
+// Fungsi untuk menambahkan node ke tree
+TNode* tambahNode(TNode* root, int data) {
+    if (root == NULL) {
+        return new TNode(data);
+    }
+    queue<TNode*> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        TNode* temp = q.front();
+        q.pop();
+
+        if (temp->left == NULL) {
+            temp->left = new TNode(data);
+            break;
+        } else {
+            q.push(temp->left);
+        }
+
+        if (temp->right == NULL) {
+            temp->right = new TNode(data);
+            break;
+        } else {
+            q.push(temp->right);
+        }
+    }
+    return root;
+}
 
 void preOrder(TNode *node) {
     if (node != NULL) {
@@ -25,7 +54,7 @@ void preOrder(TNode *node) {
 
 void inOrder(TNode *node) {
     if (node != NULL) {
-        inOrder(node -> left);
+        inOrder (node -> left);
         cout << node -> data << " ";
         inOrder(node -> right);
     }
@@ -39,97 +68,91 @@ void postOrder(TNode *node) {
     }
 }
 
-// Fungsi tambahan untuk menampilkan node child
-void displayChildNodes(TNode *node) {
+// Fungsi untuk menampilkan child dari node yang diinput
+void tampilChild(TNode* node, int value) {
     if (node == NULL) return;
-    cout << "Child nodes of " << node->data << ": ";
-    if (node->left != NULL)
-        cout << node->left->data << " ";
-    if (node->right != NULL)
-        cout << node->right->data << " ";
-    cout << endl;
+    if (node->data == value) {
+        if (node->left != NULL) {
+            cout << "Left Child: " << node->left->data << endl;
+        } else {
+            cout << "Left Child: NULL" << endl;
+        }
+        if (node->right != NULL) {
+            cout << "Right Child: " << node->right->data << endl;
+        } else {
+            cout << "Right Child: NULL" << endl;
+        }
+        return;
+    }
+    tampilChild(node->left, value);
+    tampilChild(node->right, value);
 }
 
-// Fungsi untuk menampilkan descendant dari node
-void displayDescendants(TNode *node) {
+// Fungsi untuk menampilkan semua descendant dari node yang diinput
+void tampilDescendant(TNode* node) {
     if (node == NULL) return;
-    queue<TNode*> q;
-    q.push(node);
-    cout << "Descendants of " << node->data << ": ";
-    while (!q.empty()) {
-        TNode *current = q.front();
-        q.pop();
-        if (current->left != NULL) {
-            cout << current->left->data << " ";
-            q.push(current->left);
-        }
-        if (current->right != NULL) {
-            cout << current->right->data << " ";
-            q.push(current->right);
-        }
-    }
-    cout << endl;
+    cout << node->data << " ";
+    tampilDescendant(node->left);
+    tampilDescendant(node->right);
 }
 
 int main() {
-    // Buat sebuah pohon kosong
-    TNode *root = NULL;
-    
-    int choice, data;
+    TNode* root = NULL;
+    int pilihan, data, nodeValue;
+
     while (true) {
-        cout << "Menu:" << endl;
-        cout << "1. Tambah node" << endl;
-        cout << "2. PreOrder traversal" << endl;
-        cout << "3. InOrder traversal" << endl;
-        cout << "4. PostOrder traversal" << endl;
-        cout << "5. Tampilkan child nodes dari sebuah node" << endl;
-        cout << "6. Tampilkan descendants dari sebuah node" << endl;
-        cout << "7. Keluar" << endl;
-        cout << "Pilihan Anda: ";
-        cin >> choice;
-        
-        switch (choice) {
+        cout << "\nMenu:\n";
+        cout << "1. Tambah Node\n";
+        cout << "2. Tampilkan Pre-Order\n";
+        cout << "3. Tampilkan In-Order\n";
+        cout << "4. Tampilkan Post-Order\n";
+        cout << "5. Tampilkan Child dari Node\n";
+        cout << "6. Tampilkan Descendant dari Node\n";
+        cout << "7. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
             case 1:
-                cout << "Masukkan data untuk node baru: ";
+                cout << "Masukkan data: ";
                 cin >> data;
-                if (root == NULL) {
-                    root = new TNode(data);
-                } else {
-                    // Implementasi tambahan untuk menambahkan node ke pohon
-                }
+                root = tambahNode(root, data);
                 break;
             case 2:
-                cout << "PreOrder traversal: ";
+                cout << "Pre-Order: ";
                 preOrder(root);
                 cout << endl;
                 break;
             case 3:
-                cout << "InOrder traversal: ";
+                cout << "In-Order: ";
                 inOrder(root);
                 cout << endl;
                 break;
             case 4:
-                cout << "PostOrder traversal: ";
+                cout << "Post-Order: ";
                 postOrder(root);
                 cout << endl;
                 break;
             case 5:
-                cout << "Masukkan data node yang ingin ditampilkan child nodes-nya: ";
-                cin >> data;
-                // Implementasi panggilan fungsi untuk menampilkan child nodes
+                cout << "Masukkan nilai node: ";
+                cin >> nodeValue;
+                tampilChild(root, nodeValue);
                 break;
             case 6:
-                cout << "Masukkan data node yang ingin ditampilkan descendants-nya: ";
-                cin >> data;
-                // Implementasi panggilan fungsi untuk menampilkan descendants
+                cout << "Masukkan nilai node: ";
+                cin >> nodeValue;
+                cout << "Descendant dari " << nodeValue << ": ";
+                tampilChild(root, nodeValue);
+                tampilDescendant(root);
+                cout << endl;
                 break;
             case 7:
-                cout << "Keluar dari program." << endl;
+                cout << "Keluar dari program.\n";
                 return 0;
             default:
-                cout << "Pilihan tidak valid!" << endl;
+                cout << "Pilihan tidak valid.\n";
+                break;
         }
     }
-
     return 0;
 }
