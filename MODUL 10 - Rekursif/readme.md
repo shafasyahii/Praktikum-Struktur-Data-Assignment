@@ -5,6 +5,8 @@
 
 Rekursif adalah sebuah algoritma yang berisi pemanggilan dirinya sendiri sehingga menghasilkan looping. Harus ada batasan di dalam rekursif sehingga looping dapat dibatalkan, jika tidak maka akan terjadi infinity loop dan dapat menyebabkan memori penuh [1]. Rekursi adalah suatu proses dengan salah satu langkah dalam prosedur tersebut menjalankan prosedur itu sendiri [2]. Dalam pemrograman komputer, rekursi dicontohkan saat sebuah fungsi didefinisikan dalam bentuk sederhana, bahkan versi terkecil dari dirinya. Solusi dari permasalahan kemudian dirancang dengan menggabungkan solusi-solusi yang didapat dari versi sederhana dari permasalahan [3].
 
+![Screenshot 2024-06-07 105552](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/0fce1228-9ab9-49bb-a0d9-51bba4708044)
+
 Fungsi rekursif merupakan salah satu jenis relasi. Misalkan terdapat himpunan A sebagai domain dan himpunan B seabgai codomain, maka suatu relasi disebut fungsi jika relasi tersebut menghubungkan setiap elemen di dalam A ke tepat satu elemen di dalam B [4]. Fungsi rekursif adalah fungsi yang mengacu pada dirinya sendiri. Fungsi rekursif disusun atas dua bagian, yaitu basis dan rekurens. Basis berisi nilai awal yang tidak mengacu pada dirinya sendiri. Bagian ini berfungsi untuk memberikan nilai yang terdefinisi pada fungsi rekursif dan sekaligus menghentikan proses rekursi. Rekurens merupakan bagian fungsi yang mendefinisikan argumen fungsi dalam terminologi dirinya sendiri. Setiap kali fungsi tersebut melakukan bagian rekurens maka argumen dari fungsi tersebut harus lebih dekat pada basisnya [5].
 
 Adapun aturan rekursif sebagai berikut [6]:
@@ -18,8 +20,6 @@ Contoh: ```pangkatRekursif (x, n)```
 - Nilai tersebut harus diapakan sehingga menghasilkan nilai ```pangkatRekursif (x, n)``` yang benar?
 - Jawabannya: dikalikan dengan ```x```
 4. Aturan penggabungan: Hindari duplikasi pemanggilan rekursif untuk sub-problem yang sama.
-
-#### 1. 
 
 ## Guided 
 
@@ -147,7 +147,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-29 141735](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/a2b79113-15bc-458f-b1e9-0a50aafe7ccd)
+![Screenshot 2024-06-07 111530](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/63203f6c-4095-4a26-be3a-f67e93635dcc)
 
 Kode di atas digunakan untuk membuat sebuah program yang menghitung faktorial dari sebuah bilangan bulat positif menggunakan fungsi rekursif.
 
@@ -200,7 +200,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-29 141735](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/a2b79113-15bc-458f-b1e9-0a50aafe7ccd)
+![Screenshot 2024-06-07 111600](https://github.com/shafasyahii/Praktikum-Struktur-Data-Assignment/assets/162096931/0a67ff6f-9a99-451f-8839-37f413a497ca)
 
 Kode di atas merupakan bentuk rekursif tidak langsung dari soal nomor satu. Jika kita jalankan program ini, maka program akan meminta pengguna untuk memasukkan bilangan bulat positif. Kemudian, program akan menghitung faktorial dari nilai tersebut menggunakan fungsi rekursif dengan bantuan fungsi pembantu dan menampilkan hasilnya ke layar.
 
@@ -212,7 +212,7 @@ Rekursif adalah teknik pemrograman yang memungkinkan suatu fungsi untuk memanggi
 - Memiliki kasus dasar: Kondisi yang menghentikan proses rekursif dan mengembalikan nilai.
 - Memiliki kasus rekursif: Memanggil fungsi itu sendiri dengan parameter yang lebih kecil, mengantarkannya ke kasus dasar.
 
-#### Manfaat rekursif:
+#### Kegunaan rekursif:
 - Menyederhanakan kode untuk masalah yang kompleks.
 - Mempermudah pemahaman dan pembacaan kode.
 - Menghindari penggunaan loop eksplisit.
