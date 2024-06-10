@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Priority Graph dan Tree</h1>
+# <h1 align="center">Laporan Praktikum Modul Graph dan Tree</h1>
 <p align="center">Shafa Syahida</p>
 
 ## Dasar Teori
